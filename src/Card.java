@@ -66,10 +66,24 @@ public class Card {
 			case "woodcutter":
 				makeWoodcutter(this);
 				break;
+			case "curse":
+				makeCurse(this);
+				break;
 			}
 		embargoTokens=0;
 		
 		}
+	private void makeCurse(Card card) {
+		card.cost=0;
+		card.worth=0;
+		card.actionsGranted=0;
+		card.buysGranted=0;
+		card.cardsGranted=0;
+		card.victoryPoints=(-1);
+		special=false; 
+		return;
+		
+	}
 	private void makeMine(Card card) {
 		card.cost=5;
 		card.worth=0;
