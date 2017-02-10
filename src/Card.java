@@ -300,14 +300,15 @@ public class Card {
 	
 	public String toString(){
 		String myInfo;
-		myInfo="My name is "+this.cardType;
-		myInfo+=". I cost "+this.cost+" gold.\n";
-		myInfo+="I grant "+this.actionsGranted+" actions. ";
-		myInfo+="I also grant "+this.buysGranted+" additional buys.\n";
-		myInfo+="I shove "+this.cardsGranted+" more cards into your hand ";
-		myInfo+="and am worth "+this.victoryPoints+" victory points. \n";
-		myInfo+="I currently am holding "+this.embargoTokens+" embargo tokens.\n";
-		if(this.special==true) myInfo+="I also do some other stuff\n";
+		myInfo=this.cardType;
+		//myInfo="My name is "+this.cardType;
+		//myInfo+=". I cost "+this.cost+" gold.\n";
+		//myInfo+="I grant "+this.actionsGranted+" actions. ";
+		//myInfo+="I also grant "+this.buysGranted+" additional buys.\n";
+		//myInfo+="I shove "+this.cardsGranted+" more cards into your hand ";
+		//myInfo+="and am worth "+this.victoryPoints+" victory points. \n";
+		//myInfo+="I currently am holding "+this.embargoTokens+" embargo tokens.\n";
+		//if(this.special==true) myInfo+="I also do some other stuff\n";
 		
 		return myInfo;
 	}
