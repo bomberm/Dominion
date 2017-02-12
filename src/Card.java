@@ -7,6 +7,7 @@ public class Card {
 	public Card(String type)
 	{
 		cardType=type;
+		action=false;
 		
 		switch(type){
 			case "copper":
@@ -29,42 +30,54 @@ public class Card {
 				break;
 			case "adventurer":
 				makeAdventurer(this);
+				action=true;
 				break;
 			case "ambassador":
 				makeAmbassador(this);
+				action=true;
 				break;
 			case "baron":
 				makeBaron(this);
+				action=true;
 				break;
 			case "council room":
 				makeCouncilRoom(this);
+				action=true;
 				break;
 			case "cutpurse":
 				makeCutpurse(this);
+				action=true;
 				break;
 			case "embargo":
 				makeEmbargo(this);
+				action=true;
 				break;
 			case "feast":
 				makeFeast(this);
+				action=true;
 				break;
 			case "gardens":
 				makeGardens(this);
 				break;
 			case "great hall":
 				makeGreatHall(this);
+				action=true;
 				break;
 			case "mine":
 				makeMine(this);
+				action=true;
 				break;
 			case "smithy":
 				makeSmithy(this);
+				action=true;
 				break;
 			case "village":
 				makeVillage(this);
+				action=true;
 				break;
 			case "woodcutter":
 				makeWoodcutter(this);
+				action=true;
 				break;
 			case "curse":
 				makeCurse(this);
