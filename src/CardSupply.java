@@ -49,20 +49,18 @@ public class CardSupply {
 	}
 	
 	public Card drawCard(){
-		List<String> choices= kingdomCards;
+		List<String> choices= new LinkedList<String>();
+		String cardTypes[]=copper.type.allCards();
+		for(String card : cardTypes){
+			choices.add(card);
+		}
 		Random randomness= new Random();
 		int index;
 		Card card;
-		
-		choices.add("copper");
-		choices.add("silver");
-		choices.add("gold");
-		choices.add("estate");
-		choices.add("duchy");
-		choices.add("province");
-		index=randomness.nextInt();
-		while(howMany(choices.get(index))==0){ //Grab different card types until one actually exists in the deck
-			index=randomness.nextInt();
+
+		index=randomness.nextInt(20);
+		while(howMany(choices.get(index))<=0){ //Grab different card types until one actually exists in the deck
+			index=randomness.nextInt(20);
 		}
 		card = new Card(choices.get(index));
 		removeCard(choices.get(index));
@@ -201,7 +199,6 @@ public class CardSupply {
 		
 	}
 
-
 	private int howMany(String ofWhat){
 		switch(ofWhat){
 		case "copper":
@@ -260,8 +257,6 @@ public class CardSupply {
 		
 		return returnString;
 		}
-
-
 
 	public void addCard(String string, int i) {
 		switch(string){

@@ -2,7 +2,7 @@
 public class Card {
 	String cardType;
 	int cost, worth, actionsGranted, buysGranted, cardsGranted, victoryPoints, embargoTokens;
-	boolean special;
+	boolean special, action;
 
 	public Card(String type)
 	{
