@@ -323,5 +323,22 @@ public class CardSupply {
 		
 		}
 	}
+
+
+
+	
+	public boolean endgame() {
+		int emptyPiles=0;
+		String remainingPiles[]={"copper", "silver", "gold", "estate", "duchy", "curse"};
+		if(province.quantity<1) return true;
+		for(String card: kingdomCards)
+			if(howMany(card)<1) emptyPiles++;
+		if(emptyPiles>=3) return true;
+		for(String card: remainingPiles)
+			if(howMany(card)<1) emptyPiles++;
+		if(emptyPiles>=3) return true;
+		
+		return false;
+	}
 }
 	

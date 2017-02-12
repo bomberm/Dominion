@@ -3,7 +3,6 @@ import java.util.List;
 
 public class Player {
 	CardSupply discard, drawPile;
-	List<Card> hand;
 	int deckSize, discardSize, actions, buys;
 	
 	public Player()
@@ -12,18 +11,10 @@ public class Player {
 		drawPile=new CardSupply(true);
 		drawPile.addCard("copper", 7);
 		drawPile.addCard("estate", 3);
-		hand=new ArrayList<Card>();
-		for(int i=0; i<5; i++)
-		{
-			hand.add(drawPile.drawCard());
-		}
 		deckSize=10;
 		discardSize=0;
 	}
 	
-	public List<Card> getHand(){
-		return hand;
-	}
 	
 	public void shuffleDiscard(){ //doesn't actually shuffle, just moves discard back into drawPile
 		drawPile.adventurer.quantity=discard.adventurer.quantity;
