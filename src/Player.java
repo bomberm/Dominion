@@ -70,6 +70,11 @@ public class Player {
 		discardSize=0;
 		
 	}
+
+	public Card drawCard() {
+		if(deckSize==0) shuffleDiscard();
+		return drawPile.drawCard();
+	}
 	
 	
 	

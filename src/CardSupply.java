@@ -199,7 +199,7 @@ public class CardSupply {
 		
 	}
 
-	private int howMany(String ofWhat){
+	public int howMany(String ofWhat){
 		switch(ofWhat){
 		case "copper":
 			return copper.quantity;
