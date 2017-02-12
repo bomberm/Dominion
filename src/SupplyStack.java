@@ -11,5 +11,9 @@ public class SupplyStack {
 	public String getType(){
 		return type.cardType;
 	}
+	
+	public int hasTreasure(){
+		return type.worth;
+	}
 		
 }
