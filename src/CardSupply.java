@@ -8,32 +8,58 @@ public class CardSupply {
 	SupplyStack greatHall, mine, smithy, village, woodcutter;
 	List<String> kingdomCards=		new LinkedList<String>(); //contain kingdom cards used this game
 	
-	CardSupply(Boolean player){
-		copper= 	new SupplyStack("copper", (player) ? 0 : 46); //need 46 for supply 
-		silver=		new SupplyStack("silver", (player) ? 0: 40); //need 40 for supply
-		gold= 		new SupplyStack("gold", (player) ? 0 : 30);//need 30
-		estate=		new SupplyStack("estate", (player) ? 0 : 12); //Need 18
-		duchy=		new SupplyStack("duchy", (player) ? 0 : 12); //need 12
-		province= 	new SupplyStack("province", (player) ? 0 : 12); //need 12
-		curse=	 	new SupplyStack("curse", (player) ? 0 : 10); //need 10 for 2 players
-		adventurer=	new SupplyStack("adventurer", (player) ? 0 : 10); //need 10
-		ambassador=	new SupplyStack("abassador", (player) ? 0 : 10); //need 10
-		baron= 		new SupplyStack("baron", (player) ? 0 : 10); //need 10
-		councilRoom=new SupplyStack("council room", (player) ? 0 : 10); //need 10
-		cutPurse= 	new SupplyStack("cutpurse", (player) ? 0 : 10); //need 10
-		embargo= 	new SupplyStack("embargo", (player) ? 0 : 10); //need 10
-		feast= 		new SupplyStack("feast", (player) ? 0 : 10); //need 10
-		gardens= 	new SupplyStack("gardens", (player) ? 0 : 10); //need 10
-		greatHall= 	new SupplyStack("great hall", (player) ? 0 : 10); //need 10
-		mine= 		new SupplyStack("mine", (player) ? 0 : 10); //need 10
-		smithy= 	new SupplyStack("smithy", (player) ? 0 : 10); //need 10
-		village= 	new SupplyStack("village", (player) ? 0 : 10); //need 10
-		woodcutter= new SupplyStack("woodcutter", (player) ? 0 : 10); //need 10
+	CardSupply(CardSupply supply){
+		copper= 	new SupplyStack("copper", 0); //need 46 for supply 
+		silver=		new SupplyStack("silver", 0); //need 40 for supply
+		gold= 		new SupplyStack("gold", 0);//need 30
+		estate=		new SupplyStack("estate", 0); //Need 18
+		duchy=		new SupplyStack("duchy", 0); //need 12
+		province= 	new SupplyStack("province", 0); //need 12
+		curse=	 	new SupplyStack("curse", 0); //need 10 for 2 players
+		adventurer=	new SupplyStack("adventurer", 0); //need 10
+		ambassador=	new SupplyStack("abassador", 0); //need 10
+		baron= 		new SupplyStack("baron", 0); //need 10
+		councilRoom=new SupplyStack("council room", 0); //need 10
+		cutPurse= 	new SupplyStack("cutpurse", 0); //need 10
+		embargo= 	new SupplyStack("embargo", 0); //need 10
+		feast= 		new SupplyStack("feast", 0); //need 10
+		gardens= 	new SupplyStack("gardens", 0); //need 10
+		greatHall= 	new SupplyStack("great hall", 0); //need 10
+		mine= 		new SupplyStack("mine", 0); //need 10
+		smithy= 	new SupplyStack("smithy", 0); //need 10
+		village= 	new SupplyStack("village", 0); //need 10
+		woodcutter= new SupplyStack("woodcutter", 0); //need 10
 		
-		if(!player) selectKingdomCards();
+		kingdomCards=supply.kingdomCards;
 		}
 	
 	
+
+	CardSupply(){
+		copper= 	new SupplyStack("copper", 46); //need 46 for supply 
+		silver=		new SupplyStack("silver",  40); //need 40 for supply
+		gold= 		new SupplyStack("gold",  30);//need 30
+		estate=		new SupplyStack("estate",  12); //Need 18
+		duchy=		new SupplyStack("duchy",  12); //need 12
+		province= 	new SupplyStack("province",  12); //need 12
+		curse=	 	new SupplyStack("curse",  10); //need 10 for 2 players
+		adventurer=	new SupplyStack("adventurer",  10); //need 10
+		ambassador=	new SupplyStack("abassador",  10); //need 10
+		baron= 		new SupplyStack("baron",  10); //need 10
+		councilRoom=new SupplyStack("council room",  10); //need 10
+		cutPurse= 	new SupplyStack("cutpurse",  10); //need 10
+		embargo= 	new SupplyStack("embargo",  10); //need 10
+		feast= 		new SupplyStack("feast",  10); //need 10
+		gardens= 	new SupplyStack("gardens",  10); //need 10
+		greatHall= 	new SupplyStack("great hall",  10); //need 10
+		mine= 		new SupplyStack("mine",  10); //need 10
+		smithy= 	new SupplyStack("smithy",  10); //need 10
+		village= 	new SupplyStack("village",  10); //need 10
+		woodcutter= new SupplyStack("woodcutter",  10); //need 10
+		
+		selectKingdomCards();
+		}
+
 
 	private void selectKingdomCards() {
 		String cardList[]={"adventurer", "ambassador", "baron", "council room", "cutpurse", "embargo", "feast", "gardens", "great hall", "mine", "smithy", "village", "woodcutter"};
@@ -67,7 +93,7 @@ public class CardSupply {
 		
 		}
 	
-	private void removeCard(String string) {
+	public void removeCard(String string) {
 		switch(string){
 		case "copper":
 			copper.quantity--;

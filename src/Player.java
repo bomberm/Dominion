@@ -1,18 +1,18 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class Player {
 	CardSupply discard, drawPile;
-	int deckSize, discardSize, actions, buys;
 	
-	public Player()
+	public Player(CardSupply supply)
 	{
-		discard=new CardSupply(true);
-		drawPile=new CardSupply(true);
+		discard=new CardSupply(supply);
+		drawPile=new CardSupply(supply);
 		drawPile.addCard("copper", 7);
 		drawPile.addCard("estate", 3);
-		deckSize=10;
-		discardSize=0;
 	}
-	
-	
+
+
 	public void shuffleDiscard(){ //doesn't actually shuffle, just moves discard back into drawPile
 		drawPile.adventurer.quantity=discard.adventurer.quantity;
 		discard.adventurer.quantity=0;
@@ -54,14 +54,30 @@ public class Player {
 		discard.village.quantity=0;
 		drawPile.woodcutter.quantity=discard.woodcutter.quantity;
 		discard.woodcutter.quantity=0;
-		deckSize=discardSize;
-		discardSize=0;
 		
 	}
 
 	public Card drawCard() {
-		if(deckSize==0) shuffleDiscard();
+		if(deckSize(drawPile)<1) shuffleDiscard();
 		return drawPile.drawCard();
+	}
+
+
+	private int deckSize(CardSupply drawPile2) {
+		List<String> cardsUsed= new LinkedList<String>();
+		int cardsRemaining=0;
+		for(String card : drawPile2.kingdomCards)
+			cardsUsed.add(card);
+		cardsUsed.add("copper");
+		cardsUsed.add("silver");
+		cardsUsed.add("gold");
+		cardsUsed.add("duchy");
+		cardsUsed.add("estate");
+		cardsUsed.add("province");
+		cardsUsed.add("curse");
+		for(String card : cardsUsed)
+			cardsRemaining+=drawPile.howMany(card);
+		return cardsRemaining;
 	}
 
 

@@ -16,21 +16,7 @@ public class Turn {
 		for(int i=0; i<5; i++){
 			hand.add(player.drawCard());
 		}
-		while(actions > 0){
-			playAction(player, theSupply);
-			actions--;
-		}
-		
-		for(int i=0; i<hand.size(); i++){
-			treasure+=hand.get(i).worth; //calculate worth.
-		}
-		
-		while(buys > 0){
-			buyCards(player, theSupply);
-			buys--;
-		}
-		
-		endTurn(player);
+
 	}
 
 	private void buyCards(Player player, CardSupply theSupply) {
@@ -47,7 +33,7 @@ public class Turn {
 		case 0:
 			if(theSupply.copper.quantity>0){
 				player.discard.addCard("copper");
-				player.discardSize++;
+				theSupply.removeCard("copper");
 				whatCard="copper";
 			}
 			break;
@@ -55,7 +41,7 @@ public class Turn {
 			whatCard = pick2[randomness.nextInt(2)];
 			if(theSupply.howMany(whatCard)<1) whatCard=pick2[randomness.nextInt(2)];
 			player.discard.addCard(whatCard);
-			player.discardSize++;
+			theSupply.removeCard(whatCard);
 			spend(2, player);
 			break;
 		case 3:
@@ -67,7 +53,7 @@ public class Turn {
 				}					
 			}
 			player.discard.addCard(whatCard);
-			player.discardSize++;
+			theSupply.removeCard(whatCard);
 			spend(3, player);
 			break;
 		case 4:
@@ -79,7 +65,7 @@ public class Turn {
 				}					
 			}
 			player.discard.addCard(whatCard);
-			player.discardSize++;
+			theSupply.removeCard(whatCard);
 			spend(3, player);
 			break;
 		case 5:
@@ -91,7 +77,7 @@ public class Turn {
 				}					
 			}
 			player.discard.addCard(whatCard);
-			player.discardSize++;
+			theSupply.removeCard(whatCard);
 			spend(5, player);
 			break;
 		case 6:
@@ -103,14 +89,14 @@ public class Turn {
 				}					
 			}
 			player.discard.addCard(whatCard);
-			player.discardSize++;
+			theSupply.removeCard(whatCard);
 			spend(6, player);
 			break;
 		default: 
 			if(theSupply.province.quantity>0)
 				{
 				player.discard.addCard("province");
-				player.discardSize++;
+				theSupply.removeCard("province");
 				spend(8, player);
 				whatCard="province";
 				}
@@ -128,7 +114,7 @@ public class Turn {
 			if(myCard.worth>0){
 				i-=myCard.worth;
 				player.discard.addCard(myCard.cardType);
-				player.discardSize++;
+				
 				if(i<1) return;
 			}
 		}
@@ -136,13 +122,29 @@ public class Turn {
 	}
 
 	private void endTurn(Player player) {
-		ListIterator<Card> iterator= hand.listIterator();
-		while(iterator.hasNext()){
-			Card card=iterator.next();
-			player.discard.addCard(card.cardType);
-			player.discardSize++;
-			hand.remove(card.cardType);
+		for(int i=0; i<hand.size(); i++){
+			player.discard.addCard(hand.get(i).cardType);
+			
 		}
+		
+	}
+	public void takeTurn(Player player, CardSupply theSupply){
+		while(actions > 0){
+			playAction(player, theSupply);
+			actions--;
+		}
+		
+		for(int i=0; i<hand.size(); i++){
+			treasure+=hand.get(i).worth; //calculate worth.
+		}
+		
+		while(buys > 0){
+			System.out.println("Buying!");
+			buyCards(player, theSupply);
+			buys--;
+		}
+		
+		endTurn(player);
 		
 	}
 
@@ -157,11 +159,10 @@ public class Turn {
 				treasure+=hand.get(i).worth;
 				for(int j=0; j<hand.get(i).cardsGranted; j++){
 					hand.add(player.drawCard());
-					player.deckSize--;
 				}
 				if(hand.get(i).special) doTheThing(hand.get(i));
 				player.discard.addCard(hand.get(i).cardType);
-				player.discardSize++;
+				
 				System.out.println("I played "+hand.get(i).cardType);
 				return;
 			}
