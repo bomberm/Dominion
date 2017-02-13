@@ -396,9 +396,6 @@ public class CardSupply {
 		
 		}
 	}
-
-
-
 	
 	public boolean endgame() {
 		int emptyPiles=0;

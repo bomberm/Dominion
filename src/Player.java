@@ -83,8 +83,10 @@ public class Player {
 
 	public int countPoints() {
 		int myPoints=0;
+		shuffleDiscard();
 		for(String card: discard.smithy.type.allCards())
-			myPoints+=(discard.cardVP(card)*(drawPile.howMany(card)+discard.howMany(card)));
+			myPoints+=(discard.cardVP(card)*(drawPile.howMany(card)));
+		myPoints+=deckSize(drawPile)*drawPile.howMany("gardens");
 		return myPoints;
 	}
 	

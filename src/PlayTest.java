@@ -21,8 +21,8 @@ public class PlayTest {
 		player1Victory = player1.countPoints();
 		player2Victory = player2.countPoints();
 		
-		if(player1Victory>player2Victory) System.out.println("Player 1 wins with "+player1Victory+ "points");
-		else System.out.println("Player 2 wins with "+player2Victory+ "points");
+		if(player1Victory>=player2Victory) System.out.println("Player 1 wins with "+player1Victory+ " points");
+		else System.out.println("Player 2 wins with "+player2Victory+ " points");
 
 
 	}
