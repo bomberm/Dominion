@@ -128,9 +128,9 @@ public class Turn {
 		}
 		
 	}
-	public void takeTurn(Player player, CardSupply theSupply){
+	public void takeTurn(Player player, Player player2, CardSupply theSupply){
 		while(actions > 0){
-			playAction(player, theSupply);
+			playAction(player, player2, theSupply);
 			actions--;
 		}
 		
@@ -139,7 +139,6 @@ public class Turn {
 		}
 		
 		while(buys > 0){
-			System.out.println("Buying!");
 			buyCards(player, theSupply);
 			buys--;
 		}
@@ -148,22 +147,22 @@ public class Turn {
 		
 	}
 
-	private void playAction(Player player, CardSupply theSupply) {
+	private void playAction(Player player, Player player2, CardSupply theSupply) {
 		for(int i=0; i<hand.size(); i++) //go through each card in hand.
 		{
 			if(hand.get(i).action){
-				System.out.println("I found an action! It's called "+hand.get(i).cardType);
-				actions+=hand.get(i).actionsGranted;
-				System.out.println("I now have added "+ hand.get(i).actionsGranted+" actions");
+				if(i==hand.size()) break;
+				System.out.println("I play "+hand.get(i).cardType);
+				actions+=hand.get(i).actionsGranted;;
 				buys+=hand.get(i).buysGranted;
 				treasure+=hand.get(i).worth;
 				for(int j=0; j<hand.get(i).cardsGranted; j++){
 					hand.add(player.drawCard());
 				}
-				if(hand.get(i).special) doTheThing(hand.get(i));
+				if(hand.get(i).special) doTheThing(hand.get(i), player, player2, theSupply);
 				player.discard.addCard(hand.get(i).cardType);
-				
-				System.out.println("I played "+hand.get(i).cardType);
+				Card card=hand.get(i);
+				hand.remove(card);
 				return;
 			}
 		}
@@ -171,8 +170,45 @@ public class Turn {
 		return;
 	}
 
-	private void doTheThing(Card card) {
-		System.out.println("I do a thing here!");
+	private void doTheThing(Card card, Player player, Player player2, CardSupply theSupply) {
+		String whatCard;
+		Random randomness = new Random();
+		switch(card.cardType){
+		case "mine":
+			ListIterator<Card> myHand = hand.listIterator();
+			Card thisCard;
+			
+			while(myHand.hasNext()){
+				thisCard=myHand.next();
+				if(thisCard.cardType=="copper")
+				{
+					hand.remove(card);
+					hand.add(new Card("silver"));
+					return;
+				}
+				else if(thisCard.cardType=="silver")
+				{
+					hand.remove(card);
+					hand.add(new Card("gold"));
+					return;
+				}
+			}
+			System.out.println("I chose to forfit my use of Mine");
+			break;
+		case "feast":
+			hand.remove(card);
+			String pick[]={"estate", "embargo", "silver", "ambassador", "great hall", "village", "woodcutter", "baron", "cutpurse", "feast", "gardens", "smithy", "council room", "mine"};
+			whatCard= pick[randomness.nextInt(14)];
+			if(theSupply.howMany(whatCard)<1){
+				for(int i=0; i<14; i++){ //make sure we're not looking forever
+					whatCard= pick[randomness.nextInt(2)];
+					if(theSupply.howMany(whatCard)>0) break;
+				}
+			if(whatCard==null) System.out.println("I didn't find a card to pick up");
+			else hand.add(new Card(whatCard));
+			return;
+			}
+		}
 		
 	}
 	
