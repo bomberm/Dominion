@@ -1,4 +1,6 @@
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Random;
 
 public class Turn {
@@ -9,6 +11,7 @@ public class Turn {
 		actions=1;
 		buys=1;
 		treasure=0;
+		hand= new LinkedList<Card>();
 		
 		for(int i=0; i<5; i++){
 			hand.add(player.drawCard());
@@ -16,6 +19,10 @@ public class Turn {
 		while(actions > 0){
 			playAction(player, theSupply);
 			actions--;
+		}
+		
+		for(int i=0; i<hand.size(); i++){
+			treasure+=hand.get(i).worth; //calculate worth.
 		}
 		
 		while(buys > 0){
@@ -35,10 +42,6 @@ public class Turn {
 		String pick6[]={"gold", "adventurer"};
 		Random randomness=new Random();
 		
-		for(int i=0; i<hand.size(); i++){
-			treasure+=hand.get(i).worth; //calculate worth.
-		}
-		
 		switch(treasure){
 		case 1: //no card costs 1, therefore default to purchasing copper 
 		case 0:
@@ -53,7 +56,7 @@ public class Turn {
 			if(theSupply.howMany(whatCard)<1) whatCard=pick2[randomness.nextInt(2)];
 			player.discard.addCard(whatCard);
 			player.discardSize++;
-			spend(hand, 2, player);
+			spend(2, player);
 			break;
 		case 3:
 			whatCard= pick3[randomness.nextInt(5)];
@@ -65,7 +68,7 @@ public class Turn {
 			}
 			player.discard.addCard(whatCard);
 			player.discardSize++;
-			spend(hand, 3, player);
+			spend(3, player);
 			break;
 		case 4:
 			whatCard= pick4[randomness.nextInt(5)];
@@ -77,7 +80,7 @@ public class Turn {
 			}
 			player.discard.addCard(whatCard);
 			player.discardSize++;
-			spend(hand, 3, player);
+			spend(3, player);
 			break;
 		case 5:
 			whatCard= pick5[randomness.nextInt(2)];
@@ -89,7 +92,7 @@ public class Turn {
 			}
 			player.discard.addCard(whatCard);
 			player.discardSize++;
-			spend(hand, 5, player);
+			spend(5, player);
 			break;
 		case 6:
 			whatCard= pick6[randomness.nextInt(2)];
@@ -101,14 +104,14 @@ public class Turn {
 			}
 			player.discard.addCard(whatCard);
 			player.discardSize++;
-			spend(hand, 6, player);
+			spend(6, player);
 			break;
 		default: 
 			if(theSupply.province.quantity>0)
 				{
 				player.discard.addCard("province");
 				player.discardSize++;
-				spend(hand, 8, player);
+				spend(8, player);
 				whatCard="province";
 				}
 		}
@@ -117,13 +120,15 @@ public class Turn {
 		
 	}
 
-	private void spend(List<Card> hand2, int i, Player player) {
-		for(Card myCard: hand2){
+	private void spend(int i, Player player) {
+		ListIterator<Card> iterator = hand.listIterator();
+		Card myCard;
+		while(iterator.hasNext()){
+			myCard=iterator.next();
 			if(myCard.worth>0){
 				i-=myCard.worth;
 				player.discard.addCard(myCard.cardType);
 				player.discardSize++;
-				hand.remove(myCard);
 				if(i<1) return;
 			}
 		}
@@ -131,10 +136,12 @@ public class Turn {
 	}
 
 	private void endTurn(Player player) {
-		for(Card myCard: hand){
-			player.discard.addCard(myCard.cardType);
+		ListIterator<Card> iterator= hand.listIterator();
+		while(iterator.hasNext()){
+			Card card=iterator.next();
+			player.discard.addCard(card.cardType);
 			player.discardSize++;
-			hand.remove(myCard);
+			hand.remove(card.cardType);
 		}
 		
 	}
@@ -143,7 +150,9 @@ public class Turn {
 		for(int i=0; i<hand.size(); i++) //go through each card in hand.
 		{
 			if(hand.get(i).action){
+				System.out.println("I found an action! It's called "+hand.get(i).cardType);
 				actions+=hand.get(i).actionsGranted;
+				System.out.println("I now have added "+ hand.get(i).actionsGranted+" actions");
 				buys+=hand.get(i).buysGranted;
 				treasure+=hand.get(i).worth;
 				for(int j=0; j<hand.get(i).cardsGranted; j++){

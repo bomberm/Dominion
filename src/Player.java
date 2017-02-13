@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Player {
 	CardSupply discard, drawPile;
 	int deckSize, discardSize, actions, buys;
@@ -65,6 +62,14 @@ public class Player {
 	public Card drawCard() {
 		if(deckSize==0) shuffleDiscard();
 		return drawPile.drawCard();
+	}
+
+
+	public int countPoints() {
+		int myPoints=0;
+		for(String card: discard.smithy.type.allCards())
+			myPoints+=(discard.cardVP(card)*(drawPile.howMany(card)+discard.howMany(card)));
+		return myPoints;
 	}
 	
 	

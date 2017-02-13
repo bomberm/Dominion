@@ -12,7 +12,7 @@ public class CardSupply {
 		copper= 	new SupplyStack("copper", (player) ? 0 : 46); //need 46 for supply 
 		silver=		new SupplyStack("silver", (player) ? 0: 40); //need 40 for supply
 		gold= 		new SupplyStack("gold", (player) ? 0 : 30);//need 30
-		estate=		new SupplyStack("estate", (player) ? 0 : 18); //Need 18
+		estate=		new SupplyStack("estate", (player) ? 0 : 12); //Need 18
 		duchy=		new SupplyStack("duchy", (player) ? 0 : 12); //need 12
 		province= 	new SupplyStack("province", (player) ? 0 : 12); //need 12
 		curse=	 	new SupplyStack("curse", (player) ? 0 : 10); //need 10 for 2 players
@@ -30,12 +30,12 @@ public class CardSupply {
 		village= 	new SupplyStack("village", (player) ? 0 : 10); //need 10
 		woodcutter= new SupplyStack("woodcutter", (player) ? 0 : 10); //need 10
 		
-		if(!player) kingdomCards = selectKingdomCards();
+		if(!player) selectKingdomCards();
 		}
 	
 	
 
-	private List<String> selectKingdomCards() {
+	private void selectKingdomCards() {
 		String cardList[]={"adventurer", "ambassador", "baron", "council room", "cutpurse", "embargo", "feast", "gardens", "great hall", "mine", "smithy", "village", "woodcutter"};
 		Random randomness=new Random();
 		int index;
@@ -45,7 +45,6 @@ public class CardSupply {
 			if(!kingdomCards.contains(cardList[index])) kingdomCards.add(cardList[index]);
 		}
 		
-		return null;
 	}
 	
 	public Card drawCard(){
@@ -241,6 +240,54 @@ public class CardSupply {
 			return woodcutter.quantity;
 		case "curse":
 			return curse.quantity;
+		}
+		
+		return 0;
+
+	}
+	
+	public int cardVP(String ofWhat){
+		switch(ofWhat){
+		case "copper":
+			return copper.type.victoryPoints;
+		case "silver":
+			return silver.type.victoryPoints;
+		case "gold":
+			return gold.type.victoryPoints;
+		case "estate":
+			return estate.type.victoryPoints;
+		case "duchy":
+			return duchy.type.victoryPoints;
+		case "province":
+			return province.type.victoryPoints;
+		case "adventurer":
+			return adventurer.type.victoryPoints;
+		case "ambassador":
+			return ambassador.type.victoryPoints;
+		case "baron":
+			return baron.type.victoryPoints;
+		case "council room":
+			return councilRoom.type.victoryPoints;
+		case "cutpurse":
+			return cutPurse.type.victoryPoints; 
+		case "embargo":
+			return embargo.type.victoryPoints;
+		case "feast":
+			return feast.type.victoryPoints;
+		case "gardens":
+			return gardens.type.victoryPoints;
+		case "great hall":
+			return greatHall.type.victoryPoints;
+		case "mine":
+			return mine.type.victoryPoints;
+		case "smithy":
+			return smithy.type.victoryPoints;
+		case "village":
+			return village.type.victoryPoints;
+		case "woodcutter":
+			return woodcutter.type.victoryPoints;
+		case "curse":
+			return curse.type.victoryPoints;
 		}
 		
 		return 0;
