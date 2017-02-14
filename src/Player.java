@@ -54,7 +54,7 @@ public class Player {
 		discard.village.quantity=0;
 		drawPile.woodcutter.quantity=discard.woodcutter.quantity;
 		discard.woodcutter.quantity=0;
-		
+		return;
 	}
 
 	public Card drawCard() {

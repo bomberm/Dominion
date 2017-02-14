@@ -13,7 +13,9 @@ public class PlayTest {
 		{
 			takeTurn=new Turn(player1, supply);
 			takeTurn=new Turn(player2, supply);
+			System.out.println("Player one:");
 			takeTurn.takeTurn(player1, player2, supply);
+			System.out.println("Player two:");
 			takeTurn.takeTurn(player2, player1, supply);
 
 		}
