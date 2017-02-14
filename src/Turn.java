@@ -130,8 +130,6 @@ public class Turn {
 	}
 	
 	public void takeTurn(Player player, Player player2, CardSupply theSupply){
-		System.out.println("Current deck size: "+player.deckSize(player.drawPile));
-		System.out.println("Current discard size: "+player.deckSize(player.discard));
 		while(actions > 0){
 			playAction(player, player2, theSupply);
 			actions--;
@@ -147,17 +145,14 @@ public class Turn {
 			buys--;
 		}
 		
-		endTurn(player);
-		System.out.println("Current deck size: "+player.deckSize(player.drawPile));
-		System.out.println("Current discard size: "+player.deckSize(player.discard));
-		
+		endTurn(player);	
 	}
 
 	public void playAction(Player player, Player player2, CardSupply theSupply) {
 		for(int i=0; i<hand.size()+1; i++) //go through each card in hand.
 		{
+			if(i==hand.size()) break;
 			if(hand.get(i).action){
-				if(i==hand.size()) break;
 				System.out.println("I play "+hand.get(i).cardType);
 				actions+=hand.get(i).actionsGranted;;
 				buys+=hand.get(i).buysGranted;
