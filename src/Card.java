@@ -325,7 +325,7 @@ public class Card {
 	}
 	
 	public String[] allCards(){
-		String allCards[] ={"copper", "silver", "gold", "estate", "duchy", "province", "curse", "adventurer", "ambassador", "baron", "council room", "cutpurse", "embargo", "feast", "gardens", "greathall", "mine", "smithy", "village", "woodcutter"};
+		String allCards[] ={"copper", "silver", "gold", "estate", "duchy", "province", "curse", "adventurer", "ambassador", "baron", "council room", "cutpurse", "embargo", "feast", "gardens", "great hall", "mine", "smithy", "village", "woodcutter"};
 		return allCards;
 	}
 

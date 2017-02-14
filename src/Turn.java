@@ -125,32 +125,36 @@ public class Turn {
 	public void endTurn(Player player) {
 		for(int i=0; i<hand.size(); i++){
 			player.discard.addCard(hand.get(i).cardType);
-			
 		}
-		
+		hand.clear();
 	}
 	
 	public void takeTurn(Player player, Player player2, CardSupply theSupply){
+		System.out.println("Current deck size: "+player.deckSize(player.drawPile));
+		System.out.println("Current discard size: "+player.deckSize(player.discard));
 		while(actions > 0){
 			playAction(player, player2, theSupply);
 			actions--;
 		}
 		
-		for(int i=0; i<hand.size(); i++){
-			treasure+=hand.get(i).worth; //calculate worth.
-		}
+
 		
 		while(buys > 0){
+			for(int i=0; i<hand.size(); i++){
+				treasure+=hand.get(i).worth; //calculate worth.
+			}
 			buyCards(player, theSupply);
 			buys--;
 		}
 		
 		endTurn(player);
+		System.out.println("Current deck size: "+player.deckSize(player.drawPile));
+		System.out.println("Current discard size: "+player.deckSize(player.discard));
 		
 	}
 
 	public void playAction(Player player, Player player2, CardSupply theSupply) {
-		for(int i=0; i<hand.size(); i++) //go through each card in hand.
+		for(int i=0; i<hand.size()+1; i++) //go through each card in hand.
 		{
 			if(hand.get(i).action){
 				if(i==hand.size()) break;
@@ -161,9 +165,9 @@ public class Turn {
 				for(int j=0; j<hand.get(i).cardsGranted; j++){
 					hand.add(player.drawCard());
 				}
-				if(hand.get(i).special) doTheThing(hand.get(i), player, player2, theSupply);
-				player.discard.addCard(hand.get(i).cardType);
 				Card card=hand.get(i);
+				if(hand.get(i).special) doTheThing(hand.get(i), player, player2, theSupply);
+				else player.discard.addCard(hand.get(i).cardType);
 				hand.remove(card);
 				return;
 			}

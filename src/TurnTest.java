@@ -11,7 +11,7 @@ public class TurnTest {
 		Turn testPurchase= new Turn(player, supply);
 		int previous = player.deckSize(player.discard);
 		testPurchase.buyCards(player, supply);
-		assert(previous>player.deckSize(player.discard));
+		assertTrue(previous!=player.deckSize(player.discard));
 		
 	}
 
@@ -20,14 +20,19 @@ public class TurnTest {
 		CardSupply supply = new CardSupply();
 		Player player = new Player(supply);
 		Turn testEndTurn= new Turn(player, supply);
-		int previous = player.deckSize(player.discard);
 		testEndTurn.endTurn(player);
-		assert(previous>player.deckSize(player.discard));
+		assert(testEndTurn.hand.size()==0);
 	}
 
 	@Test
 	public void testPlayAction() {
-		fail("Not yet implemented");
+		CardSupply supply = new CardSupply();
+		Player player = new Player(supply);
+		Turn testAction= new Turn(player, supply);
+		testAction.hand.add(new Card("embargo"));
+		int previous = testAction.hand.size();
+		testAction.playAction(player, player, supply);
+		assertTrue(previous!=testAction.hand.size());
 	}
 
 }

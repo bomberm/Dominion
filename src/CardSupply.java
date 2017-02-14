@@ -29,7 +29,6 @@ public class CardSupply {
 		smithy= 	new SupplyStack("smithy", 0); //need 10
 		village= 	new SupplyStack("village", 0); //need 10
 		woodcutter= new SupplyStack("woodcutter", 0); //need 10
-		
 		kingdomCards=supply.kingdomCards;
 		}
 	
@@ -56,7 +55,6 @@ public class CardSupply {
 		smithy= 	new SupplyStack("smithy",  10); //need 10
 		village= 	new SupplyStack("village",  10); //need 10
 		woodcutter= new SupplyStack("woodcutter",  10); //need 10
-		
 		selectKingdomCards();
 		}
 

@@ -63,10 +63,10 @@ public class Player {
 	}
 
 
-	public int deckSize(CardSupply drawPile2) {
+	public int deckSize(CardSupply deck) {
 		List<String> cardsUsed= new LinkedList<String>();
 		int cardsRemaining=0;
-		for(String card : drawPile2.kingdomCards)
+		for(String card : deck.kingdomCards)
 			cardsUsed.add(card);
 		cardsUsed.add("copper");
 		cardsUsed.add("silver");
@@ -76,7 +76,7 @@ public class Player {
 		cardsUsed.add("province");
 		cardsUsed.add("curse");
 		for(String card : cardsUsed)
-			cardsRemaining+=drawPile.howMany(card);
+			cardsRemaining+=deck.howMany(card);
 		return cardsRemaining;
 	}
 
