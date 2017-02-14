@@ -12,8 +12,8 @@ public class PlayTest {
 		while(!supply.endgame())
 		{
 			takeTurn=new Turn(player1, supply);
-			takeTurn.takeTurn(player1, player2,supply);
 			takeTurn=new Turn(player2, supply);
+			takeTurn.takeTurn(player1, player2, supply);
 			takeTurn.takeTurn(player2, player1, supply);
 
 		}

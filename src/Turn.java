@@ -19,7 +19,7 @@ public class Turn {
 
 	}
 
-	private void buyCards(Player player, CardSupply theSupply) {
+	public void buyCards(Player player, CardSupply theSupply) {
 		String whatCard="nothing";
 		String pick2[]={"estate", "embargo"};
 		String pick3[]={"silver", "ambassador", "great hall", "village", "woodcutter"};
@@ -101,12 +101,13 @@ public class Turn {
 				whatCard="province";
 				}
 		}
+		player.discard.addCard("curse", theSupply.isEmbargod(whatCard));
 		System.out.println("I purchased "+whatCard);
 		return;
 		
 	}
 
-	private void spend(int i, Player player) {
+	public void spend(int i, Player player) {
 		ListIterator<Card> iterator = hand.listIterator();
 		Card myCard;
 		while(iterator.hasNext()){
@@ -121,13 +122,14 @@ public class Turn {
 		
 	}
 
-	private void endTurn(Player player) {
+	public void endTurn(Player player) {
 		for(int i=0; i<hand.size(); i++){
 			player.discard.addCard(hand.get(i).cardType);
 			
 		}
 		
 	}
+	
 	public void takeTurn(Player player, Player player2, CardSupply theSupply){
 		while(actions > 0){
 			playAction(player, player2, theSupply);
@@ -147,7 +149,7 @@ public class Turn {
 		
 	}
 
-	private void playAction(Player player, Player player2, CardSupply theSupply) {
+	public void playAction(Player player, Player player2, CardSupply theSupply) {
 		for(int i=0; i<hand.size(); i++) //go through each card in hand.
 		{
 			if(hand.get(i).action){
@@ -170,7 +172,7 @@ public class Turn {
 		return;
 	}
 
-	private void doTheThing(Card card, Player player, Player player2, CardSupply theSupply) {
+	public void doTheThing(Card card, Player player, Player player2, CardSupply theSupply) {
 		String whatCard;
 		Random randomness = new Random();
 		switch(card.cardType){
@@ -208,11 +210,15 @@ public class Turn {
 			else hand.add(new Card(whatCard));
 			return;
 			}
-		}
+		case "embargo":
+			hand.remove(card);
+			String embargo = theSupply.kingdomCards.get(randomness.nextInt(theSupply.kingdomCards.size()));
+			theSupply.embargo(embargo);
+			return;
 		
-	}
-	
-	
-
+			}
+		
+		return;
+		}		
 	
 }

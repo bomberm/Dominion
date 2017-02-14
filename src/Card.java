@@ -1,7 +1,7 @@
 
 public class Card {
 	String cardType;
-	int cost, worth, actionsGranted, buysGranted, cardsGranted, victoryPoints, embargoTokens;
+	int cost, worth, actionsGranted, buysGranted, cardsGranted, victoryPoints;
 	boolean special, action;
 
 	public Card(String type)
@@ -82,9 +82,7 @@ public class Card {
 			case "curse":
 				makeCurse(this);
 				break;
-			}
-		embargoTokens=0;
-		
+			}		
 		}
 	private void makeCurse(Card card) {
 		card.cost=0;

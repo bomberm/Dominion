@@ -106,6 +106,7 @@ public class CardSupply {
 			return;
 		case "estate":
 			estate.quantity--;
+			return;
 		case "duchy":
 			duchy.quantity--;
 			return;
@@ -332,6 +333,7 @@ public class CardSupply {
 		}
 
 	public void addCard(String string, int i) {
+		if (i==0) return;
 		switch(string){
 		case "copper":
 			copper.quantity+=i;
@@ -409,6 +411,120 @@ public class CardSupply {
 		if(emptyPiles>=3) return true;
 		
 		return false;
+	}
+
+
+
+	
+	public void embargo(String embargo2) {
+		switch(embargo2){
+		case "copper":
+			copper.embargoTokens++;
+			break;
+		case "silver":
+			silver.embargoTokens++;
+			break;
+		case "gold":
+			gold.embargoTokens++;
+			break;
+		case "estate":
+			estate.embargoTokens++;
+			break;
+		case "duchy":
+			duchy.embargoTokens++;
+			break;
+		case "province":
+			province.embargoTokens++;
+			break;
+		case "adventurer":
+			adventurer.embargoTokens++;
+			break;
+		case "ambassador":
+			ambassador.embargoTokens++;
+			break;
+		case "baron":
+			baron.embargoTokens++;
+			break;
+		case "council room":
+			councilRoom.embargoTokens++;
+		case "cutpurse":
+			cutPurse.embargoTokens++;
+		case "embargo":
+			embargo.embargoTokens++;
+			break;
+		case "feast":
+			feast.embargoTokens++;
+			break;
+		case "gardens":
+			gardens.embargoTokens++;
+			break;
+		case "great hall":
+			greatHall.embargoTokens++;
+			break;
+		case "mine":
+			mine.embargoTokens++;
+			break;
+		case "smithy":
+			smithy.embargoTokens++;
+			break;
+		case "village":
+			village.embargoTokens++;
+			break;
+		case "woodcutter":
+			woodcutter.embargoTokens++;
+			break;
+		case "curse":
+			curse.embargoTokens++;
+			break;
+		}
+		
+	}
+
+	public int isEmbargod(String whatCard) {
+		switch(whatCard){
+		case "copper":
+			return copper.embargoTokens;
+		case "silver":
+			return silver.embargoTokens;
+		case "gold":
+			return gold.embargoTokens;
+		case "estate":
+			return estate.embargoTokens;
+		case "duchy":
+			return duchy.embargoTokens;
+		case "province":
+			return province.embargoTokens;
+		case "adventurer":
+			return adventurer.embargoTokens;
+		case "ambassador":
+			return ambassador.embargoTokens;
+		case "baron":
+			return baron.embargoTokens;
+		case "council room":
+			return councilRoom.embargoTokens;
+		case "cutpurse":
+			return cutPurse.embargoTokens; 
+		case "embargo":
+			return embargo.embargoTokens;
+		case "feast":
+			return feast.embargoTokens;
+		case "gardens":
+			return gardens.embargoTokens;
+		case "great hall":
+			return greatHall.embargoTokens;
+		case "mine":
+			return mine.embargoTokens;
+		case "smithy":
+			return smithy.embargoTokens;
+		case "village":
+			return village.embargoTokens;
+		case "woodcutter":
+			return woodcutter.embargoTokens;
+		case "curse":
+			return curse.embargoTokens;
+		}
+		
+		return 0;
 	}
 }
 	

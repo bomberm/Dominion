@@ -1,11 +1,12 @@
 
 public class SupplyStack {
 	Card type;
-	int quantity;
+	int quantity, embargoTokens;
 	
 	public SupplyStack(String type, int count){
 		this.type=new Card(type);
 		quantity=count;
+		embargoTokens=0;
 	}
 	
 	public String getType(){

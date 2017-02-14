@@ -63,7 +63,7 @@ public class Player {
 	}
 
 
-	private int deckSize(CardSupply drawPile2) {
+	public int deckSize(CardSupply drawPile2) {
 		List<String> cardsUsed= new LinkedList<String>();
 		int cardsRemaining=0;
 		for(String card : drawPile2.kingdomCards)
