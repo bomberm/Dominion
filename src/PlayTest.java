@@ -1,32 +1,37 @@
-
+import java.util.Random;
 
 public class PlayTest {
 
 	public static void main(String[] args) {
 		CardSupply supply=new CardSupply();
-		Player player1=new Player(supply);
-		Player player2=new Player(supply);
-		int player1Victory, player2Victory;
+		int winnerIndex=0, numberOfPlayers;
 		Turn takeTurn;
+		Random randomness = new Random();
+		
+		numberOfPlayers=(randomness.nextInt(2))+2;
+		Player[] players = new Player[numberOfPlayers];
+		int[] victoryPoints = new int[numberOfPlayers];
 		
 		while(!supply.endgame())
 		{
-			takeTurn=new Turn(player1, supply);
-			System.out.println("Player one:");
-			takeTurn.takeTurn(player1, player2, supply);
-			takeTurn=new Turn(player2, supply);
-			System.out.println("Player two:");
-			takeTurn.takeTurn(player2, player1, supply);
-
+			for(int i=0; i<numberOfPlayers; i++){
+				takeTurn=new Turn(players[i], supply);
+				System.out.println("Player "+i+":");
+				takeTurn.takeTurn(players[i], players, supply);
+			}
 		}
 
-		player1Victory = player1.countPoints();
-		player2Victory = player2.countPoints();
+		for(int i=0; i<numberOfPlayers; i++){
+			victoryPoints[i] = players[i].countPoints();
+		}
+
+		for (int i = 1; i < numberOfPlayers; i++) {
+		    if (victoryPoints[i] > victoryPoints[winnerIndex]) {
+		      winnerIndex = i;
+		    }
+		}
 		
-		if(player1Victory>=player2Victory) System.out.println("Player 1 wins with "+player1Victory+ " points");
-		else System.out.println("Player 2 wins with "+player2Victory+ " points");
-
-
+		System.out.println("Player " +winnerIndex+" wins with "+victoryPoints[winnerIndex]+ " points");
 	}
 
 }

@@ -129,9 +129,9 @@ public class Turn {
 		hand.clear();
 	}
 	
-	public void takeTurn(Player player, Player player2, CardSupply theSupply){
+	public void takeTurn(Player player, Player[] players, CardSupply theSupply){
 		while(actions > 0){
-			playAction(player, player2, theSupply);
+			playAction(player, players, theSupply);
 			actions--;
 		}
 		
@@ -148,7 +148,7 @@ public class Turn {
 		endTurn(player);	
 	}
 
-	public void playAction(Player player, Player player2, CardSupply theSupply) {
+	public void playAction(Player player, Player[] players, CardSupply theSupply) {
 		for(int i=0; i<hand.size()+1; i++) //go through each card in hand.
 		{
 			if(i==hand.size()) break;
@@ -161,7 +161,7 @@ public class Turn {
 					hand.add(player.drawCard());
 				}
 				Card card=hand.get(i);
-				if(hand.get(i).special) doTheThing(hand.get(i), player, player2, theSupply);
+				if(hand.get(i).special) doTheThing(hand.get(i), player, players, theSupply);
 				else player.discard.addCard(hand.get(i).cardType);
 				hand.remove(card);
 				return;
@@ -171,7 +171,7 @@ public class Turn {
 		return;
 	}
 
-	public void doTheThing(Card card, Player player, Player player2, CardSupply theSupply) {
+	public void doTheThing(Card card, Player player, Player[] players, CardSupply theSupply) {
 		String whatCard;
 		Random randomness = new Random();
 		switch(card.cardType){

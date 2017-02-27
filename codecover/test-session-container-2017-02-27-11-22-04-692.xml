@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1487054776429" TestSessionContainerId="22366609-50c2-4373-8217-08cdb69e8d53" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1488223324664" TestSessionContainerId="11eb5119-6cff-4ae9-b465-f5f5b681d1d7" version="1.0">
 <SrcFileList>
 <SrcFile Content="&#13;&#10;public class Card {&#13;&#10;&#9;String cardType;&#13;&#10;&#9;int cost, worth, actionsGranted, buysGranted, cardsGranted, victoryPoints;&#13;&#10;&#9;boolean special, action;&#13;&#10;&#13;&#10;&#9;public Card(String type)&#13;&#10;&#9;{&#13;&#10;&#9;&#9;cardType=type;&#13;&#10;&#9;&#9;action=false;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;switch(type){&#13;&#10;&#9;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeCopper(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeSilver(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeGold(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeEstate(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeDuchy(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeProvince(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeAdventurer(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeAmbassador(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeBaron(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeCouncilRoom(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeCutpurse(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeEmbargo(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeFeast(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeGardens(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeGreatHall(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeMine(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeSmithy(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeVillage(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeWoodcutter(this);&#13;&#10;&#9;&#9;&#9;&#9;action=true;&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;&#9;makeCurse(this);&#13;&#10;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;}&#9;&#9;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;private void makeCurse(Card card) {&#13;&#10;&#9;&#9;card.cost=0;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=(-1);&#13;&#10;&#9;&#9;special=false; &#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeMine(Card card) {&#13;&#10;&#9;&#9;card.cost=5;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //trash a treasure card, gain a treasure card costing up to 3 more put it in your hand &#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeGreatHall(Card card) {&#13;&#10;&#9;&#9;card.cost=3;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=1;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=1;&#13;&#10;&#9;&#9;card.victoryPoints=1;&#13;&#10;&#9;&#9;special=false;  &#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeGardens(Card card) {&#13;&#10;&#9;&#9;card.cost=4;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //worth 1 vp for every 10 cards in deck, (rounded down) &#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeFeast(Card card) {&#13;&#10;&#9;&#9;card.cost=4;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //Trash this card. Gain a card costing up to 5 gold &#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeEmbargo(Card card) {&#13;&#10;&#9;&#9;card.cost=2;&#13;&#10;&#9;&#9;card.worth=2;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //trash this card, put embargo token on the top of a supply pile/ When a player buys a card, he gains a curse card per embargo token on that pile &#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeCutpurse(Card card) {&#13;&#10;&#9;&#9;card.cost=4;&#13;&#10;&#9;&#9;card.worth=2;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //Each other player discards a Copper card (or reveals a hand with no Copper)&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeBaron(Card card) {&#13;&#10;&#9;&#9;card.cost=4;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=1;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //You may discard an estate card and gain +4, or gain an estate card&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeAmbassador(Card card) {&#13;&#10;&#9;&#9;card.cost=3;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //reveal a card from your hand, return up to 2 copies of it from your hand to the Supply, then each other player gains a copy of it /dead/&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeWoodcutter(Card card) {&#13;&#10;&#9;&#9;card.cost=3;&#13;&#10;&#9;&#9;card.worth=2;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=1;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeVillage(Card card) {&#13;&#10;&#9;&#9;card.cost=3;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=2;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=1;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeSmithy(Card card) {&#13;&#10;&#9;&#9;card.cost=4;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=3;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;private void makeCouncilRoom(Card card) {&#13;&#10;&#9;&#9;card.cost=5;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=1;&#13;&#10;&#9;&#9;card.cardsGranted=4;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=true; //each other player draws a card&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;private void makeAdventurer(Card card) {&#13;&#10;&#9;&#9;card.cost=8;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=6;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeProvince(Card card) {&#13;&#10;&#9;&#9;card.cost=8;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=6;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeDuchy(Card card) {&#13;&#10;&#9;&#9;card.cost=5;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=3;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;private void makeEstate(Card card) {&#13;&#10;&#9;&#9;card.cost=2;&#13;&#10;&#9;&#9;card.worth=0;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=1;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;private void makeGold(Card card) {&#13;&#10;&#9;&#9;card.cost=6;&#13;&#10;&#9;&#9;card.worth=3;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;private void makeSilver(Card card) {&#13;&#10;&#9;&#9;card.cost=3;&#13;&#10;&#9;&#9;card.worth=2;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;private void makeCopper(Card card) {&#13;&#10;&#9;&#9;card.cost=0;&#13;&#10;&#9;&#9;card.worth=1;&#13;&#10;&#9;&#9;card.actionsGranted=0;&#13;&#10;&#9;&#9;card.buysGranted=0;&#13;&#10;&#9;&#9;card.cardsGranted=0;&#13;&#10;&#9;&#9;card.victoryPoints=0;&#13;&#10;&#9;&#9;special=false;&#13;&#10;&#9;&#9;return;&#9;&#9;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public String toString(){&#13;&#10;&#9;&#9;String myInfo;&#13;&#10;&#9;&#9;myInfo=this.cardType;&#13;&#10;&#9;&#9;//myInfo=&quot;My name is &quot;+this.cardType;&#13;&#10;&#9;&#9;//myInfo+=&quot;. I cost &quot;+this.cost+&quot; gold.\n&quot;;&#13;&#10;&#9;&#9;//myInfo+=&quot;I grant &quot;+this.actionsGranted+&quot; actions. &quot;;&#13;&#10;&#9;&#9;//myInfo+=&quot;I also grant &quot;+this.buysGranted+&quot; additional buys.\n&quot;;&#13;&#10;&#9;&#9;//myInfo+=&quot;I shove &quot;+this.cardsGranted+&quot; more cards into your hand &quot;;&#13;&#10;&#9;&#9;//myInfo+=&quot;and am worth &quot;+this.victoryPoints+&quot; victory points. \n&quot;;&#13;&#10;&#9;&#9;//myInfo+=&quot;I currently am holding &quot;+this.embargoTokens+&quot; embargo tokens.\n&quot;;&#13;&#10;&#9;&#9;//if(this.special==true) myInfo+=&quot;I also do some other stuff\n&quot;;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return myInfo;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public String[] allCards(){&#13;&#10;&#9;&#9;String allCards[] ={&quot;copper&quot;, &quot;silver&quot;, &quot;gold&quot;, &quot;estate&quot;, &quot;duchy&quot;, &quot;province&quot;, &quot;curse&quot;, &quot;adventurer&quot;, &quot;ambassador&quot;, &quot;baron&quot;, &quot;council room&quot;, &quot;cutpurse&quot;, &quot;embargo&quot;, &quot;feast&quot;, &quot;gardens&quot;, &quot;great hall&quot;, &quot;mine&quot;, &quot;smithy&quot;, &quot;village&quot;, &quot;woodcutter&quot;};&#13;&#10;&#9;&#9;return allCards;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}" Filename="Card.java" Intrnl_Id="1"/>
 <SrcFile Content="import java.util.LinkedList;&#13;&#10;import java.util.List;&#13;&#10;import java.util.Random;&#13;&#10;&#13;&#10;public class CardSupply {&#13;&#10;&#9;SupplyStack copper, silver, gold, estate, duchy, province, curse, adventurer;&#13;&#10;&#9;SupplyStack ambassador, baron, councilRoom, cutPurse, embargo, feast, gardens;&#13;&#10;&#9;SupplyStack greatHall, mine, smithy, village, woodcutter;&#13;&#10;&#9;List&lt;String&gt; kingdomCards=&#9;&#9;new LinkedList&lt;String&gt;(); //contain kingdom cards used this game&#13;&#10;&#9;&#13;&#10;&#9;CardSupply(CardSupply supply){&#13;&#10;&#9;&#9;copper= &#9;new SupplyStack(&quot;copper&quot;, 0); //need 46 for supply &#13;&#10;&#9;&#9;silver=&#9;&#9;new SupplyStack(&quot;silver&quot;, 0); //need 40 for supply&#13;&#10;&#9;&#9;gold= &#9;&#9;new SupplyStack(&quot;gold&quot;, 0);//need 30&#13;&#10;&#9;&#9;estate=&#9;&#9;new SupplyStack(&quot;estate&quot;, 0); //Need 18&#13;&#10;&#9;&#9;duchy=&#9;&#9;new SupplyStack(&quot;duchy&quot;, 0); //need 12&#13;&#10;&#9;&#9;province= &#9;new SupplyStack(&quot;province&quot;, 0); //need 12&#13;&#10;&#9;&#9;curse=&#9; &#9;new SupplyStack(&quot;curse&quot;, 0); //need 10 for 2 players&#13;&#10;&#9;&#9;adventurer=&#9;new SupplyStack(&quot;adventurer&quot;, 0); //need 10&#13;&#10;&#9;&#9;ambassador=&#9;new SupplyStack(&quot;abassador&quot;, 0); //need 10&#13;&#10;&#9;&#9;baron= &#9;&#9;new SupplyStack(&quot;baron&quot;, 0); //need 10&#13;&#10;&#9;&#9;councilRoom=new SupplyStack(&quot;council room&quot;, 0); //need 10&#13;&#10;&#9;&#9;cutPurse= &#9;new SupplyStack(&quot;cutpurse&quot;, 0); //need 10&#13;&#10;&#9;&#9;embargo= &#9;new SupplyStack(&quot;embargo&quot;, 0); //need 10&#13;&#10;&#9;&#9;feast= &#9;&#9;new SupplyStack(&quot;feast&quot;, 0); //need 10&#13;&#10;&#9;&#9;gardens= &#9;new SupplyStack(&quot;gardens&quot;, 0); //need 10&#13;&#10;&#9;&#9;greatHall= &#9;new SupplyStack(&quot;great hall&quot;, 0); //need 10&#13;&#10;&#9;&#9;mine= &#9;&#9;new SupplyStack(&quot;mine&quot;, 0); //need 10&#13;&#10;&#9;&#9;smithy= &#9;new SupplyStack(&quot;smithy&quot;, 0); //need 10&#13;&#10;&#9;&#9;village= &#9;new SupplyStack(&quot;village&quot;, 0); //need 10&#13;&#10;&#9;&#9;woodcutter= new SupplyStack(&quot;woodcutter&quot;, 0); //need 10&#13;&#10;&#9;&#9;kingdomCards=supply.kingdomCards;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#13;&#10;&#9;CardSupply(){&#13;&#10;&#9;&#9;copper= &#9;new SupplyStack(&quot;copper&quot;, 46); //need 46 for supply &#13;&#10;&#9;&#9;silver=&#9;&#9;new SupplyStack(&quot;silver&quot;,  40); //need 40 for supply&#13;&#10;&#9;&#9;gold= &#9;&#9;new SupplyStack(&quot;gold&quot;,  30);//need 30&#13;&#10;&#9;&#9;estate=&#9;&#9;new SupplyStack(&quot;estate&quot;,  12); //Need 18&#13;&#10;&#9;&#9;duchy=&#9;&#9;new SupplyStack(&quot;duchy&quot;,  12); //need 12&#13;&#10;&#9;&#9;province= &#9;new SupplyStack(&quot;province&quot;,  12); //need 12&#13;&#10;&#9;&#9;curse=&#9; &#9;new SupplyStack(&quot;curse&quot;,  10); //need 10 for 2 players&#13;&#10;&#9;&#9;adventurer=&#9;new SupplyStack(&quot;adventurer&quot;,  10); //need 10&#13;&#10;&#9;&#9;ambassador=&#9;new SupplyStack(&quot;abassador&quot;,  10); //need 10&#13;&#10;&#9;&#9;baron= &#9;&#9;new SupplyStack(&quot;baron&quot;,  10); //need 10&#13;&#10;&#9;&#9;councilRoom=new SupplyStack(&quot;council room&quot;,  10); //need 10&#13;&#10;&#9;&#9;cutPurse= &#9;new SupplyStack(&quot;cutpurse&quot;,  10); //need 10&#13;&#10;&#9;&#9;embargo= &#9;new SupplyStack(&quot;embargo&quot;,  10); //need 10&#13;&#10;&#9;&#9;feast= &#9;&#9;new SupplyStack(&quot;feast&quot;,  10); //need 10&#13;&#10;&#9;&#9;gardens= &#9;new SupplyStack(&quot;gardens&quot;,  10); //need 10&#13;&#10;&#9;&#9;greatHall= &#9;new SupplyStack(&quot;great hall&quot;,  10); //need 10&#13;&#10;&#9;&#9;mine= &#9;&#9;new SupplyStack(&quot;mine&quot;,  10); //need 10&#13;&#10;&#9;&#9;smithy= &#9;new SupplyStack(&quot;smithy&quot;,  10); //need 10&#13;&#10;&#9;&#9;village= &#9;new SupplyStack(&quot;village&quot;,  10); //need 10&#13;&#10;&#9;&#9;woodcutter= new SupplyStack(&quot;woodcutter&quot;,  10); //need 10&#13;&#10;&#9;&#9;selectKingdomCards();&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;&#9;private void selectKingdomCards() {&#13;&#10;&#9;&#9;String cardList[]={&quot;adventurer&quot;, &quot;ambassador&quot;, &quot;baron&quot;, &quot;council room&quot;, &quot;cutpurse&quot;, &quot;embargo&quot;, &quot;feast&quot;, &quot;gardens&quot;, &quot;great hall&quot;, &quot;mine&quot;, &quot;smithy&quot;, &quot;village&quot;, &quot;woodcutter&quot;};&#13;&#10;&#9;&#9;Random randomness=new Random();&#13;&#10;&#9;&#9;int index;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;while(kingdomCards.size()&lt;10){&#13;&#10;&#9;&#9;&#9;index=randomness.nextInt(13);&#13;&#10;&#9;&#9;&#9;if(!kingdomCards.contains(cardList[index])) kingdomCards.add(cardList[index]);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public Card drawCard(){&#13;&#10;&#9;&#9;List&lt;String&gt; choices= new LinkedList&lt;String&gt;();&#13;&#10;&#9;&#9;String cardTypes[]=copper.type.allCards();&#13;&#10;&#9;&#9;for(String card : cardTypes){&#13;&#10;&#9;&#9;&#9;choices.add(card);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;Random randomness= new Random();&#13;&#10;&#9;&#9;int index;&#13;&#10;&#9;&#9;Card card;&#13;&#10;&#13;&#10;&#9;&#9;index=randomness.nextInt(20);&#13;&#10;&#9;&#9;while(howMany(choices.get(index))&lt;=0){ //Grab different card types until one actually exists in the deck&#13;&#10;&#9;&#9;&#9;index=randomness.nextInt(20);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;card = new Card(choices.get(index));&#13;&#10;&#9;&#9;removeCard(choices.get(index));&#13;&#10;&#9;&#9;return card;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public void removeCard(String string) {&#13;&#10;&#9;&#9;switch(string){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;copper.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;silver.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;gold.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;estate.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;duchy.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;province.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;adventurer.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;ambassador.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;baron.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;councilRoom.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;cutPurse.quantity--;&#13;&#10;&#9;&#9;&#9;return; &#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;embargo.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;feast.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;gardens.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;greatHall.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;mine.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;smithy.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;village.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;woodcutter.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;curse.quantity--;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void addCard(String string) {&#13;&#10;&#9;&#9;switch(string){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;copper.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;silver.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;gold.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;estate.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;duchy.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;province.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;adventurer.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;ambassador.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;baron.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;councilRoom.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;cutPurse.quantity++;&#13;&#10;&#9;&#9;&#9;return; &#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;embargo.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;feast.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;gardens.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;greatHall.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;mine.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;smithy.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;village.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;woodcutter.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;curse.quantity++;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int howMany(String ofWhat){&#13;&#10;&#9;&#9;switch(ofWhat){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;return copper.quantity;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;return silver.quantity;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;return gold.quantity;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;return estate.quantity;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;return duchy.quantity;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;return province.quantity;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;return adventurer.quantity;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;return ambassador.quantity;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;return baron.quantity;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;return councilRoom.quantity;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;return cutPurse.quantity; &#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;return embargo.quantity;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;return feast.quantity;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;return gardens.quantity;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;return greatHall.quantity;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;return mine.quantity;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;return smithy.quantity;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;return village.quantity;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;return woodcutter.quantity;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;return curse.quantity;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return 0;&#13;&#10;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public int cardVP(String ofWhat){&#13;&#10;&#9;&#9;switch(ofWhat){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;return copper.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;return silver.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;return gold.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;return estate.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;return duchy.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;return province.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;return adventurer.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;return ambassador.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;return baron.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;return councilRoom.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;return cutPurse.type.victoryPoints; &#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;return embargo.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;return feast.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;return gardens.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;return greatHall.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;return mine.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;return smithy.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;return village.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;return woodcutter.type.victoryPoints;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;return curse.type.victoryPoints;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return 0;&#13;&#10;&#13;&#10;&#9;}&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;public String toString(){&#13;&#10;&#9;&#9;String returnString=&quot;&quot;;&#13;&#10;&#9;&#9;String theList[]=curse.type.allCards();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;for(String eachCard : theList){&#13;&#10;&#9;&#9;&#9;returnString+=eachCard+&quot; has: &quot;+howMany(eachCard)+&quot; cards currently\n&quot;;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return returnString;&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#9;public void addCard(String string, int i) {&#13;&#10;&#9;&#9;if (i==0) return;&#13;&#10;&#9;&#9;switch(string){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;copper.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;silver.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;gold.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;estate.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;duchy.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;province.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;adventurer.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;ambassador.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;baron.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;councilRoom.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;cutPurse.quantity+=i;&#13;&#10;&#9;&#9;&#9;return; &#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;embargo.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;feast.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;gardens.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;greatHall.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;mine.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;smithy.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;village.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;woodcutter.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;curse.quantity+=i;&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public boolean endgame() {&#13;&#10;&#9;&#9;int emptyPiles=0;&#13;&#10;&#9;&#9;String remainingPiles[]={&quot;copper&quot;, &quot;silver&quot;, &quot;gold&quot;, &quot;estate&quot;, &quot;duchy&quot;, &quot;curse&quot;};&#13;&#10;&#9;&#9;if(province.quantity&lt;1) return true;&#13;&#10;&#9;&#9;for(String card: kingdomCards)&#13;&#10;&#9;&#9;&#9;if(howMany(card)&lt;1) emptyPiles++;&#13;&#10;&#9;&#9;if(emptyPiles&gt;=3) return true;&#13;&#10;&#9;&#9;for(String card: remainingPiles)&#13;&#10;&#9;&#9;&#9;if(howMany(card)&lt;1) emptyPiles++;&#13;&#10;&#9;&#9;if(emptyPiles&gt;=3) return true;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return false;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;public void embargo(String embargo2) {&#13;&#10;&#9;&#9;switch(embargo2){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;copper.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;silver.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;gold.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;estate.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;duchy.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;province.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;adventurer.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;ambassador.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;baron.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;councilRoom.embargoTokens++;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;cutPurse.embargoTokens++;&#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;embargo.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;feast.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;gardens.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;greatHall.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;mine.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;smithy.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;village.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;woodcutter.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;curse.embargoTokens++;&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int isEmbargod(String whatCard) {&#13;&#10;&#9;&#9;switch(whatCard){&#13;&#10;&#9;&#9;case &quot;copper&quot;:&#13;&#10;&#9;&#9;&#9;return copper.embargoTokens;&#13;&#10;&#9;&#9;case &quot;silver&quot;:&#13;&#10;&#9;&#9;&#9;return silver.embargoTokens;&#13;&#10;&#9;&#9;case &quot;gold&quot;:&#13;&#10;&#9;&#9;&#9;return gold.embargoTokens;&#13;&#10;&#9;&#9;case &quot;estate&quot;:&#13;&#10;&#9;&#9;&#9;return estate.embargoTokens;&#13;&#10;&#9;&#9;case &quot;duchy&quot;:&#13;&#10;&#9;&#9;&#9;return duchy.embargoTokens;&#13;&#10;&#9;&#9;case &quot;province&quot;:&#13;&#10;&#9;&#9;&#9;return province.embargoTokens;&#13;&#10;&#9;&#9;case &quot;adventurer&quot;:&#13;&#10;&#9;&#9;&#9;return adventurer.embargoTokens;&#13;&#10;&#9;&#9;case &quot;ambassador&quot;:&#13;&#10;&#9;&#9;&#9;return ambassador.embargoTokens;&#13;&#10;&#9;&#9;case &quot;baron&quot;:&#13;&#10;&#9;&#9;&#9;return baron.embargoTokens;&#13;&#10;&#9;&#9;case &quot;council room&quot;:&#13;&#10;&#9;&#9;&#9;return councilRoom.embargoTokens;&#13;&#10;&#9;&#9;case &quot;cutpurse&quot;:&#13;&#10;&#9;&#9;&#9;return cutPurse.embargoTokens; &#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;return embargo.embargoTokens;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;return feast.embargoTokens;&#13;&#10;&#9;&#9;case &quot;gardens&quot;:&#13;&#10;&#9;&#9;&#9;return gardens.embargoTokens;&#13;&#10;&#9;&#9;case &quot;great hall&quot;:&#13;&#10;&#9;&#9;&#9;return greatHall.embargoTokens;&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;return mine.embargoTokens;&#13;&#10;&#9;&#9;case &quot;smithy&quot;:&#13;&#10;&#9;&#9;&#9;return smithy.embargoTokens;&#13;&#10;&#9;&#9;case &quot;village&quot;:&#13;&#10;&#9;&#9;&#9;return village.embargoTokens;&#13;&#10;&#9;&#9;case &quot;woodcutter&quot;:&#13;&#10;&#9;&#9;&#9;return woodcutter.embargoTokens;&#13;&#10;&#9;&#9;case &quot;curse&quot;:&#13;&#10;&#9;&#9;&#9;return curse.embargoTokens;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return 0;&#13;&#10;&#9;}&#13;&#10;}&#13;&#10;&#9;" Filename="CardSupply.java" Intrnl_Id="2"/>
 <SrcFile Content="import org.junit.Test;&#13;&#10;&#13;&#10;public class CardSupplyTest {&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testRemoveCard() {&#13;&#10;&#9;&#9;CardSupply testDeck = new CardSupply();&#13;&#10;&#9;&#9;testDeck.removeCard(&quot;copper&quot;);&#13;&#10;&#9;&#9;assert(testDeck.copper.quantity&lt;46);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testAddCardString() {&#13;&#10;&#9;&#9;CardSupply testDeck = new CardSupply();&#13;&#10;&#9;&#9;testDeck.addCard(&quot;copper&quot;);&#13;&#10;&#9;&#9;assert(testDeck.copper.quantity&gt;46);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testHowMany() {&#13;&#10;&#9;&#9;CardSupply testDeck = new CardSupply();&#13;&#10;&#9;&#9;int howMany=testDeck.howMany(&quot;province&quot;);&#13;&#10;&#9;&#9;assert(howMany==12);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testCardVP() {&#13;&#10;&#9;&#9;CardSupply testDeck = new CardSupply();&#13;&#10;&#9;&#9;assert(testDeck.cardVP(&quot;province&quot;)==6);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testAddCardStringInt() {&#13;&#10;&#9;&#9;CardSupply testDeck = new CardSupply();&#13;&#10;&#9;&#9;testDeck.addCard(&quot;copper&quot;, 54);&#13;&#10;&#9;&#9;assert(testDeck.copper.quantity==100);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testEndgame() {&#13;&#10;&#9;&#9;CardSupply testDeck = new CardSupply();&#13;&#10;&#9;&#9;testDeck.province.quantity=0;&#13;&#10;&#9;&#9;assert(testDeck.endgame());&#13;&#10;&#9;&#9;testDeck = new CardSupply();&#13;&#10;&#9;&#9;testDeck.copper.quantity=0;&#13;&#10;&#9;&#9;testDeck.silver.quantity=0;&#13;&#10;&#9;&#9;testDeck.estate.quantity=0;&#13;&#10;&#9;&#9;assert(testDeck.endgame());&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="CardSupplyTest.java" Intrnl_Id="3"/>
-<SrcFile Content="&#13;&#10;&#13;&#10;public class PlayTest {&#13;&#10;&#13;&#10;&#9;public static void main(String[] args) {&#13;&#10;&#9;&#9;CardSupply supply=new CardSupply();&#13;&#10;&#9;&#9;Player player1=new Player(supply);&#13;&#10;&#9;&#9;Player player2=new Player(supply);&#13;&#10;&#9;&#9;int player1Victory, player2Victory;&#13;&#10;&#9;&#9;Turn takeTurn;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;while(!supply.endgame())&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;takeTurn=new Turn(player1, supply);&#13;&#10;&#9;&#9;&#9;System.out.println(&quot;Player one:&quot;);&#13;&#10;&#9;&#9;&#9;takeTurn.takeTurn(player1, player2, supply);&#13;&#10;&#9;&#9;&#9;takeTurn=new Turn(player2, supply);&#13;&#10;&#9;&#9;&#9;System.out.println(&quot;Player two:&quot;);&#13;&#10;&#9;&#9;&#9;takeTurn.takeTurn(player2, player1, supply);&#13;&#10;&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#9;&#9;player1Victory = player1.countPoints();&#13;&#10;&#9;&#9;player2Victory = player2.countPoints();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;if(player1Victory&gt;=player2Victory) System.out.println(&quot;Player 1 wins with &quot;+player1Victory+ &quot; points&quot;);&#13;&#10;&#9;&#9;else System.out.println(&quot;Player 2 wins with &quot;+player2Victory+ &quot; points&quot;);&#13;&#10;&#13;&#10;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="PlayTest.java" Intrnl_Id="4"/>
+<SrcFile Content="import java.util.Random;&#13;&#10;&#13;&#10;public class PlayTest {&#13;&#10;&#13;&#10;&#9;public static void main(String[] args) {&#13;&#10;&#9;&#9;CardSupply supply=new CardSupply();&#13;&#10;&#9;&#9;int player1Victory, player2Victory, numberOfPlayers;&#13;&#10;&#9;&#9;Turn takeTurn;&#13;&#10;&#9;&#9;Random randomness = new Random();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;numberOfPlayers=(randomness.nextInt(2))+2;&#13;&#10;&#9;&#9;Player[] players = new Player[numberOfPlayers];&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;while(!supply.endgame())&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;for(Player player: players){&#13;&#10;&#9;&#9;&#9;&#9;takeTurn=new Turn(player, supply);&#13;&#10;&#9;&#9;&#9;&#9;System.out.println(&quot;Player one:&quot;);&#13;&#10;&#9;&#9;&#9;&#9;takeTurn.takeTurn(player, players, supply);&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#9;&#9;player1Victory = player1.countPoints();&#13;&#10;&#9;&#9;player2Victory = player2.countPoints();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;if(player1Victory&gt;=player2Victory) System.out.println(&quot;Player 1 wins with &quot;+player1Victory+ &quot; points&quot;);&#13;&#10;&#9;&#9;else System.out.println(&quot;Player 2 wins with &quot;+player2Victory+ &quot; points&quot;);&#13;&#10;&#13;&#10;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="PlayTest.java" Intrnl_Id="4"/>
 <SrcFile Content="import java.util.LinkedList;&#13;&#10;import java.util.List;&#13;&#10;&#13;&#10;public class Player {&#13;&#10;&#9;CardSupply discard, drawPile;&#13;&#10;&#9;&#13;&#10;&#9;public Player(CardSupply supply)&#13;&#10;&#9;{&#13;&#10;&#9;&#9;discard=new CardSupply(supply);&#13;&#10;&#9;&#9;drawPile=new CardSupply(supply);&#13;&#10;&#9;&#9;drawPile.addCard(&quot;copper&quot;, 7);&#13;&#10;&#9;&#9;drawPile.addCard(&quot;estate&quot;, 3);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;&#9;public void shuffleDiscard(){ //doesn't actually shuffle, just moves discard back into drawPile&#13;&#10;&#9;&#9;drawPile.adventurer.quantity=discard.adventurer.quantity;&#13;&#10;&#9;&#9;discard.adventurer.quantity=0;&#13;&#10;&#9;&#9;drawPile.ambassador.quantity=discard.ambassador.quantity;&#13;&#10;&#9;&#9;discard.ambassador.quantity=0;&#13;&#10;&#9;&#9;drawPile.copper.quantity=discard.copper.quantity;&#13;&#10;&#9;&#9;discard.copper.quantity=0;&#13;&#10;&#9;&#9;drawPile.silver.quantity=discard.silver.quantity;&#13;&#10;&#9;&#9;discard.silver.quantity=0;&#13;&#10;&#9;&#9;drawPile.gold.quantity=discard.gold.quantity;&#13;&#10;&#9;&#9;discard.gold.quantity=0;&#13;&#10;&#9;&#9;drawPile.estate.quantity=discard.estate.quantity;&#13;&#10;&#9;&#9;discard.estate.quantity=0;&#13;&#10;&#9;&#9;drawPile.baron.quantity=discard.baron.quantity;&#13;&#10;&#9;&#9;discard.baron.quantity=0;&#13;&#10;&#9;&#9;drawPile.duchy.quantity=discard.duchy.quantity;&#13;&#10;&#9;&#9;discard.duchy.quantity=0;&#13;&#10;&#9;&#9;drawPile.province.quantity=discard.province.quantity;&#13;&#10;&#9;&#9;discard.province.quantity=0;&#13;&#10;&#9;&#9;drawPile.curse.quantity=discard.curse.quantity;&#13;&#10;&#9;&#9;discard.curse.quantity=0;&#13;&#10;&#9;&#9;drawPile.councilRoom.quantity=discard.councilRoom.quantity;&#13;&#10;&#9;&#9;discard.councilRoom.quantity=0;&#13;&#10;&#9;&#9;drawPile.cutPurse.quantity=discard.cutPurse.quantity;&#13;&#10;&#9;&#9;discard.cutPurse.quantity=0;&#13;&#10;&#9;&#9;drawPile.embargo.quantity=discard.embargo.quantity;&#13;&#10;&#9;&#9;discard.embargo.quantity=0;&#13;&#10;&#9;&#9;drawPile.feast.quantity=discard.feast.quantity;&#13;&#10;&#9;&#9;discard.feast.quantity=0;&#13;&#10;&#9;&#9;drawPile.gardens.quantity=discard.gardens.quantity;&#13;&#10;&#9;&#9;discard.gardens.quantity=0;&#13;&#10;&#9;&#9;drawPile.greatHall.quantity=discard.greatHall.quantity;&#13;&#10;&#9;&#9;discard.greatHall.quantity=0;&#13;&#10;&#9;&#9;drawPile.mine.quantity=discard.mine.quantity;&#13;&#10;&#9;&#9;discard.mine.quantity=0;&#13;&#10;&#9;&#9;drawPile.smithy.quantity=discard.smithy.quantity;&#13;&#10;&#9;&#9;discard.smithy.quantity=0;&#13;&#10;&#9;&#9;drawPile.village.quantity=discard.village.quantity;&#13;&#10;&#9;&#9;discard.village.quantity=0;&#13;&#10;&#9;&#9;drawPile.woodcutter.quantity=discard.woodcutter.quantity;&#13;&#10;&#9;&#9;discard.woodcutter.quantity=0;&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public Card drawCard() {&#13;&#10;&#9;&#9;if(deckSize(drawPile)&lt;1) shuffleDiscard();&#13;&#10;&#9;&#9;return drawPile.drawCard();&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;&#9;public int deckSize(CardSupply deck) {&#13;&#10;&#9;&#9;List&lt;String&gt; cardsUsed= new LinkedList&lt;String&gt;();&#13;&#10;&#9;&#9;int cardsRemaining=0;&#13;&#10;&#9;&#9;for(String card : deck.kingdomCards)&#13;&#10;&#9;&#9;&#9;cardsUsed.add(card);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;copper&quot;);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;silver&quot;);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;gold&quot;);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;duchy&quot;);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;estate&quot;);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;province&quot;);&#13;&#10;&#9;&#9;cardsUsed.add(&quot;curse&quot;);&#13;&#10;&#9;&#9;for(String card : cardsUsed)&#13;&#10;&#9;&#9;&#9;cardsRemaining+=deck.howMany(card);&#13;&#10;&#9;&#9;return cardsRemaining;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;&#9;public int countPoints() {&#13;&#10;&#9;&#9;int myPoints=0;&#13;&#10;&#9;&#9;shuffleDiscard();&#13;&#10;&#9;&#9;for(String card: discard.smithy.type.allCards())&#13;&#10;&#9;&#9;&#9;myPoints+=(discard.cardVP(card)*(drawPile.howMany(card)));&#13;&#10;&#9;&#9;myPoints+=deckSize(drawPile)*drawPile.howMany(&quot;gardens&quot;);&#13;&#10;&#9;&#9;return myPoints;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="Player.java" Intrnl_Id="5"/>
 <SrcFile Content="import org.junit.Test;&#13;&#10;&#13;&#10;public class PlayerTest {&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testShuffleDiscard() {&#13;&#10;&#9;&#9;CardSupply testSupply=new CardSupply();&#13;&#10;&#9;&#9;Player testPlayer= new Player(testSupply);&#13;&#10;&#9;&#9;testPlayer.discard.addCard(&quot;estate&quot;, 5);&#13;&#10;&#9;&#9;testPlayer.shuffleDiscard();&#13;&#10;&#9;&#9;assert(testPlayer.deckSize(testPlayer.discard)==0);&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testDrawCard() {&#13;&#10;&#9;&#9;CardSupply testSupply=new CardSupply();&#13;&#10;&#9;&#9;Player testPlayer= new Player(testSupply);&#13;&#10;&#9;&#9;Card card=testPlayer.drawCard();&#13;&#10;&#9;&#9;assert(card!=null);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testDeckSize() {&#13;&#10;&#9;&#9;CardSupply testSupply=new CardSupply();&#13;&#10;&#9;&#9;Player testPlayer= new Player(testSupply);&#13;&#10;&#9;&#9;assert(testPlayer.deckSize(testPlayer.drawPile)==10);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="PlayerTest.java" Intrnl_Id="6"/>
 <SrcFile Content="&#13;&#10;public class SupplyStack {&#13;&#10;&#9;Card type;&#13;&#10;&#9;int quantity, embargoTokens;&#13;&#10;&#9;&#13;&#10;&#9;public SupplyStack(String type, int count){&#13;&#10;&#9;&#9;this.type=new Card(type);&#13;&#10;&#9;&#9;quantity=count;&#13;&#10;&#9;&#9;embargoTokens=0;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public String getType(){&#13;&#10;&#9;&#9;return type.cardType;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public int hasTreasure(){&#13;&#10;&#9;&#9;return type.worth;&#13;&#10;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;}&#13;&#10;" Filename="SupplyStack.java" Intrnl_Id="7"/>
-<SrcFile Content="import java.util.LinkedList;&#13;&#10;import java.util.List;&#13;&#10;import java.util.ListIterator;&#13;&#10;import java.util.Random;&#13;&#10;&#13;&#10;public class Turn {&#13;&#10;&#9;int actions, buys, treasure;&#13;&#10;&#9;List&lt;Card&gt; hand;&#13;&#10;&#9;&#13;&#10;&#9;public Turn(Player player, CardSupply theSupply){&#13;&#10;&#9;&#9;actions=1;&#13;&#10;&#9;&#9;buys=1;&#13;&#10;&#9;&#9;treasure=0;&#13;&#10;&#9;&#9;hand= new LinkedList&lt;Card&gt;();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;for(int i=0; i&lt;5; i++){&#13;&#10;&#9;&#9;&#9;hand.add(player.drawCard());&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void buyCards(Player player, CardSupply theSupply) {&#13;&#10;&#9;&#9;String whatCard=&quot;nothing&quot;;&#13;&#10;&#9;&#9;String pick2[]={&quot;estate&quot;, &quot;embargo&quot;};&#13;&#10;&#9;&#9;String pick3[]={&quot;silver&quot;, &quot;ambassador&quot;, &quot;great hall&quot;, &quot;village&quot;, &quot;woodcutter&quot;};&#13;&#10;&#9;&#9;String pick4[]={&quot;baron&quot;, &quot;cutpurse&quot;, &quot;feast&quot;, &quot;gardens&quot;, &quot;smithy&quot;};&#13;&#10;&#9;&#9;String pick5[]={&quot;council room&quot;, &quot;mine&quot;};&#13;&#10;&#9;&#9;String pick6[]={&quot;gold&quot;, &quot;adventurer&quot;};&#13;&#10;&#9;&#9;Random randomness=new Random();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;switch(treasure){&#13;&#10;&#9;&#9;case 1: //no card costs 1, therefore default to purchasing copper &#13;&#10;&#9;&#9;case 0:&#13;&#10;&#9;&#9;&#9;if(theSupply.copper.quantity&gt;0){&#13;&#10;&#9;&#9;&#9;&#9;player.discard.addCard(&quot;copper&quot;);&#13;&#10;&#9;&#9;&#9;&#9;theSupply.removeCard(&quot;copper&quot;);&#13;&#10;&#9;&#9;&#9;&#9;whatCard=&quot;copper&quot;;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 2:&#13;&#10;&#9;&#9;&#9;whatCard = pick2[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1) whatCard=pick2[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(2, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 3:&#13;&#10;&#9;&#9;&#9;whatCard= pick3[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick3[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(3, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 4:&#13;&#10;&#9;&#9;&#9;whatCard= pick4[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick4[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(3, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 5:&#13;&#10;&#9;&#9;&#9;whatCard= pick5[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick5[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(5, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 6:&#13;&#10;&#9;&#9;&#9;whatCard= pick6[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick6[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(6, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;default: &#13;&#10;&#9;&#9;&#9;if(theSupply.province.quantity&gt;0)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;player.discard.addCard(&quot;province&quot;);&#13;&#10;&#9;&#9;&#9;&#9;theSupply.removeCard(&quot;province&quot;);&#13;&#10;&#9;&#9;&#9;&#9;spend(8, player);&#13;&#10;&#9;&#9;&#9;&#9;whatCard=&quot;province&quot;;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;player.discard.addCard(&quot;curse&quot;, theSupply.isEmbargod(whatCard));&#13;&#10;&#9;&#9;System.out.println(&quot;I purchased &quot;+whatCard);&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void spend(int i, Player player) {&#13;&#10;&#9;&#9;ListIterator&lt;Card&gt; iterator = hand.listIterator();&#13;&#10;&#9;&#9;Card myCard;&#13;&#10;&#9;&#9;while(iterator.hasNext()){&#13;&#10;&#9;&#9;&#9;myCard=iterator.next();&#13;&#10;&#9;&#9;&#9;if(myCard.worth&gt;0){&#13;&#10;&#9;&#9;&#9;&#9;i-=myCard.worth;&#13;&#10;&#9;&#9;&#9;&#9;player.discard.addCard(myCard.cardType);&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;if(i&lt;1) return;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void endTurn(Player player) {&#13;&#10;&#9;&#9;for(int i=0; i&lt;hand.size(); i++){&#13;&#10;&#9;&#9;&#9;player.discard.addCard(hand.get(i).cardType);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;hand.clear();&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public void takeTurn(Player player, Player player2, CardSupply theSupply){&#13;&#10;&#9;&#9;while(actions &gt; 0){&#13;&#10;&#9;&#9;&#9;playAction(player, player2, theSupply);&#13;&#10;&#9;&#9;&#9;actions--;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;while(buys &gt; 0){&#13;&#10;&#9;&#9;&#9;for(int i=0; i&lt;hand.size(); i++){&#13;&#10;&#9;&#9;&#9;&#9;treasure+=hand.get(i).worth; //calculate worth.&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;buyCards(player, theSupply);&#13;&#10;&#9;&#9;&#9;buys--;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;endTurn(player);&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void playAction(Player player, Player player2, CardSupply theSupply) {&#13;&#10;&#9;&#9;for(int i=0; i&lt;hand.size()+1; i++) //go through each card in hand.&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;if(i==hand.size()) break;&#13;&#10;&#9;&#9;&#9;if(hand.get(i).action){&#13;&#10;&#9;&#9;&#9;&#9;System.out.println(&quot;I play &quot;+hand.get(i).cardType);&#13;&#10;&#9;&#9;&#9;&#9;actions+=hand.get(i).actionsGranted;;&#13;&#10;&#9;&#9;&#9;&#9;buys+=hand.get(i).buysGranted;&#13;&#10;&#9;&#9;&#9;&#9;treasure+=hand.get(i).worth;&#13;&#10;&#9;&#9;&#9;&#9;for(int j=0; j&lt;hand.get(i).cardsGranted; j++){&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.add(player.drawCard());&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;Card card=hand.get(i);&#13;&#10;&#9;&#9;&#9;&#9;if(hand.get(i).special) doTheThing(hand.get(i), player, player2, theSupply);&#13;&#10;&#9;&#9;&#9;&#9;else player.discard.addCard(hand.get(i).cardType);&#13;&#10;&#9;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;System.out.println(&quot;I forfitted an action&quot;);&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void doTheThing(Card card, Player player, Player player2, CardSupply theSupply) {&#13;&#10;&#9;&#9;String whatCard;&#13;&#10;&#9;&#9;Random randomness = new Random();&#13;&#10;&#9;&#9;switch(card.cardType){&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;ListIterator&lt;Card&gt; myHand = hand.listIterator();&#13;&#10;&#9;&#9;&#9;Card thisCard;&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;while(myHand.hasNext()){&#13;&#10;&#9;&#9;&#9;&#9;thisCard=myHand.next();&#13;&#10;&#9;&#9;&#9;&#9;if(thisCard.cardType==&quot;copper&quot;)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.add(new Card(&quot;silver&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;else if(thisCard.cardType==&quot;silver&quot;)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.add(new Card(&quot;gold&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;System.out.println(&quot;I chose to forfit my use of Mine&quot;);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;String pick[]={&quot;estate&quot;, &quot;embargo&quot;, &quot;silver&quot;, &quot;ambassador&quot;, &quot;great hall&quot;, &quot;village&quot;, &quot;woodcutter&quot;, &quot;baron&quot;, &quot;cutpurse&quot;, &quot;feast&quot;, &quot;gardens&quot;, &quot;smithy&quot;, &quot;council room&quot;, &quot;mine&quot;};&#13;&#10;&#9;&#9;&#9;whatCard= pick[randomness.nextInt(14)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;14; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;if(whatCard==null) System.out.println(&quot;I didn't find a card to pick up&quot;);&#13;&#10;&#9;&#9;&#9;else hand.add(new Card(whatCard));&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;String embargo = theSupply.kingdomCards.get(randomness.nextInt(theSupply.kingdomCards.size()));&#13;&#10;&#9;&#9;&#9;theSupply.embargo(embargo);&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;}&#9;&#9;&#13;&#10;&#9;&#13;&#10;}&#13;&#10;" Filename="Turn.java" Intrnl_Id="8"/>
+<SrcFile Content="import java.util.LinkedList;&#13;&#10;import java.util.List;&#13;&#10;import java.util.ListIterator;&#13;&#10;import java.util.Random;&#13;&#10;&#13;&#10;public class Turn {&#13;&#10;&#9;int actions, buys, treasure;&#13;&#10;&#9;List&lt;Card&gt; hand;&#13;&#10;&#9;&#13;&#10;&#9;public Turn(Player player, CardSupply theSupply){&#13;&#10;&#9;&#9;actions=1;&#13;&#10;&#9;&#9;buys=1;&#13;&#10;&#9;&#9;treasure=0;&#13;&#10;&#9;&#9;hand= new LinkedList&lt;Card&gt;();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;for(int i=0; i&lt;5; i++){&#13;&#10;&#9;&#9;&#9;hand.add(player.drawCard());&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void buyCards(Player player, CardSupply theSupply) {&#13;&#10;&#9;&#9;String whatCard=&quot;nothing&quot;;&#13;&#10;&#9;&#9;String pick2[]={&quot;estate&quot;, &quot;embargo&quot;};&#13;&#10;&#9;&#9;String pick3[]={&quot;silver&quot;, &quot;ambassador&quot;, &quot;great hall&quot;, &quot;village&quot;, &quot;woodcutter&quot;};&#13;&#10;&#9;&#9;String pick4[]={&quot;baron&quot;, &quot;cutpurse&quot;, &quot;feast&quot;, &quot;gardens&quot;, &quot;smithy&quot;};&#13;&#10;&#9;&#9;String pick5[]={&quot;council room&quot;, &quot;mine&quot;};&#13;&#10;&#9;&#9;String pick6[]={&quot;gold&quot;, &quot;adventurer&quot;};&#13;&#10;&#9;&#9;Random randomness=new Random();&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;switch(treasure){&#13;&#10;&#9;&#9;case 1: //no card costs 1, therefore default to purchasing copper &#13;&#10;&#9;&#9;case 0:&#13;&#10;&#9;&#9;&#9;if(theSupply.copper.quantity&gt;0){&#13;&#10;&#9;&#9;&#9;&#9;player.discard.addCard(&quot;copper&quot;);&#13;&#10;&#9;&#9;&#9;&#9;theSupply.removeCard(&quot;copper&quot;);&#13;&#10;&#9;&#9;&#9;&#9;whatCard=&quot;copper&quot;;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 2:&#13;&#10;&#9;&#9;&#9;whatCard = pick2[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1) whatCard=pick2[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(2, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 3:&#13;&#10;&#9;&#9;&#9;whatCard= pick3[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick3[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(3, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 4:&#13;&#10;&#9;&#9;&#9;whatCard= pick4[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick4[randomness.nextInt(5)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(3, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 5:&#13;&#10;&#9;&#9;&#9;whatCard= pick5[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick5[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(5, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case 6:&#13;&#10;&#9;&#9;&#9;whatCard= pick6[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;5; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick6[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;player.discard.addCard(whatCard);&#13;&#10;&#9;&#9;&#9;theSupply.removeCard(whatCard);&#13;&#10;&#9;&#9;&#9;spend(6, player);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;default: &#13;&#10;&#9;&#9;&#9;if(theSupply.province.quantity&gt;0)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;player.discard.addCard(&quot;province&quot;);&#13;&#10;&#9;&#9;&#9;&#9;theSupply.removeCard(&quot;province&quot;);&#13;&#10;&#9;&#9;&#9;&#9;spend(8, player);&#13;&#10;&#9;&#9;&#9;&#9;whatCard=&quot;province&quot;;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;player.discard.addCard(&quot;curse&quot;, theSupply.isEmbargod(whatCard));&#13;&#10;&#9;&#9;System.out.println(&quot;I purchased &quot;+whatCard);&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void spend(int i, Player player) {&#13;&#10;&#9;&#9;ListIterator&lt;Card&gt; iterator = hand.listIterator();&#13;&#10;&#9;&#9;Card myCard;&#13;&#10;&#9;&#9;while(iterator.hasNext()){&#13;&#10;&#9;&#9;&#9;myCard=iterator.next();&#13;&#10;&#9;&#9;&#9;if(myCard.worth&gt;0){&#13;&#10;&#9;&#9;&#9;&#9;i-=myCard.worth;&#13;&#10;&#9;&#9;&#9;&#9;player.discard.addCard(myCard.cardType);&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;if(i&lt;1) return;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void endTurn(Player player) {&#13;&#10;&#9;&#9;for(int i=0; i&lt;hand.size(); i++){&#13;&#10;&#9;&#9;&#9;player.discard.addCard(hand.get(i).cardType);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;hand.clear();&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public void takeTurn(Player player, Player[] players, CardSupply theSupply){&#13;&#10;&#9;&#9;while(actions &gt; 0){&#13;&#10;&#9;&#9;&#9;playAction(player, players, theSupply);&#13;&#10;&#9;&#9;&#9;actions--;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;while(buys &gt; 0){&#13;&#10;&#9;&#9;&#9;for(int i=0; i&lt;hand.size(); i++){&#13;&#10;&#9;&#9;&#9;&#9;treasure+=hand.get(i).worth; //calculate worth.&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;buyCards(player, theSupply);&#13;&#10;&#9;&#9;&#9;buys--;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;endTurn(player);&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void playAction(Player player, Player[] players, CardSupply theSupply) {&#13;&#10;&#9;&#9;for(int i=0; i&lt;hand.size()+1; i++) //go through each card in hand.&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;if(i==hand.size()) break;&#13;&#10;&#9;&#9;&#9;if(hand.get(i).action){&#13;&#10;&#9;&#9;&#9;&#9;System.out.println(&quot;I play &quot;+hand.get(i).cardType);&#13;&#10;&#9;&#9;&#9;&#9;actions+=hand.get(i).actionsGranted;;&#13;&#10;&#9;&#9;&#9;&#9;buys+=hand.get(i).buysGranted;&#13;&#10;&#9;&#9;&#9;&#9;treasure+=hand.get(i).worth;&#13;&#10;&#9;&#9;&#9;&#9;for(int j=0; j&lt;hand.get(i).cardsGranted; j++){&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.add(player.drawCard());&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;Card card=hand.get(i);&#13;&#10;&#9;&#9;&#9;&#9;if(hand.get(i).special) doTheThing(hand.get(i), player, players, theSupply);&#13;&#10;&#9;&#9;&#9;&#9;else player.discard.addCard(hand.get(i).cardType);&#13;&#10;&#9;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;System.out.println(&quot;I forfitted an action&quot;);&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public void doTheThing(Card card, Player player, Player[] players, CardSupply theSupply) {&#13;&#10;&#9;&#9;String whatCard;&#13;&#10;&#9;&#9;Random randomness = new Random();&#13;&#10;&#9;&#9;switch(card.cardType){&#13;&#10;&#9;&#9;case &quot;mine&quot;:&#13;&#10;&#9;&#9;&#9;ListIterator&lt;Card&gt; myHand = hand.listIterator();&#13;&#10;&#9;&#9;&#9;Card thisCard;&#13;&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;while(myHand.hasNext()){&#13;&#10;&#9;&#9;&#9;&#9;thisCard=myHand.next();&#13;&#10;&#9;&#9;&#9;&#9;if(thisCard.cardType==&quot;copper&quot;)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.add(new Card(&quot;silver&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;else if(thisCard.cardType==&quot;silver&quot;)&#13;&#10;&#9;&#9;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;&#9;&#9;hand.add(new Card(&quot;gold&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;System.out.println(&quot;I chose to forfit my use of Mine&quot;);&#13;&#10;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;case &quot;feast&quot;:&#13;&#10;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;String pick[]={&quot;estate&quot;, &quot;embargo&quot;, &quot;silver&quot;, &quot;ambassador&quot;, &quot;great hall&quot;, &quot;village&quot;, &quot;woodcutter&quot;, &quot;baron&quot;, &quot;cutpurse&quot;, &quot;feast&quot;, &quot;gardens&quot;, &quot;smithy&quot;, &quot;council room&quot;, &quot;mine&quot;};&#13;&#10;&#9;&#9;&#9;whatCard= pick[randomness.nextInt(14)];&#13;&#10;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&lt;1){&#13;&#10;&#9;&#9;&#9;&#9;for(int i=0; i&lt;14; i++){ //make sure we're not looking forever&#13;&#10;&#9;&#9;&#9;&#9;&#9;whatCard= pick[randomness.nextInt(2)];&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(theSupply.howMany(whatCard)&gt;0) break;&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;if(whatCard==null) System.out.println(&quot;I didn't find a card to pick up&quot;);&#13;&#10;&#9;&#9;&#9;else hand.add(new Card(whatCard));&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;case &quot;embargo&quot;:&#13;&#10;&#9;&#9;&#9;hand.remove(card);&#13;&#10;&#9;&#9;&#9;String embargo = theSupply.kingdomCards.get(randomness.nextInt(theSupply.kingdomCards.size()));&#13;&#10;&#9;&#9;&#9;theSupply.embargo(embargo);&#13;&#10;&#9;&#9;&#9;return;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;return;&#13;&#10;&#9;&#9;}&#9;&#9;&#13;&#10;&#9;&#13;&#10;}&#13;&#10;" Filename="Turn.java" Intrnl_Id="8"/>
 <SrcFile Content="import static org.junit.Assert.*;&#13;&#10;&#13;&#10;import org.junit.Test;&#13;&#10;&#13;&#10;public class TurnTest {&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testBuyCards() {&#13;&#10;&#9;&#9;CardSupply supply = new CardSupply();&#13;&#10;&#9;&#9;Player player = new Player(supply);&#13;&#10;&#9;&#9;Turn testPurchase= new Turn(player, supply);&#13;&#10;&#9;&#9;int previous = player.deckSize(player.discard);&#13;&#10;&#9;&#9;testPurchase.buyCards(player, supply);&#13;&#10;&#9;&#9;assertTrue(previous!=player.deckSize(player.discard));&#13;&#10;&#9;&#9;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testEndTurn() {&#13;&#10;&#9;&#9;CardSupply supply = new CardSupply();&#13;&#10;&#9;&#9;Player player = new Player(supply);&#13;&#10;&#9;&#9;Turn testEndTurn= new Turn(player, supply);&#13;&#10;&#9;&#9;testEndTurn.endTurn(player);&#13;&#10;&#9;&#9;assert(testEndTurn.hand.size()==0);&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void testPlayAction() {&#13;&#10;&#9;&#9;CardSupply supply = new CardSupply();&#13;&#10;&#9;&#9;Player player = new Player(supply);&#13;&#10;&#9;&#9;Turn testAction= new Turn(player, supply);&#13;&#10;&#9;&#9;testAction.hand.add(new Card(&quot;embargo&quot;));&#13;&#10;&#9;&#9;int previous = testAction.hand.size();&#13;&#10;&#9;&#9;testAction.playAction(player, player, supply);&#13;&#10;&#9;&#9;assertTrue(previous!=testAction.hand.size());&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="TurnTest.java" Intrnl_Id="9"/>
 </SrcFileList>
 <CritList>
@@ -30,17 +30,17 @@
 <HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="13"/>
 </HierarchyLvlTypeList>
 <MASTRoot>
-<HierarchyLvl HierarchyLvlId="2590" HierarchyLvlTypeId="13" Intrnl_Id="14" Name="default package">
+<HierarchyLvl HierarchyLvlId="148" HierarchyLvlTypeId="13" Intrnl_Id="14" Name="default package">
 <Header/>
 <LocList/>
-<HierarchyLvl HierarchyLvlId="2540" HierarchyLvlTypeId="12" Intrnl_Id="15" Name="Card">
+<HierarchyLvl HierarchyLvlId="98" HierarchyLvlTypeId="12" Intrnl_Id="15" Name="Card">
 <Header>
 <Loc EndOffset="19" SrcFileId="1" StartOffset="2"/>
 </Header>
 <LocList>
 <Loc EndOffset="7343" SrcFileId="1" StartOffset="2"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2517" HierarchyLvlTypeId="11" Intrnl_Id="16" Name="Card">
+<HierarchyLvl HierarchyLvlId="75" HierarchyLvlTypeId="11" Intrnl_Id="16" Name="Card">
 <Header>
 <Loc EndOffset="173" SrcFileId="1" StartOffset="149"/>
 </Header>
@@ -630,7 +630,7 @@
 </CondStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2518" HierarchyLvlTypeId="11" Intrnl_Id="115" Name="makeCurse">
+<HierarchyLvl HierarchyLvlId="76" HierarchyLvlTypeId="11" Intrnl_Id="115" Name="makeCurse">
 <Header>
 <Loc EndOffset="1618" SrcFileId="1" StartOffset="1585"/>
 </Header>
@@ -690,7 +690,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2519" HierarchyLvlTypeId="11" Intrnl_Id="125" Name="makeMine">
+<HierarchyLvl HierarchyLvlId="77" HierarchyLvlTypeId="11" Intrnl_Id="125" Name="makeMine">
 <Header>
 <Loc EndOffset="1827" SrcFileId="1" StartOffset="1795"/>
 </Header>
@@ -750,7 +750,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2520" HierarchyLvlTypeId="11" Intrnl_Id="135" Name="makeGreatHall">
+<HierarchyLvl HierarchyLvlId="78" HierarchyLvlTypeId="11" Intrnl_Id="135" Name="makeGreatHall">
 <Header>
 <Loc EndOffset="2124" SrcFileId="1" StartOffset="2087"/>
 </Header>
@@ -810,7 +810,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2521" HierarchyLvlTypeId="11" Intrnl_Id="145" Name="makeGardens">
+<HierarchyLvl HierarchyLvlId="79" HierarchyLvlTypeId="11" Intrnl_Id="145" Name="makeGardens">
 <Header>
 <Loc EndOffset="2335" SrcFileId="1" StartOffset="2300"/>
 </Header>
@@ -870,7 +870,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2522" HierarchyLvlTypeId="11" Intrnl_Id="155" Name="makeFeast">
+<HierarchyLvl HierarchyLvlId="80" HierarchyLvlTypeId="11" Intrnl_Id="155" Name="makeFeast">
 <Header>
 <Loc EndOffset="2598" SrcFileId="1" StartOffset="2565"/>
 </Header>
@@ -930,7 +930,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2523" HierarchyLvlTypeId="11" Intrnl_Id="165" Name="makeEmbargo">
+<HierarchyLvl HierarchyLvlId="81" HierarchyLvlTypeId="11" Intrnl_Id="165" Name="makeEmbargo">
 <Header>
 <Loc EndOffset="2859" SrcFileId="1" StartOffset="2824"/>
 </Header>
@@ -990,7 +990,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2524" HierarchyLvlTypeId="11" Intrnl_Id="175" Name="makeCutpurse">
+<HierarchyLvl HierarchyLvlId="82" HierarchyLvlTypeId="11" Intrnl_Id="175" Name="makeCutpurse">
 <Header>
 <Loc EndOffset="3215" SrcFileId="1" StartOffset="3179"/>
 </Header>
@@ -1050,7 +1050,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2525" HierarchyLvlTypeId="11" Intrnl_Id="185" Name="makeBaron">
+<HierarchyLvl HierarchyLvlId="83" HierarchyLvlTypeId="11" Intrnl_Id="185" Name="makeBaron">
 <Header>
 <Loc EndOffset="3499" SrcFileId="1" StartOffset="3466"/>
 </Header>
@@ -1110,7 +1110,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2526" HierarchyLvlTypeId="11" Intrnl_Id="195" Name="makeAmbassador">
+<HierarchyLvl HierarchyLvlId="84" HierarchyLvlTypeId="11" Intrnl_Id="195" Name="makeAmbassador">
 <Header>
 <Loc EndOffset="3779" SrcFileId="1" StartOffset="3741"/>
 </Header>
@@ -1170,7 +1170,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2527" HierarchyLvlTypeId="11" Intrnl_Id="205" Name="makeWoodcutter">
+<HierarchyLvl HierarchyLvlId="85" HierarchyLvlTypeId="11" Intrnl_Id="205" Name="makeWoodcutter">
 <Header>
 <Loc EndOffset="4129" SrcFileId="1" StartOffset="4091"/>
 </Header>
@@ -1230,7 +1230,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2528" HierarchyLvlTypeId="11" Intrnl_Id="215" Name="makeVillage">
+<HierarchyLvl HierarchyLvlId="86" HierarchyLvlTypeId="11" Intrnl_Id="215" Name="makeVillage">
 <Header>
 <Loc EndOffset="4338" SrcFileId="1" StartOffset="4303"/>
 </Header>
@@ -1290,7 +1290,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2529" HierarchyLvlTypeId="11" Intrnl_Id="225" Name="makeSmithy">
+<HierarchyLvl HierarchyLvlId="87" HierarchyLvlTypeId="11" Intrnl_Id="225" Name="makeSmithy">
 <Header>
 <Loc EndOffset="4546" SrcFileId="1" StartOffset="4512"/>
 </Header>
@@ -1350,7 +1350,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2530" HierarchyLvlTypeId="11" Intrnl_Id="235" Name="makeCouncilRoom">
+<HierarchyLvl HierarchyLvlId="88" HierarchyLvlTypeId="11" Intrnl_Id="235" Name="makeCouncilRoom">
 <Header>
 <Loc EndOffset="4762" SrcFileId="1" StartOffset="4723"/>
 </Header>
@@ -1410,7 +1410,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2531" HierarchyLvlTypeId="11" Intrnl_Id="245" Name="makeAdventurer">
+<HierarchyLvl HierarchyLvlId="89" HierarchyLvlTypeId="11" Intrnl_Id="245" Name="makeAdventurer">
 <Header>
 <Loc EndOffset="5008" SrcFileId="1" StartOffset="4970"/>
 </Header>
@@ -1470,7 +1470,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2532" HierarchyLvlTypeId="11" Intrnl_Id="255" Name="makeProvince">
+<HierarchyLvl HierarchyLvlId="90" HierarchyLvlTypeId="11" Intrnl_Id="255" Name="makeProvince">
 <Header>
 <Loc EndOffset="5218" SrcFileId="1" StartOffset="5182"/>
 </Header>
@@ -1530,7 +1530,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2533" HierarchyLvlTypeId="11" Intrnl_Id="265" Name="makeDuchy">
+<HierarchyLvl HierarchyLvlId="91" HierarchyLvlTypeId="11" Intrnl_Id="265" Name="makeDuchy">
 <Header>
 <Loc EndOffset="5425" SrcFileId="1" StartOffset="5392"/>
 </Header>
@@ -1590,7 +1590,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2534" HierarchyLvlTypeId="11" Intrnl_Id="275" Name="makeEstate">
+<HierarchyLvl HierarchyLvlId="92" HierarchyLvlTypeId="11" Intrnl_Id="275" Name="makeEstate">
 <Header>
 <Loc EndOffset="5633" SrcFileId="1" StartOffset="5599"/>
 </Header>
@@ -1650,7 +1650,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2535" HierarchyLvlTypeId="11" Intrnl_Id="285" Name="makeGold">
+<HierarchyLvl HierarchyLvlId="93" HierarchyLvlTypeId="11" Intrnl_Id="285" Name="makeGold">
 <Header>
 <Loc EndOffset="5841" SrcFileId="1" StartOffset="5809"/>
 </Header>
@@ -1710,7 +1710,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2536" HierarchyLvlTypeId="11" Intrnl_Id="295" Name="makeSilver">
+<HierarchyLvl HierarchyLvlId="94" HierarchyLvlTypeId="11" Intrnl_Id="295" Name="makeSilver">
 <Header>
 <Loc EndOffset="6048" SrcFileId="1" StartOffset="6014"/>
 </Header>
@@ -1770,7 +1770,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2537" HierarchyLvlTypeId="11" Intrnl_Id="305" Name="makeCopper">
+<HierarchyLvl HierarchyLvlId="95" HierarchyLvlTypeId="11" Intrnl_Id="305" Name="makeCopper">
 <Header>
 <Loc EndOffset="6257" SrcFileId="1" StartOffset="6223"/>
 </Header>
@@ -1830,7 +1830,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2538" HierarchyLvlTypeId="11" Intrnl_Id="315" Name="toString">
+<HierarchyLvl HierarchyLvlId="96" HierarchyLvlTypeId="11" Intrnl_Id="315" Name="toString">
 <Header>
 <Loc EndOffset="6459" SrcFileId="1" StartOffset="6435"/>
 </Header>
@@ -1854,7 +1854,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2539" HierarchyLvlTypeId="11" Intrnl_Id="319" Name="allCards">
+<HierarchyLvl HierarchyLvlId="97" HierarchyLvlTypeId="11" Intrnl_Id="319" Name="allCards">
 <Header>
 <Loc EndOffset="7068" SrcFileId="1" StartOffset="7042"/>
 </Header>
@@ -1879,7 +1879,7 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2554" HierarchyLvlTypeId="12" Intrnl_Id="323" Name="CardSupply">
+<HierarchyLvl HierarchyLvlId="112" HierarchyLvlTypeId="12" Intrnl_Id="323" Name="CardSupply">
 <Header>
 <Loc EndOffset="105" SrcFileId="2" StartOffset="82"/>
 </Header>
@@ -1896,7 +1896,7 @@
 </LocList>
 </BasicStmnt>
 </StmntSeq>
-<HierarchyLvl HierarchyLvlId="2541" HierarchyLvlTypeId="11" Intrnl_Id="326" Name="CardSupply">
+<HierarchyLvl HierarchyLvlId="99" HierarchyLvlTypeId="11" Intrnl_Id="326" Name="CardSupply">
 <Header>
 <Loc EndOffset="458" SrcFileId="2" StartOffset="429"/>
 </Header>
@@ -2034,7 +2034,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2542" HierarchyLvlTypeId="11" Intrnl_Id="349" Name="CardSupply">
+<HierarchyLvl HierarchyLvlId="100" HierarchyLvlTypeId="11" Intrnl_Id="349" Name="CardSupply">
 <Header>
 <Loc EndOffset="1639" SrcFileId="2" StartOffset="1627"/>
 </Header>
@@ -2172,7 +2172,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2543" HierarchyLvlTypeId="11" Intrnl_Id="372" Name="selectKingdomCards">
+<HierarchyLvl HierarchyLvlId="101" HierarchyLvlTypeId="11" Intrnl_Id="372" Name="selectKingdomCards">
 <Header>
 <Loc EndOffset="2864" SrcFileId="2" StartOffset="2831"/>
 </Header>
@@ -2262,7 +2262,7 @@
 </LoopStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2544" HierarchyLvlTypeId="11" Intrnl_Id="390" Name="drawCard">
+<HierarchyLvl HierarchyLvlId="102" HierarchyLvlTypeId="11" Intrnl_Id="390" Name="drawCard">
 <Header>
 <Loc EndOffset="3287" SrcFileId="2" StartOffset="3265"/>
 </Header>
@@ -2357,7 +2357,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2545" HierarchyLvlTypeId="11" Intrnl_Id="407" Name="removeCard">
+<HierarchyLvl HierarchyLvlId="103" HierarchyLvlTypeId="11" Intrnl_Id="407" Name="removeCard">
 <Header>
 <Loc EndOffset="3835" SrcFileId="2" StartOffset="3798"/>
 </Header>
@@ -2863,7 +2863,7 @@
 </CondStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2546" HierarchyLvlTypeId="11" Intrnl_Id="492" Name="addCard">
+<HierarchyLvl HierarchyLvlId="104" HierarchyLvlTypeId="11" Intrnl_Id="492" Name="addCard">
 <Header>
 <Loc EndOffset="5009" SrcFileId="2" StartOffset="4975"/>
 </Header>
@@ -3369,7 +3369,7 @@
 </CondStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2547" HierarchyLvlTypeId="11" Intrnl_Id="577" Name="howMany">
+<HierarchyLvl HierarchyLvlId="105" HierarchyLvlTypeId="11" Intrnl_Id="577" Name="howMany">
 <Header>
 <Loc EndOffset="6182" SrcFileId="2" StartOffset="6149"/>
 </Header>
@@ -3761,7 +3761,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2548" HierarchyLvlTypeId="11" Intrnl_Id="643" Name="cardVP">
+<HierarchyLvl HierarchyLvlId="106" HierarchyLvlTypeId="11" Intrnl_Id="643" Name="cardVP">
 <Header>
 <Loc EndOffset="7229" SrcFileId="2" StartOffset="7197"/>
 </Header>
@@ -4153,7 +4153,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2549" HierarchyLvlTypeId="11" Intrnl_Id="709" Name="toString">
+<HierarchyLvl HierarchyLvlId="107" HierarchyLvlTypeId="11" Intrnl_Id="709" Name="toString">
 <Header>
 <Loc EndOffset="8470" SrcFileId="2" StartOffset="8446"/>
 </Header>
@@ -4200,7 +4200,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2550" HierarchyLvlTypeId="11" Intrnl_Id="717" Name="addCard">
+<HierarchyLvl HierarchyLvlId="108" HierarchyLvlTypeId="11" Intrnl_Id="717" Name="addCard">
 <Header>
 <Loc EndOffset="8740" SrcFileId="2" StartOffset="8699"/>
 </Header>
@@ -4743,7 +4743,7 @@
 </CondStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2551" HierarchyLvlTypeId="11" Intrnl_Id="810" Name="endgame">
+<HierarchyLvl HierarchyLvlId="109" HierarchyLvlTypeId="11" Intrnl_Id="810" Name="endgame">
 <Header>
 <Loc EndOffset="9946" SrcFileId="2" StartOffset="9922"/>
 </Header>
@@ -4980,7 +4980,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2552" HierarchyLvlTypeId="11" Intrnl_Id="859" Name="embargo">
+<HierarchyLvl HierarchyLvlId="110" HierarchyLvlTypeId="11" Intrnl_Id="859" Name="embargo">
 <Header>
 <Loc EndOffset="10381" SrcFileId="2" StartOffset="10345"/>
 </Header>
@@ -5474,7 +5474,7 @@
 </CondStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2553" HierarchyLvlTypeId="11" Intrnl_Id="942" Name="isEmbargod">
+<HierarchyLvl HierarchyLvlId="111" HierarchyLvlTypeId="11" Intrnl_Id="942" Name="isEmbargod">
 <Header>
 <Loc EndOffset="11618" SrcFileId="2" StartOffset="11580"/>
 </Header>
@@ -5867,14 +5867,14 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2561" HierarchyLvlTypeId="12" Intrnl_Id="1008" Name="CardSupplyTest">
+<HierarchyLvl HierarchyLvlId="119" HierarchyLvlTypeId="12" Intrnl_Id="1008" Name="CardSupplyTest">
 <Header>
 <Loc EndOffset="53" SrcFileId="3" StartOffset="26"/>
 </Header>
 <LocList>
 <Loc EndOffset="1153" SrcFileId="3" StartOffset="26"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2555" HierarchyLvlTypeId="11" Intrnl_Id="1009" Name="testRemoveCard">
+<HierarchyLvl HierarchyLvlId="113" HierarchyLvlTypeId="11" Intrnl_Id="1009" Name="testRemoveCard">
 <Header>
 <Loc EndOffset="96" SrcFileId="3" StartOffset="60"/>
 </Header>
@@ -5898,7 +5898,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2556" HierarchyLvlTypeId="11" Intrnl_Id="1013" Name="testAddCardString">
+<HierarchyLvl HierarchyLvlId="114" HierarchyLvlTypeId="11" Intrnl_Id="1013" Name="testAddCardString">
 <Header>
 <Loc EndOffset="263" SrcFileId="3" StartOffset="224"/>
 </Header>
@@ -5922,7 +5922,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2557" HierarchyLvlTypeId="11" Intrnl_Id="1017" Name="testHowMany">
+<HierarchyLvl HierarchyLvlId="115" HierarchyLvlTypeId="11" Intrnl_Id="1017" Name="testHowMany">
 <Header>
 <Loc EndOffset="421" SrcFileId="3" StartOffset="388"/>
 </Header>
@@ -5946,7 +5946,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2558" HierarchyLvlTypeId="11" Intrnl_Id="1021" Name="testCardVP">
+<HierarchyLvl HierarchyLvlId="116" HierarchyLvlTypeId="11" Intrnl_Id="1021" Name="testCardVP">
 <Header>
 <Loc EndOffset="576" SrcFileId="3" StartOffset="544"/>
 </Header>
@@ -5964,7 +5964,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2559" HierarchyLvlTypeId="11" Intrnl_Id="1024" Name="testAddCardStringInt">
+<HierarchyLvl HierarchyLvlId="117" HierarchyLvlTypeId="11" Intrnl_Id="1024" Name="testAddCardStringInt">
 <Header>
 <Loc EndOffset="715" SrcFileId="3" StartOffset="673"/>
 </Header>
@@ -5988,7 +5988,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2560" HierarchyLvlTypeId="11" Intrnl_Id="1028" Name="testEndgame">
+<HierarchyLvl HierarchyLvlId="118" HierarchyLvlTypeId="11" Intrnl_Id="1028" Name="testEndgame">
 <Header>
 <Loc EndOffset="879" SrcFileId="3" StartOffset="846"/>
 </Header>
@@ -6037,156 +6037,155 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2563" HierarchyLvlTypeId="12" Intrnl_Id="1036" Name="PlayTest">
+<HierarchyLvl HierarchyLvlId="121" HierarchyLvlTypeId="12" Intrnl_Id="1036" Name="PlayTest">
 <Header>
-<Loc EndOffset="25" SrcFileId="4" StartOffset="4"/>
+<Loc EndOffset="49" SrcFileId="4" StartOffset="28"/>
 </Header>
 <LocList>
-<Loc EndOffset="833" SrcFileId="4" StartOffset="4"/>
+<Loc EndOffset="846" SrcFileId="4" StartOffset="28"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2562" HierarchyLvlTypeId="11" Intrnl_Id="1037" Name="main">
+<HierarchyLvl HierarchyLvlId="120" HierarchyLvlTypeId="11" Intrnl_Id="1037" Name="main">
 <Header>
-<Loc EndOffset="70" SrcFileId="4" StartOffset="32"/>
+<Loc EndOffset="94" SrcFileId="4" StartOffset="56"/>
 </Header>
 <LocList>
-<Loc EndOffset="828" SrcFileId="4" StartOffset="32"/>
+<Loc EndOffset="841" SrcFileId="4" StartOffset="56"/>
 </LocList>
 <StmntSeq Intrnl_Id="1038">
 <LocList>
-<Loc EndOffset="111" SrcFileId="4" StartOffset="76"/>
-<Loc EndOffset="149" SrcFileId="4" StartOffset="115"/>
-<Loc EndOffset="187" SrcFileId="4" StartOffset="153"/>
-<Loc EndOffset="544" SrcFileId="4" StartOffset="252"/>
-<Loc EndOffset="589" SrcFileId="4" StartOffset="550"/>
-<Loc EndOffset="632" SrcFileId="4" StartOffset="593"/>
-<Loc EndOffset="820" SrcFileId="4" StartOffset="640"/>
+<Loc EndOffset="135" SrcFileId="4" StartOffset="100"/>
+<Loc EndOffset="246" SrcFileId="4" StartOffset="213"/>
+<Loc EndOffset="296" SrcFileId="4" StartOffset="254"/>
+<Loc EndOffset="347" SrcFileId="4" StartOffset="300"/>
+<Loc EndOffset="557" SrcFileId="4" StartOffset="355"/>
+<Loc EndOffset="602" SrcFileId="4" StartOffset="563"/>
+<Loc EndOffset="645" SrcFileId="4" StartOffset="606"/>
+<Loc EndOffset="833" SrcFileId="4" StartOffset="653"/>
 </LocList>
 <BasicStmnt CovItemId="S1" CovItemPrefix="PlayTest.java" Intrnl_Id="1039">
 <LocList>
-<Loc EndOffset="111" SrcFileId="4" StartOffset="76"/>
+<Loc EndOffset="135" SrcFileId="4" StartOffset="100"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S2" CovItemPrefix="PlayTest.java" Intrnl_Id="1040">
 <LocList>
-<Loc EndOffset="149" SrcFileId="4" StartOffset="115"/>
+<Loc EndOffset="246" SrcFileId="4" StartOffset="213"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S3" CovItemPrefix="PlayTest.java" Intrnl_Id="1041">
 <LocList>
-<Loc EndOffset="187" SrcFileId="4" StartOffset="153"/>
+<Loc EndOffset="296" SrcFileId="4" StartOffset="254"/>
 </LocList>
 </BasicStmnt>
-<LoopStmnt CovItemId="S4" CovItemPrefix="PlayTest.java" Intrnl_Id="1042" MltplExecId="L1-2" MltplExecPrefix="PlayTest.java" NvrExecId="L1-0" NvrExecPrefix="PlayTest.java" OnceExecutedId="L1-1" OnceExecutedPrefix="PlayTest.java" OptBodyExec="true">
-<StmntSeq Intrnl_Id="1043">
+<BasicStmnt CovItemId="S4" CovItemPrefix="PlayTest.java" Intrnl_Id="1042">
 <LocList>
-<Loc EndOffset="321" SrcFileId="4" StartOffset="286"/>
-<Loc EndOffset="360" SrcFileId="4" StartOffset="326"/>
-<Loc EndOffset="409" SrcFileId="4" StartOffset="365"/>
-<Loc EndOffset="449" SrcFileId="4" StartOffset="414"/>
-<Loc EndOffset="488" SrcFileId="4" StartOffset="454"/>
-<Loc EndOffset="537" SrcFileId="4" StartOffset="493"/>
-</LocList>
-<BasicStmnt CovItemId="S5" CovItemPrefix="PlayTest.java" Intrnl_Id="1044">
-<LocList>
-<Loc EndOffset="321" SrcFileId="4" StartOffset="286"/>
+<Loc EndOffset="347" SrcFileId="4" StartOffset="300"/>
 </LocList>
 </BasicStmnt>
-<BasicStmnt CovItemId="S6" CovItemPrefix="PlayTest.java" Intrnl_Id="1045">
+<LoopStmnt CovItemId="S5" CovItemPrefix="PlayTest.java" Intrnl_Id="1043" MltplExecId="L1-2" MltplExecPrefix="PlayTest.java" NvrExecId="L1-0" NvrExecPrefix="PlayTest.java" OnceExecutedId="L1-1" OnceExecutedPrefix="PlayTest.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="1044">
 <LocList>
-<Loc EndOffset="360" SrcFileId="4" StartOffset="326"/>
+<Loc EndOffset="552" SrcFileId="4" StartOffset="389"/>
+</LocList>
+<LoopStmnt CovItemId="S6" CovItemPrefix="PlayTest.java" Intrnl_Id="1045" MltplExecId="L2-2" MltplExecPrefix="PlayTest.java" NvrExecId="L2-0" NvrExecPrefix="PlayTest.java" OnceExecutedId="L2-1" OnceExecutedPrefix="PlayTest.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="1046">
+<LocList>
+<Loc EndOffset="457" SrcFileId="4" StartOffset="423"/>
+<Loc EndOffset="497" SrcFileId="4" StartOffset="463"/>
+<Loc EndOffset="546" SrcFileId="4" StartOffset="503"/>
+</LocList>
+<BasicStmnt CovItemId="S7" CovItemPrefix="PlayTest.java" Intrnl_Id="1047">
+<LocList>
+<Loc EndOffset="457" SrcFileId="4" StartOffset="423"/>
 </LocList>
 </BasicStmnt>
-<BasicStmnt CovItemId="S7" CovItemPrefix="PlayTest.java" Intrnl_Id="1046">
+<BasicStmnt CovItemId="S8" CovItemPrefix="PlayTest.java" Intrnl_Id="1048">
 <LocList>
-<Loc EndOffset="409" SrcFileId="4" StartOffset="365"/>
+<Loc EndOffset="497" SrcFileId="4" StartOffset="463"/>
 </LocList>
 </BasicStmnt>
-<BasicStmnt CovItemId="S8" CovItemPrefix="PlayTest.java" Intrnl_Id="1047">
+<BasicStmnt CovItemId="S9" CovItemPrefix="PlayTest.java" Intrnl_Id="1049">
 <LocList>
-<Loc EndOffset="449" SrcFileId="4" StartOffset="414"/>
-</LocList>
-</BasicStmnt>
-<BasicStmnt CovItemId="S9" CovItemPrefix="PlayTest.java" Intrnl_Id="1048">
-<LocList>
-<Loc EndOffset="488" SrcFileId="4" StartOffset="454"/>
-</LocList>
-</BasicStmnt>
-<BasicStmnt CovItemId="S10" CovItemPrefix="PlayTest.java" Intrnl_Id="1049">
-<LocList>
-<Loc EndOffset="537" SrcFileId="4" StartOffset="493"/>
+<Loc EndOffset="546" SrcFileId="4" StartOffset="503"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
-<Keyword EndOffset="257" SrcFileId="4" StartOffset="252"/>
+<Keyword EndOffset="392" SrcFileId="4" StartOffset="389"/>
 <LocList>
-<Loc EndOffset="544" SrcFileId="4" StartOffset="252"/>
+<Loc EndOffset="552" SrcFileId="4" StartOffset="389"/>
+</LocList>
+</LoopStmnt>
+</StmntSeq>
+<Keyword EndOffset="360" SrcFileId="4" StartOffset="355"/>
+<LocList>
+<Loc EndOffset="557" SrcFileId="4" StartOffset="355"/>
 </LocList>
 <RootTerm CovItemId="C1" CovItemPrefix="PlayTest.java" Intrnl_Id="1050">
 <OpTerm BooleanOpId="10" Intrnl_Id="1051">
 <BasicBoolTerm Intrnl_Id="1052">
 <LocList>
-<Loc EndOffset="275" SrcFileId="4" StartOffset="259"/>
+<Loc EndOffset="378" SrcFileId="4" StartOffset="362"/>
 </LocList>
 </BasicBoolTerm>
 <LocList>
-<Loc EndOffset="259" SrcFileId="4" StartOffset="258"/>
+<Loc EndOffset="362" SrcFileId="4" StartOffset="361"/>
 </LocList>
 </OpTerm>
 </RootTerm>
 </LoopStmnt>
-<BasicStmnt CovItemId="S11" CovItemPrefix="PlayTest.java" Intrnl_Id="1053">
+<BasicStmnt CovItemId="S10" CovItemPrefix="PlayTest.java" Intrnl_Id="1053">
 <LocList>
-<Loc EndOffset="589" SrcFileId="4" StartOffset="550"/>
+<Loc EndOffset="602" SrcFileId="4" StartOffset="563"/>
 </LocList>
 </BasicStmnt>
-<BasicStmnt CovItemId="S12" CovItemPrefix="PlayTest.java" Intrnl_Id="1054">
+<BasicStmnt CovItemId="S11" CovItemPrefix="PlayTest.java" Intrnl_Id="1054">
 <LocList>
-<Loc EndOffset="632" SrcFileId="4" StartOffset="593"/>
+<Loc EndOffset="645" SrcFileId="4" StartOffset="606"/>
 </LocList>
 </BasicStmnt>
-<CondStmnt CovItemId="S13" CovItemPrefix="PlayTest.java" Intrnl_Id="1055">
+<CondStmnt CovItemId="S12" CovItemPrefix="PlayTest.java" Intrnl_Id="1055">
 <Branch CovItemId="B1" CovItemPrefix="PlayTest.java" Implct="false" Intrnl_Id="1056">
 <Cond/>
 <LocList>
-<Loc EndOffset="743" SrcFileId="4" StartOffset="675"/>
+<Loc EndOffset="756" SrcFileId="4" StartOffset="688"/>
 </LocList>
 <StmntSeq Intrnl_Id="1057">
 <LocList>
-<Loc EndOffset="743" SrcFileId="4" StartOffset="675"/>
+<Loc EndOffset="756" SrcFileId="4" StartOffset="688"/>
 </LocList>
-<BasicStmnt CovItemId="S14" CovItemPrefix="PlayTest.java" Intrnl_Id="1058">
+<BasicStmnt CovItemId="S13" CovItemPrefix="PlayTest.java" Intrnl_Id="1058">
 <LocList>
-<Loc EndOffset="743" SrcFileId="4" StartOffset="675"/>
+<Loc EndOffset="756" SrcFileId="4" StartOffset="688"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
 <Branch CovItemId="B2" CovItemPrefix="PlayTest.java" Implct="false" Intrnl_Id="1059">
 <Cond>
-<Loc EndOffset="751" SrcFileId="4" StartOffset="747"/>
+<Loc EndOffset="764" SrcFileId="4" StartOffset="760"/>
 </Cond>
 <LocList>
-<Loc EndOffset="820" SrcFileId="4" StartOffset="752"/>
+<Loc EndOffset="833" SrcFileId="4" StartOffset="765"/>
 </LocList>
 <StmntSeq Intrnl_Id="1060">
 <LocList>
-<Loc EndOffset="820" SrcFileId="4" StartOffset="752"/>
+<Loc EndOffset="833" SrcFileId="4" StartOffset="765"/>
 </LocList>
-<BasicStmnt CovItemId="S15" CovItemPrefix="PlayTest.java" Intrnl_Id="1061">
+<BasicStmnt CovItemId="S14" CovItemPrefix="PlayTest.java" Intrnl_Id="1061">
 <LocList>
-<Loc EndOffset="820" SrcFileId="4" StartOffset="752"/>
+<Loc EndOffset="833" SrcFileId="4" StartOffset="765"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="642" SrcFileId="4" StartOffset="640"/>
+<Keyword EndOffset="655" SrcFileId="4" StartOffset="653"/>
 <LocList>
-<Loc EndOffset="820" SrcFileId="4" StartOffset="640"/>
+<Loc EndOffset="833" SrcFileId="4" StartOffset="653"/>
 </LocList>
 <RootTerm CovItemId="C2" CovItemPrefix="PlayTest.java" Intrnl_Id="1062">
 <BasicBoolTerm Intrnl_Id="1063">
 <LocList>
-<Loc EndOffset="673" SrcFileId="4" StartOffset="643"/>
+<Loc EndOffset="686" SrcFileId="4" StartOffset="656"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
@@ -6194,14 +6193,14 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2569" HierarchyLvlTypeId="12" Intrnl_Id="1064" Name="Player">
+<HierarchyLvl HierarchyLvlId="127" HierarchyLvlTypeId="12" Intrnl_Id="1064" Name="Player">
 <Header>
 <Loc EndOffset="75" SrcFileId="5" StartOffset="56"/>
 </Header>
 <LocList>
 <Loc EndOffset="3012" SrcFileId="5" StartOffset="56"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2564" HierarchyLvlTypeId="11" Intrnl_Id="1065" Name="Player">
+<HierarchyLvl HierarchyLvlId="122" HierarchyLvlTypeId="11" Intrnl_Id="1065" Name="Player">
 <Header>
 <Loc EndOffset="147" SrcFileId="5" StartOffset="115"/>
 </Header>
@@ -6237,7 +6236,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2565" HierarchyLvlTypeId="11" Intrnl_Id="1071" Name="shuffleDiscard">
+<HierarchyLvl HierarchyLvlId="123" HierarchyLvlTypeId="11" Intrnl_Id="1071" Name="shuffleDiscard">
 <Header>
 <Loc EndOffset="329" SrcFileId="5" StartOffset="301"/>
 </Header>
@@ -6495,7 +6494,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2566" HierarchyLvlTypeId="11" Intrnl_Id="1114" Name="drawCard">
+<HierarchyLvl HierarchyLvlId="124" HierarchyLvlTypeId="11" Intrnl_Id="1114" Name="drawCard">
 <Header>
 <Loc EndOffset="2155" SrcFileId="5" StartOffset="2133"/>
 </Header>
@@ -6550,7 +6549,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2567" HierarchyLvlTypeId="11" Intrnl_Id="1125" Name="deckSize">
+<HierarchyLvl HierarchyLvlId="125" HierarchyLvlTypeId="11" Intrnl_Id="1125" Name="deckSize">
 <Header>
 <Loc EndOffset="2281" SrcFileId="5" StartOffset="2245"/>
 </Header>
@@ -6656,7 +6655,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2568" HierarchyLvlTypeId="11" Intrnl_Id="1143" Name="countPoints">
+<HierarchyLvl HierarchyLvlId="126" HierarchyLvlTypeId="11" Intrnl_Id="1143" Name="countPoints">
 <Header>
 <Loc EndOffset="2753" SrcFileId="5" StartOffset="2729"/>
 </Header>
@@ -6710,14 +6709,14 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2573" HierarchyLvlTypeId="12" Intrnl_Id="1152" Name="PlayerTest">
+<HierarchyLvl HierarchyLvlId="131" HierarchyLvlTypeId="12" Intrnl_Id="1152" Name="PlayerTest">
 <Header>
 <Loc EndOffset="49" SrcFileId="6" StartOffset="26"/>
 </Header>
 <LocList>
 <Loc EndOffset="719" SrcFileId="6" StartOffset="26"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2570" HierarchyLvlTypeId="11" Intrnl_Id="1153" Name="testShuffleDiscard">
+<HierarchyLvl HierarchyLvlId="128" HierarchyLvlTypeId="11" Intrnl_Id="1153" Name="testShuffleDiscard">
 <Header>
 <Loc EndOffset="96" SrcFileId="6" StartOffset="56"/>
 </Header>
@@ -6753,7 +6752,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2571" HierarchyLvlTypeId="11" Intrnl_Id="1159" Name="testDrawCard">
+<HierarchyLvl HierarchyLvlId="129" HierarchyLvlTypeId="11" Intrnl_Id="1159" Name="testDrawCard">
 <Header>
 <Loc EndOffset="367" SrcFileId="6" StartOffset="333"/>
 </Header>
@@ -6783,7 +6782,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2572" HierarchyLvlTypeId="11" Intrnl_Id="1164" Name="testDeckSize">
+<HierarchyLvl HierarchyLvlId="130" HierarchyLvlTypeId="11" Intrnl_Id="1164" Name="testDeckSize">
 <Header>
 <Loc EndOffset="560" SrcFileId="6" StartOffset="526"/>
 </Header>
@@ -6808,14 +6807,14 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2577" HierarchyLvlTypeId="12" Intrnl_Id="1168" Name="SupplyStack">
+<HierarchyLvl HierarchyLvlId="135" HierarchyLvlTypeId="12" Intrnl_Id="1168" Name="SupplyStack">
 <Header>
 <Loc EndOffset="26" SrcFileId="7" StartOffset="2"/>
 </Header>
 <LocList>
 <Loc EndOffset="316" SrcFileId="7" StartOffset="2"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2574" HierarchyLvlTypeId="11" Intrnl_Id="1169" Name="SupplyStack">
+<HierarchyLvl HierarchyLvlId="132" HierarchyLvlTypeId="11" Intrnl_Id="1169" Name="SupplyStack">
 <Header>
 <Loc EndOffset="120" SrcFileId="7" StartOffset="78"/>
 </Header>
@@ -6845,7 +6844,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2575" HierarchyLvlTypeId="11" Intrnl_Id="1174" Name="getType">
+<HierarchyLvl HierarchyLvlId="133" HierarchyLvlTypeId="11" Intrnl_Id="1174" Name="getType">
 <Header>
 <Loc EndOffset="222" SrcFileId="7" StartOffset="199"/>
 </Header>
@@ -6863,7 +6862,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2576" HierarchyLvlTypeId="11" Intrnl_Id="1177" Name="hasTreasure">
+<HierarchyLvl HierarchyLvlId="134" HierarchyLvlTypeId="11" Intrnl_Id="1177" Name="hasTreasure">
 <Header>
 <Loc EndOffset="282" SrcFileId="7" StartOffset="258"/>
 </Header>
@@ -6882,14 +6881,14 @@
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2585" HierarchyLvlTypeId="12" Intrnl_Id="1180" Name="Turn">
+<HierarchyLvl HierarchyLvlId="143" HierarchyLvlTypeId="12" Intrnl_Id="1180" Name="Turn">
 <Header>
 <Loc EndOffset="131" SrcFileId="8" StartOffset="114"/>
 </Header>
 <LocList>
-<Loc EndOffset="6228" SrcFileId="8" StartOffset="114"/>
+<Loc EndOffset="6234" SrcFileId="8" StartOffset="114"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2578" HierarchyLvlTypeId="11" Intrnl_Id="1181" Name="Turn">
+<HierarchyLvl HierarchyLvlId="136" HierarchyLvlTypeId="11" Intrnl_Id="1181" Name="Turn">
 <Header>
 <Loc EndOffset="237" SrcFileId="8" StartOffset="189"/>
 </Header>
@@ -6949,7 +6948,7 @@
 </LoopStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2579" HierarchyLvlTypeId="11" Intrnl_Id="1192" Name="buyCards">
+<HierarchyLvl HierarchyLvlId="137" HierarchyLvlTypeId="11" Intrnl_Id="1192" Name="buyCards">
 <Header>
 <Loc EndOffset="448" SrcFileId="8" StartOffset="391"/>
 </Header>
@@ -7786,7 +7785,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2580" HierarchyLvlTypeId="11" Intrnl_Id="1356" Name="spend">
+<HierarchyLvl HierarchyLvlId="138" HierarchyLvlTypeId="11" Intrnl_Id="1356" Name="spend">
 <Header>
 <Loc EndOffset="3190" SrcFileId="8" StartOffset="3151"/>
 </Header>
@@ -7908,7 +7907,7 @@
 </LoopStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2581" HierarchyLvlTypeId="11" Intrnl_Id="1381" Name="endTurn">
+<HierarchyLvl HierarchyLvlId="139" HierarchyLvlTypeId="11" Intrnl_Id="1381" Name="endTurn">
 <Header>
 <Loc EndOffset="3497" SrcFileId="8" StartOffset="3463"/>
 </Header>
@@ -7950,44 +7949,44 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2582" HierarchyLvlTypeId="11" Intrnl_Id="1389" Name="takeTurn">
+<HierarchyLvl HierarchyLvlId="140" HierarchyLvlTypeId="11" Intrnl_Id="1389" Name="takeTurn">
 <Header>
-<Loc EndOffset="3691" SrcFileId="8" StartOffset="3618"/>
+<Loc EndOffset="3693" SrcFileId="8" StartOffset="3618"/>
 </Header>
 <LocList>
-<Loc EndOffset="3985" SrcFileId="8" StartOffset="3618"/>
+<Loc EndOffset="3987" SrcFileId="8" StartOffset="3618"/>
 </LocList>
 <StmntSeq Intrnl_Id="1390">
 <LocList>
-<Loc EndOffset="3779" SrcFileId="8" StartOffset="3696"/>
-<Loc EndOffset="3956" SrcFileId="8" StartOffset="3793"/>
-<Loc EndOffset="3980" SrcFileId="8" StartOffset="3964"/>
+<Loc EndOffset="3781" SrcFileId="8" StartOffset="3698"/>
+<Loc EndOffset="3958" SrcFileId="8" StartOffset="3795"/>
+<Loc EndOffset="3982" SrcFileId="8" StartOffset="3966"/>
 </LocList>
 <LoopStmnt CovItemId="S86" CovItemPrefix="Turn.java" Intrnl_Id="1391" MltplExecId="L8-2" MltplExecPrefix="Turn.java" NvrExecId="L8-0" NvrExecPrefix="Turn.java" OnceExecutedId="L8-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1392">
 <LocList>
-<Loc EndOffset="3759" SrcFileId="8" StartOffset="3720"/>
-<Loc EndOffset="3774" SrcFileId="8" StartOffset="3764"/>
+<Loc EndOffset="3761" SrcFileId="8" StartOffset="3722"/>
+<Loc EndOffset="3776" SrcFileId="8" StartOffset="3766"/>
 </LocList>
 <BasicStmnt CovItemId="S87" CovItemPrefix="Turn.java" Intrnl_Id="1393">
 <LocList>
-<Loc EndOffset="3759" SrcFileId="8" StartOffset="3720"/>
+<Loc EndOffset="3761" SrcFileId="8" StartOffset="3722"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S88" CovItemPrefix="Turn.java" Intrnl_Id="1394">
 <LocList>
-<Loc EndOffset="3774" SrcFileId="8" StartOffset="3764"/>
+<Loc EndOffset="3776" SrcFileId="8" StartOffset="3766"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
-<Keyword EndOffset="3701" SrcFileId="8" StartOffset="3696"/>
+<Keyword EndOffset="3703" SrcFileId="8" StartOffset="3698"/>
 <LocList>
-<Loc EndOffset="3779" SrcFileId="8" StartOffset="3696"/>
+<Loc EndOffset="3781" SrcFileId="8" StartOffset="3698"/>
 </LocList>
 <RootTerm CovItemId="C21" CovItemPrefix="Turn.java" Intrnl_Id="1395">
 <BasicBoolTerm Intrnl_Id="1396">
 <LocList>
-<Loc EndOffset="3713" SrcFileId="8" StartOffset="3702"/>
+<Loc EndOffset="3715" SrcFileId="8" StartOffset="3704"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
@@ -7995,95 +7994,95 @@
 <LoopStmnt CovItemId="S89" CovItemPrefix="Turn.java" Intrnl_Id="1397" MltplExecId="L9-2" MltplExecPrefix="Turn.java" NvrExecId="L9-0" NvrExecPrefix="Turn.java" OnceExecutedId="L9-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1398">
 <LocList>
-<Loc EndOffset="3906" SrcFileId="8" StartOffset="3814"/>
-<Loc EndOffset="3939" SrcFileId="8" StartOffset="3911"/>
-<Loc EndOffset="3951" SrcFileId="8" StartOffset="3944"/>
+<Loc EndOffset="3908" SrcFileId="8" StartOffset="3816"/>
+<Loc EndOffset="3941" SrcFileId="8" StartOffset="3913"/>
+<Loc EndOffset="3953" SrcFileId="8" StartOffset="3946"/>
 </LocList>
 <LoopStmnt CovItemId="S90" CovItemPrefix="Turn.java" Intrnl_Id="1399" MltplExecId="L10-2" MltplExecPrefix="Turn.java" NvrExecId="L10-0" NvrExecPrefix="Turn.java" OnceExecutedId="L10-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1400">
 <LocList>
-<Loc EndOffset="3881" SrcFileId="8" StartOffset="3853"/>
+<Loc EndOffset="3883" SrcFileId="8" StartOffset="3855"/>
 </LocList>
 <BasicStmnt CovItemId="S91" CovItemPrefix="Turn.java" Intrnl_Id="1401">
 <LocList>
-<Loc EndOffset="3881" SrcFileId="8" StartOffset="3853"/>
+<Loc EndOffset="3883" SrcFileId="8" StartOffset="3855"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
-<Keyword EndOffset="3817" SrcFileId="8" StartOffset="3814"/>
+<Keyword EndOffset="3819" SrcFileId="8" StartOffset="3816"/>
 <LocList>
-<Loc EndOffset="3906" SrcFileId="8" StartOffset="3814"/>
+<Loc EndOffset="3908" SrcFileId="8" StartOffset="3816"/>
 </LocList>
 <RootTerm CovItemId="C23" CovItemPrefix="Turn.java" Intrnl_Id="1402">
 <BasicBoolTerm Intrnl_Id="1403">
 <LocList>
-<Loc EndOffset="3840" SrcFileId="8" StartOffset="3827"/>
+<Loc EndOffset="3842" SrcFileId="8" StartOffset="3829"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </LoopStmnt>
 <BasicStmnt CovItemId="S92" CovItemPrefix="Turn.java" Intrnl_Id="1404">
 <LocList>
-<Loc EndOffset="3939" SrcFileId="8" StartOffset="3911"/>
+<Loc EndOffset="3941" SrcFileId="8" StartOffset="3913"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S93" CovItemPrefix="Turn.java" Intrnl_Id="1405">
 <LocList>
-<Loc EndOffset="3951" SrcFileId="8" StartOffset="3944"/>
+<Loc EndOffset="3953" SrcFileId="8" StartOffset="3946"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
-<Keyword EndOffset="3798" SrcFileId="8" StartOffset="3793"/>
+<Keyword EndOffset="3800" SrcFileId="8" StartOffset="3795"/>
 <LocList>
-<Loc EndOffset="3956" SrcFileId="8" StartOffset="3793"/>
+<Loc EndOffset="3958" SrcFileId="8" StartOffset="3795"/>
 </LocList>
 <RootTerm CovItemId="C22" CovItemPrefix="Turn.java" Intrnl_Id="1406">
 <BasicBoolTerm Intrnl_Id="1407">
 <LocList>
-<Loc EndOffset="3807" SrcFileId="8" StartOffset="3799"/>
+<Loc EndOffset="3809" SrcFileId="8" StartOffset="3801"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </LoopStmnt>
 <BasicStmnt CovItemId="S94" CovItemPrefix="Turn.java" Intrnl_Id="1408">
 <LocList>
-<Loc EndOffset="3980" SrcFileId="8" StartOffset="3964"/>
+<Loc EndOffset="3982" SrcFileId="8" StartOffset="3966"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2583" HierarchyLvlTypeId="11" Intrnl_Id="1409" Name="playAction">
+<HierarchyLvl HierarchyLvlId="141" HierarchyLvlTypeId="11" Intrnl_Id="1409" Name="playAction">
 <Header>
-<Loc EndOffset="4065" SrcFileId="8" StartOffset="3990"/>
+<Loc EndOffset="4069" SrcFileId="8" StartOffset="3992"/>
 </Header>
 <LocList>
-<Loc EndOffset="4741" SrcFileId="8" StartOffset="3990"/>
+<Loc EndOffset="4745" SrcFileId="8" StartOffset="3992"/>
 </LocList>
 <StmntSeq Intrnl_Id="1410">
 <LocList>
-<Loc EndOffset="4678" SrcFileId="8" StartOffset="4071"/>
-<Loc EndOffset="4726" SrcFileId="8" StartOffset="4682"/>
-<Loc EndOffset="4737" SrcFileId="8" StartOffset="4730"/>
+<Loc EndOffset="4682" SrcFileId="8" StartOffset="4075"/>
+<Loc EndOffset="4730" SrcFileId="8" StartOffset="4686"/>
+<Loc EndOffset="4741" SrcFileId="8" StartOffset="4734"/>
 </LocList>
 <LoopStmnt CovItemId="S95" CovItemPrefix="Turn.java" Intrnl_Id="1411" MltplExecId="L11-2" MltplExecPrefix="Turn.java" NvrExecId="L11-0" NvrExecPrefix="Turn.java" OnceExecutedId="L11-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1412">
 <LocList>
-<Loc EndOffset="4172" SrcFileId="8" StartOffset="4147"/>
-<Loc EndOffset="4673" SrcFileId="8" StartOffset="4177"/>
+<Loc EndOffset="4176" SrcFileId="8" StartOffset="4151"/>
+<Loc EndOffset="4677" SrcFileId="8" StartOffset="4181"/>
 </LocList>
 <CondStmnt CovItemId="S96" CovItemPrefix="Turn.java" Intrnl_Id="1413">
 <Branch CovItemId="B35" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1414">
 <Cond/>
 <LocList>
-<Loc EndOffset="4172" SrcFileId="8" StartOffset="4166"/>
+<Loc EndOffset="4176" SrcFileId="8" StartOffset="4170"/>
 </LocList>
 <StmntSeq Intrnl_Id="1415">
 <LocList>
-<Loc EndOffset="4172" SrcFileId="8" StartOffset="4166"/>
+<Loc EndOffset="4176" SrcFileId="8" StartOffset="4170"/>
 </LocList>
 <BasicStmnt CovItemId="S97" CovItemPrefix="Turn.java" Intrnl_Id="1416">
 <LocList>
-<Loc EndOffset="4172" SrcFileId="8" StartOffset="4166"/>
+<Loc EndOffset="4176" SrcFileId="8" StartOffset="4170"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
@@ -8095,14 +8094,14 @@
 <LocList/>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="4149" SrcFileId="8" StartOffset="4147"/>
+<Keyword EndOffset="4153" SrcFileId="8" StartOffset="4151"/>
 <LocList>
-<Loc EndOffset="4172" SrcFileId="8" StartOffset="4147"/>
+<Loc EndOffset="4176" SrcFileId="8" StartOffset="4151"/>
 </LocList>
 <RootTerm CovItemId="C25" CovItemPrefix="Turn.java" Intrnl_Id="1419">
 <BasicBoolTerm Intrnl_Id="1420">
 <LocList>
-<Loc EndOffset="4164" SrcFileId="8" StartOffset="4150"/>
+<Loc EndOffset="4168" SrcFileId="8" StartOffset="4154"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
@@ -8111,129 +8110,129 @@
 <Branch CovItemId="B37" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1422">
 <Cond/>
 <LocList>
-<Loc EndOffset="4673" SrcFileId="8" StartOffset="4199"/>
+<Loc EndOffset="4677" SrcFileId="8" StartOffset="4203"/>
 </LocList>
 <StmntSeq Intrnl_Id="1423">
 <LocList>
-<Loc EndOffset="4257" SrcFileId="8" StartOffset="4206"/>
-<Loc EndOffset="4299" SrcFileId="8" StartOffset="4263"/>
-<Loc EndOffset="4300" SrcFileId="8" StartOffset="4299"/>
-<Loc EndOffset="4336" SrcFileId="8" StartOffset="4306"/>
-<Loc EndOffset="4370" SrcFileId="8" StartOffset="4342"/>
-<Loc EndOffset="4464" SrcFileId="8" StartOffset="4376"/>
-<Loc EndOffset="4492" SrcFileId="8" StartOffset="4470"/>
-<Loc EndOffset="4630" SrcFileId="8" StartOffset="4498"/>
-<Loc EndOffset="4654" SrcFileId="8" StartOffset="4636"/>
-<Loc EndOffset="4667" SrcFileId="8" StartOffset="4660"/>
+<Loc EndOffset="4261" SrcFileId="8" StartOffset="4210"/>
+<Loc EndOffset="4303" SrcFileId="8" StartOffset="4267"/>
+<Loc EndOffset="4304" SrcFileId="8" StartOffset="4303"/>
+<Loc EndOffset="4340" SrcFileId="8" StartOffset="4310"/>
+<Loc EndOffset="4374" SrcFileId="8" StartOffset="4346"/>
+<Loc EndOffset="4468" SrcFileId="8" StartOffset="4380"/>
+<Loc EndOffset="4496" SrcFileId="8" StartOffset="4474"/>
+<Loc EndOffset="4634" SrcFileId="8" StartOffset="4502"/>
+<Loc EndOffset="4658" SrcFileId="8" StartOffset="4640"/>
+<Loc EndOffset="4671" SrcFileId="8" StartOffset="4664"/>
 </LocList>
 <BasicStmnt CovItemId="S99" CovItemPrefix="Turn.java" Intrnl_Id="1424">
 <LocList>
-<Loc EndOffset="4257" SrcFileId="8" StartOffset="4206"/>
+<Loc EndOffset="4261" SrcFileId="8" StartOffset="4210"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S100" CovItemPrefix="Turn.java" Intrnl_Id="1425">
 <LocList>
-<Loc EndOffset="4299" SrcFileId="8" StartOffset="4263"/>
+<Loc EndOffset="4303" SrcFileId="8" StartOffset="4267"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S101" CovItemPrefix="Turn.java" Intrnl_Id="1426">
 <LocList>
-<Loc EndOffset="4300" SrcFileId="8" StartOffset="4299"/>
+<Loc EndOffset="4304" SrcFileId="8" StartOffset="4303"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S102" CovItemPrefix="Turn.java" Intrnl_Id="1427">
 <LocList>
-<Loc EndOffset="4336" SrcFileId="8" StartOffset="4306"/>
+<Loc EndOffset="4340" SrcFileId="8" StartOffset="4310"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S103" CovItemPrefix="Turn.java" Intrnl_Id="1428">
 <LocList>
-<Loc EndOffset="4370" SrcFileId="8" StartOffset="4342"/>
+<Loc EndOffset="4374" SrcFileId="8" StartOffset="4346"/>
 </LocList>
 </BasicStmnt>
 <LoopStmnt CovItemId="S104" CovItemPrefix="Turn.java" Intrnl_Id="1429" MltplExecId="L12-2" MltplExecPrefix="Turn.java" NvrExecId="L12-0" NvrExecPrefix="Turn.java" OnceExecutedId="L12-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1430">
 <LocList>
-<Loc EndOffset="4457" SrcFileId="8" StartOffset="4429"/>
+<Loc EndOffset="4461" SrcFileId="8" StartOffset="4433"/>
 </LocList>
 <BasicStmnt CovItemId="S105" CovItemPrefix="Turn.java" Intrnl_Id="1431">
 <LocList>
-<Loc EndOffset="4457" SrcFileId="8" StartOffset="4429"/>
+<Loc EndOffset="4461" SrcFileId="8" StartOffset="4433"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
-<Keyword EndOffset="4379" SrcFileId="8" StartOffset="4376"/>
+<Keyword EndOffset="4383" SrcFileId="8" StartOffset="4380"/>
 <LocList>
-<Loc EndOffset="4464" SrcFileId="8" StartOffset="4376"/>
+<Loc EndOffset="4468" SrcFileId="8" StartOffset="4380"/>
 </LocList>
 <RootTerm CovItemId="C27" CovItemPrefix="Turn.java" Intrnl_Id="1432">
 <BasicBoolTerm Intrnl_Id="1433">
 <LocList>
-<Loc EndOffset="4415" SrcFileId="8" StartOffset="4389"/>
+<Loc EndOffset="4419" SrcFileId="8" StartOffset="4393"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </LoopStmnt>
 <BasicStmnt CovItemId="S106" CovItemPrefix="Turn.java" Intrnl_Id="1434">
 <LocList>
-<Loc EndOffset="4492" SrcFileId="8" StartOffset="4470"/>
+<Loc EndOffset="4496" SrcFileId="8" StartOffset="4474"/>
 </LocList>
 </BasicStmnt>
 <CondStmnt CovItemId="S107" CovItemPrefix="Turn.java" Intrnl_Id="1435">
 <Branch CovItemId="B39" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1436">
 <Cond/>
 <LocList>
-<Loc EndOffset="4574" SrcFileId="8" StartOffset="4522"/>
+<Loc EndOffset="4578" SrcFileId="8" StartOffset="4526"/>
 </LocList>
 <StmntSeq Intrnl_Id="1437">
 <LocList>
-<Loc EndOffset="4574" SrcFileId="8" StartOffset="4522"/>
+<Loc EndOffset="4578" SrcFileId="8" StartOffset="4526"/>
 </LocList>
 <BasicStmnt CovItemId="S108" CovItemPrefix="Turn.java" Intrnl_Id="1438">
 <LocList>
-<Loc EndOffset="4574" SrcFileId="8" StartOffset="4522"/>
+<Loc EndOffset="4578" SrcFileId="8" StartOffset="4526"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
 <Branch CovItemId="B40" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1439">
 <Cond>
-<Loc EndOffset="4584" SrcFileId="8" StartOffset="4580"/>
+<Loc EndOffset="4588" SrcFileId="8" StartOffset="4584"/>
 </Cond>
 <LocList>
-<Loc EndOffset="4630" SrcFileId="8" StartOffset="4585"/>
+<Loc EndOffset="4634" SrcFileId="8" StartOffset="4589"/>
 </LocList>
 <StmntSeq Intrnl_Id="1440">
 <LocList>
-<Loc EndOffset="4630" SrcFileId="8" StartOffset="4585"/>
+<Loc EndOffset="4634" SrcFileId="8" StartOffset="4589"/>
 </LocList>
 <BasicStmnt CovItemId="S109" CovItemPrefix="Turn.java" Intrnl_Id="1441">
 <LocList>
-<Loc EndOffset="4630" SrcFileId="8" StartOffset="4585"/>
+<Loc EndOffset="4634" SrcFileId="8" StartOffset="4589"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="4500" SrcFileId="8" StartOffset="4498"/>
+<Keyword EndOffset="4504" SrcFileId="8" StartOffset="4502"/>
 <LocList>
-<Loc EndOffset="4630" SrcFileId="8" StartOffset="4498"/>
+<Loc EndOffset="4634" SrcFileId="8" StartOffset="4502"/>
 </LocList>
 <RootTerm CovItemId="C28" CovItemPrefix="Turn.java" Intrnl_Id="1442">
 <BasicBoolTerm Intrnl_Id="1443">
 <LocList>
-<Loc EndOffset="4520" SrcFileId="8" StartOffset="4501"/>
+<Loc EndOffset="4524" SrcFileId="8" StartOffset="4505"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </CondStmnt>
 <BasicStmnt CovItemId="S110" CovItemPrefix="Turn.java" Intrnl_Id="1444">
 <LocList>
-<Loc EndOffset="4654" SrcFileId="8" StartOffset="4636"/>
+<Loc EndOffset="4658" SrcFileId="8" StartOffset="4640"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S111" CovItemPrefix="Turn.java" Intrnl_Id="1445">
 <LocList>
-<Loc EndOffset="4667" SrcFileId="8" StartOffset="4660"/>
+<Loc EndOffset="4671" SrcFileId="8" StartOffset="4664"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
@@ -8245,157 +8244,157 @@
 <LocList/>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="4179" SrcFileId="8" StartOffset="4177"/>
+<Keyword EndOffset="4183" SrcFileId="8" StartOffset="4181"/>
 <LocList>
-<Loc EndOffset="4673" SrcFileId="8" StartOffset="4177"/>
+<Loc EndOffset="4677" SrcFileId="8" StartOffset="4181"/>
 </LocList>
 <RootTerm CovItemId="C26" CovItemPrefix="Turn.java" Intrnl_Id="1448">
 <BasicBoolTerm Intrnl_Id="1449">
 <LocList>
-<Loc EndOffset="4198" SrcFileId="8" StartOffset="4180"/>
+<Loc EndOffset="4202" SrcFileId="8" StartOffset="4184"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </CondStmnt>
 </StmntSeq>
-<Keyword EndOffset="4074" SrcFileId="8" StartOffset="4071"/>
+<Keyword EndOffset="4078" SrcFileId="8" StartOffset="4075"/>
 <LocList>
-<Loc EndOffset="4678" SrcFileId="8" StartOffset="4071"/>
+<Loc EndOffset="4682" SrcFileId="8" StartOffset="4075"/>
 </LocList>
 <RootTerm CovItemId="C24" CovItemPrefix="Turn.java" Intrnl_Id="1450">
 <BasicBoolTerm Intrnl_Id="1451">
 <LocList>
-<Loc EndOffset="4099" SrcFileId="8" StartOffset="4084"/>
+<Loc EndOffset="4103" SrcFileId="8" StartOffset="4088"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </LoopStmnt>
 <BasicStmnt CovItemId="S112" CovItemPrefix="Turn.java" Intrnl_Id="1452">
 <LocList>
-<Loc EndOffset="4726" SrcFileId="8" StartOffset="4682"/>
+<Loc EndOffset="4730" SrcFileId="8" StartOffset="4686"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S113" CovItemPrefix="Turn.java" Intrnl_Id="1453">
 <LocList>
-<Loc EndOffset="4737" SrcFileId="8" StartOffset="4730"/>
+<Loc EndOffset="4741" SrcFileId="8" StartOffset="4734"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2584" HierarchyLvlTypeId="11" Intrnl_Id="1454" Name="doTheThing">
+<HierarchyLvl HierarchyLvlId="142" HierarchyLvlTypeId="11" Intrnl_Id="1454" Name="doTheThing">
 <Header>
-<Loc EndOffset="4832" SrcFileId="8" StartOffset="4746"/>
+<Loc EndOffset="4838" SrcFileId="8" StartOffset="4750"/>
 </Header>
 <LocList>
-<Loc EndOffset="6220" SrcFileId="8" StartOffset="4746"/>
+<Loc EndOffset="6226" SrcFileId="8" StartOffset="4750"/>
 </LocList>
 <StmntSeq Intrnl_Id="1455">
 <LocList>
-<Loc EndOffset="4891" SrcFileId="8" StartOffset="4858"/>
-<Loc EndOffset="6200" SrcFileId="8" StartOffset="4895"/>
-<Loc EndOffset="6215" SrcFileId="8" StartOffset="6208"/>
+<Loc EndOffset="4897" SrcFileId="8" StartOffset="4864"/>
+<Loc EndOffset="6206" SrcFileId="8" StartOffset="4901"/>
+<Loc EndOffset="6221" SrcFileId="8" StartOffset="6214"/>
 </LocList>
 <BasicStmnt CovItemId="S114" CovItemPrefix="Turn.java" Intrnl_Id="1456">
 <LocList>
-<Loc EndOffset="4891" SrcFileId="8" StartOffset="4858"/>
+<Loc EndOffset="4897" SrcFileId="8" StartOffset="4864"/>
 </LocList>
 </BasicStmnt>
 <CondStmnt CovItemId="S115" CovItemPrefix="Turn.java" Intrnl_Id="1457">
 <Branch CovItemId="B41" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1458">
 <Cond>
-<Loc EndOffset="4932" SrcFileId="8" StartOffset="4921"/>
+<Loc EndOffset="4938" SrcFileId="8" StartOffset="4927"/>
 </Cond>
 <LocList>
-<Loc EndOffset="5400" SrcFileId="8" StartOffset="4938"/>
+<Loc EndOffset="5406" SrcFileId="8" StartOffset="4944"/>
 </LocList>
 <StmntSeq Intrnl_Id="1459">
 <LocList>
-<Loc EndOffset="4986" SrcFileId="8" StartOffset="4938"/>
-<Loc EndOffset="5329" SrcFileId="8" StartOffset="5015"/>
-<Loc EndOffset="5389" SrcFileId="8" StartOffset="5334"/>
-<Loc EndOffset="5400" SrcFileId="8" StartOffset="5394"/>
+<Loc EndOffset="4992" SrcFileId="8" StartOffset="4944"/>
+<Loc EndOffset="5335" SrcFileId="8" StartOffset="5021"/>
+<Loc EndOffset="5395" SrcFileId="8" StartOffset="5340"/>
+<Loc EndOffset="5406" SrcFileId="8" StartOffset="5400"/>
 </LocList>
 <BasicStmnt CovItemId="S116" CovItemPrefix="Turn.java" Intrnl_Id="1460">
 <LocList>
-<Loc EndOffset="4986" SrcFileId="8" StartOffset="4938"/>
+<Loc EndOffset="4992" SrcFileId="8" StartOffset="4944"/>
 </LocList>
 </BasicStmnt>
 <LoopStmnt CovItemId="S117" CovItemPrefix="Turn.java" Intrnl_Id="1461" MltplExecId="L13-2" MltplExecPrefix="Turn.java" NvrExecId="L13-0" NvrExecPrefix="Turn.java" OnceExecutedId="L13-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1462">
 <LocList>
-<Loc EndOffset="5068" SrcFileId="8" StartOffset="5045"/>
-<Loc EndOffset="5323" SrcFileId="8" StartOffset="5074"/>
+<Loc EndOffset="5074" SrcFileId="8" StartOffset="5051"/>
+<Loc EndOffset="5329" SrcFileId="8" StartOffset="5080"/>
 </LocList>
 <BasicStmnt CovItemId="S118" CovItemPrefix="Turn.java" Intrnl_Id="1463">
 <LocList>
-<Loc EndOffset="5068" SrcFileId="8" StartOffset="5045"/>
+<Loc EndOffset="5074" SrcFileId="8" StartOffset="5051"/>
 </LocList>
 </BasicStmnt>
 <CondStmnt CovItemId="S119" CovItemPrefix="Turn.java" Intrnl_Id="1464">
 <Branch CovItemId="B42" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1465">
 <Cond/>
 <LocList>
-<Loc EndOffset="5194" SrcFileId="8" StartOffset="5111"/>
+<Loc EndOffset="5200" SrcFileId="8" StartOffset="5117"/>
 </LocList>
 <StmntSeq Intrnl_Id="1466">
 <LocList>
-<Loc EndOffset="5137" SrcFileId="8" StartOffset="5119"/>
-<Loc EndOffset="5173" SrcFileId="8" StartOffset="5144"/>
-<Loc EndOffset="5187" SrcFileId="8" StartOffset="5180"/>
+<Loc EndOffset="5143" SrcFileId="8" StartOffset="5125"/>
+<Loc EndOffset="5179" SrcFileId="8" StartOffset="5150"/>
+<Loc EndOffset="5193" SrcFileId="8" StartOffset="5186"/>
 </LocList>
 <BasicStmnt CovItemId="S120" CovItemPrefix="Turn.java" Intrnl_Id="1467">
 <LocList>
-<Loc EndOffset="5137" SrcFileId="8" StartOffset="5119"/>
+<Loc EndOffset="5143" SrcFileId="8" StartOffset="5125"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S121" CovItemPrefix="Turn.java" Intrnl_Id="1468">
 <LocList>
-<Loc EndOffset="5173" SrcFileId="8" StartOffset="5144"/>
+<Loc EndOffset="5179" SrcFileId="8" StartOffset="5150"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S122" CovItemPrefix="Turn.java" Intrnl_Id="1469">
 <LocList>
-<Loc EndOffset="5187" SrcFileId="8" StartOffset="5180"/>
+<Loc EndOffset="5193" SrcFileId="8" StartOffset="5186"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
 <Branch CovItemId="B43" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1470">
 <Cond>
-<Loc EndOffset="5204" SrcFileId="8" StartOffset="5200"/>
+<Loc EndOffset="5210" SrcFileId="8" StartOffset="5206"/>
 </Cond>
 <LocList>
-<Loc EndOffset="5323" SrcFileId="8" StartOffset="5205"/>
+<Loc EndOffset="5329" SrcFileId="8" StartOffset="5211"/>
 </LocList>
 <StmntSeq Intrnl_Id="1471">
 <LocList>
-<Loc EndOffset="5323" SrcFileId="8" StartOffset="5205"/>
+<Loc EndOffset="5329" SrcFileId="8" StartOffset="5211"/>
 </LocList>
 <CondStmnt CovItemId="S123" CovItemPrefix="Turn.java" Intrnl_Id="1472">
 <Branch CovItemId="B44" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1473">
 <Cond/>
 <LocList>
-<Loc EndOffset="5323" SrcFileId="8" StartOffset="5242"/>
+<Loc EndOffset="5329" SrcFileId="8" StartOffset="5248"/>
 </LocList>
 <StmntSeq Intrnl_Id="1474">
 <LocList>
-<Loc EndOffset="5268" SrcFileId="8" StartOffset="5250"/>
-<Loc EndOffset="5302" SrcFileId="8" StartOffset="5275"/>
-<Loc EndOffset="5316" SrcFileId="8" StartOffset="5309"/>
+<Loc EndOffset="5274" SrcFileId="8" StartOffset="5256"/>
+<Loc EndOffset="5308" SrcFileId="8" StartOffset="5281"/>
+<Loc EndOffset="5322" SrcFileId="8" StartOffset="5315"/>
 </LocList>
 <BasicStmnt CovItemId="S124" CovItemPrefix="Turn.java" Intrnl_Id="1475">
 <LocList>
-<Loc EndOffset="5268" SrcFileId="8" StartOffset="5250"/>
+<Loc EndOffset="5274" SrcFileId="8" StartOffset="5256"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S125" CovItemPrefix="Turn.java" Intrnl_Id="1476">
 <LocList>
-<Loc EndOffset="5302" SrcFileId="8" StartOffset="5275"/>
+<Loc EndOffset="5308" SrcFileId="8" StartOffset="5281"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S126" CovItemPrefix="Turn.java" Intrnl_Id="1477">
 <LocList>
-<Loc EndOffset="5316" SrcFileId="8" StartOffset="5309"/>
+<Loc EndOffset="5322" SrcFileId="8" StartOffset="5315"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
@@ -8407,122 +8406,122 @@
 <LocList/>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="5207" SrcFileId="8" StartOffset="5205"/>
+<Keyword EndOffset="5213" SrcFileId="8" StartOffset="5211"/>
 <LocList>
-<Loc EndOffset="5323" SrcFileId="8" StartOffset="5205"/>
+<Loc EndOffset="5329" SrcFileId="8" StartOffset="5211"/>
 </LocList>
 <RootTerm CovItemId="C31" CovItemPrefix="Turn.java" Intrnl_Id="1480">
 <BasicBoolTerm Intrnl_Id="1481">
 <LocList>
-<Loc EndOffset="5235" SrcFileId="8" StartOffset="5208"/>
+<Loc EndOffset="5241" SrcFileId="8" StartOffset="5214"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </CondStmnt>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="5076" SrcFileId="8" StartOffset="5074"/>
+<Keyword EndOffset="5082" SrcFileId="8" StartOffset="5080"/>
 <LocList>
-<Loc EndOffset="5323" SrcFileId="8" StartOffset="5074"/>
+<Loc EndOffset="5329" SrcFileId="8" StartOffset="5080"/>
 </LocList>
 <RootTerm CovItemId="C30" CovItemPrefix="Turn.java" Intrnl_Id="1482">
 <BasicBoolTerm Intrnl_Id="1483">
 <LocList>
-<Loc EndOffset="5104" SrcFileId="8" StartOffset="5077"/>
+<Loc EndOffset="5110" SrcFileId="8" StartOffset="5083"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </CondStmnt>
 </StmntSeq>
-<Keyword EndOffset="5020" SrcFileId="8" StartOffset="5015"/>
+<Keyword EndOffset="5026" SrcFileId="8" StartOffset="5021"/>
 <LocList>
-<Loc EndOffset="5329" SrcFileId="8" StartOffset="5015"/>
+<Loc EndOffset="5335" SrcFileId="8" StartOffset="5021"/>
 </LocList>
 <RootTerm CovItemId="C29" CovItemPrefix="Turn.java" Intrnl_Id="1484">
 <BasicBoolTerm Intrnl_Id="1485">
 <LocList>
-<Loc EndOffset="5037" SrcFileId="8" StartOffset="5021"/>
+<Loc EndOffset="5043" SrcFileId="8" StartOffset="5027"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </LoopStmnt>
 <BasicStmnt CovItemId="S127" CovItemPrefix="Turn.java" Intrnl_Id="1486">
 <LocList>
-<Loc EndOffset="5389" SrcFileId="8" StartOffset="5334"/>
+<Loc EndOffset="5395" SrcFileId="8" StartOffset="5340"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S128" CovItemPrefix="Turn.java" Intrnl_Id="1487">
 <LocList>
-<Loc EndOffset="5400" SrcFileId="8" StartOffset="5394"/>
+<Loc EndOffset="5406" SrcFileId="8" StartOffset="5400"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
 <Branch CovItemId="B46" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1488">
 <Cond>
-<Loc EndOffset="5416" SrcFileId="8" StartOffset="5404"/>
+<Loc EndOffset="5422" SrcFileId="8" StartOffset="5410"/>
 </Cond>
 <LocList>
-<Loc EndOffset="6004" SrcFileId="8" StartOffset="5422"/>
+<Loc EndOffset="6010" SrcFileId="8" StartOffset="5428"/>
 </LocList>
 <StmntSeq Intrnl_Id="1489">
 <LocList>
-<Loc EndOffset="5440" SrcFileId="8" StartOffset="5422"/>
-<Loc EndOffset="5619" SrcFileId="8" StartOffset="5445"/>
-<Loc EndOffset="5663" SrcFileId="8" StartOffset="5624"/>
-<Loc EndOffset="6004" SrcFileId="8" StartOffset="5668"/>
+<Loc EndOffset="5446" SrcFileId="8" StartOffset="5428"/>
+<Loc EndOffset="5625" SrcFileId="8" StartOffset="5451"/>
+<Loc EndOffset="5669" SrcFileId="8" StartOffset="5630"/>
+<Loc EndOffset="6010" SrcFileId="8" StartOffset="5674"/>
 </LocList>
 <BasicStmnt CovItemId="S129" CovItemPrefix="Turn.java" Intrnl_Id="1490">
 <LocList>
-<Loc EndOffset="5440" SrcFileId="8" StartOffset="5422"/>
+<Loc EndOffset="5446" SrcFileId="8" StartOffset="5428"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S130" CovItemPrefix="Turn.java" Intrnl_Id="1491">
 <LocList>
-<Loc EndOffset="5619" SrcFileId="8" StartOffset="5445"/>
+<Loc EndOffset="5625" SrcFileId="8" StartOffset="5451"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S131" CovItemPrefix="Turn.java" Intrnl_Id="1492">
 <LocList>
-<Loc EndOffset="5663" SrcFileId="8" StartOffset="5624"/>
+<Loc EndOffset="5669" SrcFileId="8" StartOffset="5630"/>
 </LocList>
 </BasicStmnt>
 <CondStmnt CovItemId="S132" CovItemPrefix="Turn.java" Intrnl_Id="1493">
 <Branch CovItemId="B47" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1494">
 <Cond/>
 <LocList>
-<Loc EndOffset="6004" SrcFileId="8" StartOffset="5701"/>
+<Loc EndOffset="6010" SrcFileId="8" StartOffset="5707"/>
 </LocList>
 <StmntSeq Intrnl_Id="1495">
 <LocList>
-<Loc EndOffset="5869" SrcFileId="8" StartOffset="5708"/>
-<Loc EndOffset="5986" SrcFileId="8" StartOffset="5874"/>
-<Loc EndOffset="5998" SrcFileId="8" StartOffset="5991"/>
+<Loc EndOffset="5875" SrcFileId="8" StartOffset="5714"/>
+<Loc EndOffset="5992" SrcFileId="8" StartOffset="5880"/>
+<Loc EndOffset="6004" SrcFileId="8" StartOffset="5997"/>
 </LocList>
 <LoopStmnt CovItemId="S133" CovItemPrefix="Turn.java" Intrnl_Id="1496" MltplExecId="L14-2" MltplExecPrefix="Turn.java" NvrExecId="L14-0" NvrExecPrefix="Turn.java" OnceExecutedId="L14-1" OnceExecutedPrefix="Turn.java" OptBodyExec="true">
 <StmntSeq Intrnl_Id="1497">
 <LocList>
-<Loc EndOffset="5815" SrcFileId="8" StartOffset="5777"/>
-<Loc EndOffset="5862" SrcFileId="8" StartOffset="5822"/>
+<Loc EndOffset="5821" SrcFileId="8" StartOffset="5783"/>
+<Loc EndOffset="5868" SrcFileId="8" StartOffset="5828"/>
 </LocList>
 <BasicStmnt CovItemId="S134" CovItemPrefix="Turn.java" Intrnl_Id="1498">
 <LocList>
-<Loc EndOffset="5815" SrcFileId="8" StartOffset="5777"/>
+<Loc EndOffset="5821" SrcFileId="8" StartOffset="5783"/>
 </LocList>
 </BasicStmnt>
 <CondStmnt CovItemId="S135" CovItemPrefix="Turn.java" Intrnl_Id="1499">
 <Branch CovItemId="B49" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1500">
 <Cond/>
 <LocList>
-<Loc EndOffset="5862" SrcFileId="8" StartOffset="5856"/>
+<Loc EndOffset="5868" SrcFileId="8" StartOffset="5862"/>
 </LocList>
 <StmntSeq Intrnl_Id="1501">
 <LocList>
-<Loc EndOffset="5862" SrcFileId="8" StartOffset="5856"/>
+<Loc EndOffset="5868" SrcFileId="8" StartOffset="5862"/>
 </LocList>
 <BasicStmnt CovItemId="S136" CovItemPrefix="Turn.java" Intrnl_Id="1502">
 <LocList>
-<Loc EndOffset="5862" SrcFileId="8" StartOffset="5856"/>
+<Loc EndOffset="5868" SrcFileId="8" StartOffset="5862"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
@@ -8534,27 +8533,27 @@
 <LocList/>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="5824" SrcFileId="8" StartOffset="5822"/>
+<Keyword EndOffset="5830" SrcFileId="8" StartOffset="5828"/>
 <LocList>
-<Loc EndOffset="5862" SrcFileId="8" StartOffset="5822"/>
+<Loc EndOffset="5868" SrcFileId="8" StartOffset="5828"/>
 </LocList>
 <RootTerm CovItemId="C34" CovItemPrefix="Turn.java" Intrnl_Id="1505">
 <BasicBoolTerm Intrnl_Id="1506">
 <LocList>
-<Loc EndOffset="5854" SrcFileId="8" StartOffset="5825"/>
+<Loc EndOffset="5860" SrcFileId="8" StartOffset="5831"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </CondStmnt>
 </StmntSeq>
-<Keyword EndOffset="5711" SrcFileId="8" StartOffset="5708"/>
+<Keyword EndOffset="5717" SrcFileId="8" StartOffset="5714"/>
 <LocList>
-<Loc EndOffset="5869" SrcFileId="8" StartOffset="5708"/>
+<Loc EndOffset="5875" SrcFileId="8" StartOffset="5714"/>
 </LocList>
 <RootTerm CovItemId="C33" CovItemPrefix="Turn.java" Intrnl_Id="1507">
 <BasicBoolTerm Intrnl_Id="1508">
 <LocList>
-<Loc EndOffset="5725" SrcFileId="8" StartOffset="5721"/>
+<Loc EndOffset="5731" SrcFileId="8" StartOffset="5727"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
@@ -8563,52 +8562,52 @@
 <Branch CovItemId="B51" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1510">
 <Cond/>
 <LocList>
-<Loc EndOffset="5947" SrcFileId="8" StartOffset="5893"/>
+<Loc EndOffset="5953" SrcFileId="8" StartOffset="5899"/>
 </LocList>
 <StmntSeq Intrnl_Id="1511">
 <LocList>
-<Loc EndOffset="5947" SrcFileId="8" StartOffset="5893"/>
+<Loc EndOffset="5953" SrcFileId="8" StartOffset="5899"/>
 </LocList>
 <BasicStmnt CovItemId="S138" CovItemPrefix="Turn.java" Intrnl_Id="1512">
 <LocList>
-<Loc EndOffset="5947" SrcFileId="8" StartOffset="5893"/>
+<Loc EndOffset="5953" SrcFileId="8" StartOffset="5899"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
 <Branch CovItemId="B52" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1513">
 <Cond>
-<Loc EndOffset="5956" SrcFileId="8" StartOffset="5952"/>
+<Loc EndOffset="5962" SrcFileId="8" StartOffset="5958"/>
 </Cond>
 <LocList>
-<Loc EndOffset="5986" SrcFileId="8" StartOffset="5957"/>
+<Loc EndOffset="5992" SrcFileId="8" StartOffset="5963"/>
 </LocList>
 <StmntSeq Intrnl_Id="1514">
 <LocList>
-<Loc EndOffset="5986" SrcFileId="8" StartOffset="5957"/>
+<Loc EndOffset="5992" SrcFileId="8" StartOffset="5963"/>
 </LocList>
 <BasicStmnt CovItemId="S139" CovItemPrefix="Turn.java" Intrnl_Id="1515">
 <LocList>
-<Loc EndOffset="5986" SrcFileId="8" StartOffset="5957"/>
+<Loc EndOffset="5992" SrcFileId="8" StartOffset="5963"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="5876" SrcFileId="8" StartOffset="5874"/>
+<Keyword EndOffset="5882" SrcFileId="8" StartOffset="5880"/>
 <LocList>
-<Loc EndOffset="5986" SrcFileId="8" StartOffset="5874"/>
+<Loc EndOffset="5992" SrcFileId="8" StartOffset="5880"/>
 </LocList>
 <RootTerm CovItemId="C35" CovItemPrefix="Turn.java" Intrnl_Id="1516">
 <BasicBoolTerm Intrnl_Id="1517">
 <LocList>
-<Loc EndOffset="5891" SrcFileId="8" StartOffset="5877"/>
+<Loc EndOffset="5897" SrcFileId="8" StartOffset="5883"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
 </CondStmnt>
 <BasicStmnt CovItemId="S140" CovItemPrefix="Turn.java" Intrnl_Id="1518">
 <LocList>
-<Loc EndOffset="5998" SrcFileId="8" StartOffset="5991"/>
+<Loc EndOffset="6004" SrcFileId="8" StartOffset="5997"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
@@ -8620,14 +8619,14 @@
 <LocList/>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="5670" SrcFileId="8" StartOffset="5668"/>
+<Keyword EndOffset="5676" SrcFileId="8" StartOffset="5674"/>
 <LocList>
-<Loc EndOffset="6004" SrcFileId="8" StartOffset="5668"/>
+<Loc EndOffset="6010" SrcFileId="8" StartOffset="5674"/>
 </LocList>
 <RootTerm CovItemId="C32" CovItemPrefix="Turn.java" Intrnl_Id="1521">
 <BasicBoolTerm Intrnl_Id="1522">
 <LocList>
-<Loc EndOffset="5700" SrcFileId="8" StartOffset="5671"/>
+<Loc EndOffset="5706" SrcFileId="8" StartOffset="5677"/>
 </LocList>
 </BasicBoolTerm>
 </RootTerm>
@@ -8636,36 +8635,36 @@
 </Branch>
 <Branch CovItemId="B53" CovItemPrefix="Turn.java" Implct="false" Intrnl_Id="1523">
 <Cond>
-<Loc EndOffset="6022" SrcFileId="8" StartOffset="6008"/>
+<Loc EndOffset="6028" SrcFileId="8" StartOffset="6014"/>
 </Cond>
 <LocList>
-<Loc EndOffset="6190" SrcFileId="8" StartOffset="6028"/>
+<Loc EndOffset="6196" SrcFileId="8" StartOffset="6034"/>
 </LocList>
 <StmntSeq Intrnl_Id="1524">
 <LocList>
-<Loc EndOffset="6046" SrcFileId="8" StartOffset="6028"/>
-<Loc EndOffset="6146" SrcFileId="8" StartOffset="6051"/>
-<Loc EndOffset="6178" SrcFileId="8" StartOffset="6151"/>
-<Loc EndOffset="6190" SrcFileId="8" StartOffset="6183"/>
+<Loc EndOffset="6052" SrcFileId="8" StartOffset="6034"/>
+<Loc EndOffset="6152" SrcFileId="8" StartOffset="6057"/>
+<Loc EndOffset="6184" SrcFileId="8" StartOffset="6157"/>
+<Loc EndOffset="6196" SrcFileId="8" StartOffset="6189"/>
 </LocList>
 <BasicStmnt CovItemId="S141" CovItemPrefix="Turn.java" Intrnl_Id="1525">
 <LocList>
-<Loc EndOffset="6046" SrcFileId="8" StartOffset="6028"/>
+<Loc EndOffset="6052" SrcFileId="8" StartOffset="6034"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S142" CovItemPrefix="Turn.java" Intrnl_Id="1526">
 <LocList>
-<Loc EndOffset="6146" SrcFileId="8" StartOffset="6051"/>
+<Loc EndOffset="6152" SrcFileId="8" StartOffset="6057"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S143" CovItemPrefix="Turn.java" Intrnl_Id="1527">
 <LocList>
-<Loc EndOffset="6178" SrcFileId="8" StartOffset="6151"/>
+<Loc EndOffset="6184" SrcFileId="8" StartOffset="6157"/>
 </LocList>
 </BasicStmnt>
 <BasicStmnt CovItemId="S144" CovItemPrefix="Turn.java" Intrnl_Id="1528">
 <LocList>
-<Loc EndOffset="6190" SrcFileId="8" StartOffset="6183"/>
+<Loc EndOffset="6196" SrcFileId="8" StartOffset="6189"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
@@ -8677,27 +8676,27 @@
 <LocList/>
 </StmntSeq>
 </Branch>
-<Keyword EndOffset="4901" SrcFileId="8" StartOffset="4895"/>
+<Keyword EndOffset="4907" SrcFileId="8" StartOffset="4901"/>
 <LocList>
-<Loc EndOffset="6200" SrcFileId="8" StartOffset="4895"/>
+<Loc EndOffset="6206" SrcFileId="8" StartOffset="4901"/>
 </LocList>
 </CondStmnt>
 <BasicStmnt CovItemId="S145" CovItemPrefix="Turn.java" Intrnl_Id="1531">
 <LocList>
-<Loc EndOffset="6215" SrcFileId="8" StartOffset="6208"/>
+<Loc EndOffset="6221" SrcFileId="8" StartOffset="6214"/>
 </LocList>
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2589" HierarchyLvlTypeId="12" Intrnl_Id="1532" Name="TurnTest">
+<HierarchyLvl HierarchyLvlId="147" HierarchyLvlTypeId="12" Intrnl_Id="1532" Name="TurnTest">
 <Header>
 <Loc EndOffset="84" SrcFileId="9" StartOffset="63"/>
 </Header>
 <LocList>
 <Loc EndOffset="1020" SrcFileId="9" StartOffset="63"/>
 </LocList>
-<HierarchyLvl HierarchyLvlId="2586" HierarchyLvlTypeId="11" Intrnl_Id="1533" Name="testBuyCards">
+<HierarchyLvl HierarchyLvlId="144" HierarchyLvlTypeId="11" Intrnl_Id="1533" Name="testBuyCards">
 <Header>
 <Loc EndOffset="125" SrcFileId="9" StartOffset="91"/>
 </Header>
@@ -8745,7 +8744,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2587" HierarchyLvlTypeId="11" Intrnl_Id="1541" Name="testEndTurn">
+<HierarchyLvl HierarchyLvlId="145" HierarchyLvlTypeId="11" Intrnl_Id="1541" Name="testEndTurn">
 <Header>
 <Loc EndOffset="452" SrcFileId="9" StartOffset="419"/>
 </Header>
@@ -8781,7 +8780,7 @@
 </BasicStmnt>
 </StmntSeq>
 </HierarchyLvl>
-<HierarchyLvl HierarchyLvlId="2588" HierarchyLvlTypeId="11" Intrnl_Id="1547" Name="testPlayAction">
+<HierarchyLvl HierarchyLvlId="146" HierarchyLvlTypeId="11" Intrnl_Id="1547" Name="testPlayAction">
 <Header>
 <Loc EndOffset="697" SrcFileId="9" StartOffset="661"/>
 </Header>
@@ -8838,908 +8837,4 @@
 </HierarchyLvl>
 </HierarchyLvl>
 </MASTRoot>
-<TestSession Comment="" Date="1487054779316" Name="Feb 13, 2017 10:46:19 PM">
-<TestCase Comment="This is a test case containing all coverage results cause no startTestCase methods where captured." Date="1487054779121" Name="UNNAMED TESTCASE">
-<CovList>
-<CovPrefix CovItemPrefix="Card.java">
-<Cov CovItemId="B1" Value="129"/>
-<Cov CovItemId="B10" Value="14"/>
-<Cov CovItemId="B11" Value="6"/>
-<Cov CovItemId="B12" Value="15"/>
-<Cov CovItemId="B13" Value="6"/>
-<Cov CovItemId="B14" Value="5"/>
-<Cov CovItemId="B15" Value="5"/>
-<Cov CovItemId="B16" Value="13"/>
-<Cov CovItemId="B17" Value="5"/>
-<Cov CovItemId="B18" Value="5"/>
-<Cov CovItemId="B19" Value="5"/>
-<Cov CovItemId="B2" Value="13"/>
-<Cov CovItemId="B20" Value="5"/>
-<Cov CovItemId="B21" Value="5"/>
-<Cov CovItemId="B3" Value="10"/>
-<Cov CovItemId="B4" Value="32"/>
-<Cov CovItemId="B5" Value="5"/>
-<Cov CovItemId="B6" Value="11"/>
-<Cov CovItemId="B7" Value="5"/>
-<Cov CovItemId="B9" Value="5"/>
-<Cov CovItemId="S1" Value="299"/>
-<Cov CovItemId="S10" Value="32"/>
-<Cov CovItemId="S100" Value="15"/>
-<Cov CovItemId="S101" Value="15"/>
-<Cov CovItemId="S102" Value="15"/>
-<Cov CovItemId="S103" Value="15"/>
-<Cov CovItemId="S104" Value="6"/>
-<Cov CovItemId="S105" Value="6"/>
-<Cov CovItemId="S106" Value="6"/>
-<Cov CovItemId="S107" Value="6"/>
-<Cov CovItemId="S108" Value="6"/>
-<Cov CovItemId="S109" Value="6"/>
-<Cov CovItemId="S11" Value="32"/>
-<Cov CovItemId="S110" Value="6"/>
-<Cov CovItemId="S111" Value="6"/>
-<Cov CovItemId="S112" Value="5"/>
-<Cov CovItemId="S113" Value="5"/>
-<Cov CovItemId="S114" Value="5"/>
-<Cov CovItemId="S115" Value="5"/>
-<Cov CovItemId="S116" Value="5"/>
-<Cov CovItemId="S117" Value="5"/>
-<Cov CovItemId="S118" Value="5"/>
-<Cov CovItemId="S119" Value="5"/>
-<Cov CovItemId="S12" Value="5"/>
-<Cov CovItemId="S128" Value="5"/>
-<Cov CovItemId="S129" Value="5"/>
-<Cov CovItemId="S13" Value="5"/>
-<Cov CovItemId="S130" Value="5"/>
-<Cov CovItemId="S131" Value="5"/>
-<Cov CovItemId="S132" Value="5"/>
-<Cov CovItemId="S133" Value="5"/>
-<Cov CovItemId="S134" Value="5"/>
-<Cov CovItemId="S135" Value="5"/>
-<Cov CovItemId="S136" Value="5"/>
-<Cov CovItemId="S137" Value="5"/>
-<Cov CovItemId="S138" Value="5"/>
-<Cov CovItemId="S139" Value="5"/>
-<Cov CovItemId="S14" Value="11"/>
-<Cov CovItemId="S140" Value="5"/>
-<Cov CovItemId="S141" Value="5"/>
-<Cov CovItemId="S142" Value="5"/>
-<Cov CovItemId="S143" Value="5"/>
-<Cov CovItemId="S144" Value="5"/>
-<Cov CovItemId="S145" Value="5"/>
-<Cov CovItemId="S146" Value="5"/>
-<Cov CovItemId="S147" Value="5"/>
-<Cov CovItemId="S148" Value="5"/>
-<Cov CovItemId="S149" Value="5"/>
-<Cov CovItemId="S15" Value="11"/>
-<Cov CovItemId="S150" Value="5"/>
-<Cov CovItemId="S151" Value="5"/>
-<Cov CovItemId="S152" Value="14"/>
-<Cov CovItemId="S153" Value="14"/>
-<Cov CovItemId="S154" Value="14"/>
-<Cov CovItemId="S155" Value="14"/>
-<Cov CovItemId="S156" Value="14"/>
-<Cov CovItemId="S157" Value="14"/>
-<Cov CovItemId="S158" Value="14"/>
-<Cov CovItemId="S159" Value="14"/>
-<Cov CovItemId="S16" Value="5"/>
-<Cov CovItemId="S160" Value="5"/>
-<Cov CovItemId="S161" Value="5"/>
-<Cov CovItemId="S162" Value="5"/>
-<Cov CovItemId="S163" Value="5"/>
-<Cov CovItemId="S164" Value="5"/>
-<Cov CovItemId="S165" Value="5"/>
-<Cov CovItemId="S166" Value="5"/>
-<Cov CovItemId="S167" Value="5"/>
-<Cov CovItemId="S168" Value="11"/>
-<Cov CovItemId="S169" Value="11"/>
-<Cov CovItemId="S17" Value="5"/>
-<Cov CovItemId="S170" Value="11"/>
-<Cov CovItemId="S171" Value="11"/>
-<Cov CovItemId="S172" Value="11"/>
-<Cov CovItemId="S173" Value="11"/>
-<Cov CovItemId="S174" Value="11"/>
-<Cov CovItemId="S175" Value="11"/>
-<Cov CovItemId="S176" Value="5"/>
-<Cov CovItemId="S177" Value="5"/>
-<Cov CovItemId="S178" Value="5"/>
-<Cov CovItemId="S179" Value="5"/>
-<Cov CovItemId="S18" Value="5"/>
-<Cov CovItemId="S180" Value="5"/>
-<Cov CovItemId="S181" Value="5"/>
-<Cov CovItemId="S182" Value="5"/>
-<Cov CovItemId="S183" Value="5"/>
-<Cov CovItemId="S184" Value="32"/>
-<Cov CovItemId="S185" Value="32"/>
-<Cov CovItemId="S186" Value="32"/>
-<Cov CovItemId="S187" Value="32"/>
-<Cov CovItemId="S188" Value="32"/>
-<Cov CovItemId="S189" Value="32"/>
-<Cov CovItemId="S190" Value="32"/>
-<Cov CovItemId="S191" Value="32"/>
-<Cov CovItemId="S192" Value="10"/>
-<Cov CovItemId="S193" Value="10"/>
-<Cov CovItemId="S194" Value="10"/>
-<Cov CovItemId="S195" Value="10"/>
-<Cov CovItemId="S196" Value="10"/>
-<Cov CovItemId="S197" Value="10"/>
-<Cov CovItemId="S198" Value="10"/>
-<Cov CovItemId="S199" Value="10"/>
-<Cov CovItemId="S2" Value="299"/>
-<Cov CovItemId="S200" Value="13"/>
-<Cov CovItemId="S201" Value="13"/>
-<Cov CovItemId="S202" Value="13"/>
-<Cov CovItemId="S203" Value="13"/>
-<Cov CovItemId="S204" Value="13"/>
-<Cov CovItemId="S205" Value="13"/>
-<Cov CovItemId="S206" Value="13"/>
-<Cov CovItemId="S207" Value="13"/>
-<Cov CovItemId="S208" Value="129"/>
-<Cov CovItemId="S209" Value="129"/>
-<Cov CovItemId="S210" Value="129"/>
-<Cov CovItemId="S211" Value="129"/>
-<Cov CovItemId="S212" Value="129"/>
-<Cov CovItemId="S213" Value="129"/>
-<Cov CovItemId="S214" Value="129"/>
-<Cov CovItemId="S215" Value="129"/>
-<Cov CovItemId="S218" Value="196"/>
-<Cov CovItemId="S219" Value="196"/>
-<Cov CovItemId="S22" Value="5"/>
-<Cov CovItemId="S23" Value="5"/>
-<Cov CovItemId="S24" Value="5"/>
-<Cov CovItemId="S25" Value="14"/>
-<Cov CovItemId="S26" Value="14"/>
-<Cov CovItemId="S27" Value="14"/>
-<Cov CovItemId="S28" Value="6"/>
-<Cov CovItemId="S29" Value="6"/>
-<Cov CovItemId="S3" Value="299"/>
-<Cov CovItemId="S30" Value="6"/>
-<Cov CovItemId="S31" Value="15"/>
-<Cov CovItemId="S32" Value="15"/>
-<Cov CovItemId="S33" Value="15"/>
-<Cov CovItemId="S34" Value="6"/>
-<Cov CovItemId="S35" Value="6"/>
-<Cov CovItemId="S36" Value="6"/>
-<Cov CovItemId="S37" Value="5"/>
-<Cov CovItemId="S38" Value="5"/>
-<Cov CovItemId="S39" Value="5"/>
-<Cov CovItemId="S4" Value="129"/>
-<Cov CovItemId="S40" Value="5"/>
-<Cov CovItemId="S41" Value="5"/>
-<Cov CovItemId="S42" Value="13"/>
-<Cov CovItemId="S43" Value="13"/>
-<Cov CovItemId="S44" Value="13"/>
-<Cov CovItemId="S45" Value="5"/>
-<Cov CovItemId="S46" Value="5"/>
-<Cov CovItemId="S47" Value="5"/>
-<Cov CovItemId="S48" Value="5"/>
-<Cov CovItemId="S49" Value="5"/>
-<Cov CovItemId="S5" Value="129"/>
-<Cov CovItemId="S50" Value="5"/>
-<Cov CovItemId="S51" Value="5"/>
-<Cov CovItemId="S52" Value="5"/>
-<Cov CovItemId="S53" Value="5"/>
-<Cov CovItemId="S54" Value="5"/>
-<Cov CovItemId="S55" Value="5"/>
-<Cov CovItemId="S56" Value="5"/>
-<Cov CovItemId="S57" Value="5"/>
-<Cov CovItemId="S58" Value="5"/>
-<Cov CovItemId="S59" Value="5"/>
-<Cov CovItemId="S6" Value="13"/>
-<Cov CovItemId="S60" Value="5"/>
-<Cov CovItemId="S61" Value="5"/>
-<Cov CovItemId="S62" Value="5"/>
-<Cov CovItemId="S63" Value="5"/>
-<Cov CovItemId="S64" Value="13"/>
-<Cov CovItemId="S65" Value="13"/>
-<Cov CovItemId="S66" Value="13"/>
-<Cov CovItemId="S67" Value="13"/>
-<Cov CovItemId="S68" Value="13"/>
-<Cov CovItemId="S69" Value="13"/>
-<Cov CovItemId="S7" Value="13"/>
-<Cov CovItemId="S70" Value="13"/>
-<Cov CovItemId="S71" Value="13"/>
-<Cov CovItemId="S72" Value="5"/>
-<Cov CovItemId="S73" Value="5"/>
-<Cov CovItemId="S74" Value="5"/>
-<Cov CovItemId="S75" Value="5"/>
-<Cov CovItemId="S76" Value="5"/>
-<Cov CovItemId="S77" Value="5"/>
-<Cov CovItemId="S78" Value="5"/>
-<Cov CovItemId="S79" Value="5"/>
-<Cov CovItemId="S8" Value="10"/>
-<Cov CovItemId="S80" Value="5"/>
-<Cov CovItemId="S81" Value="5"/>
-<Cov CovItemId="S82" Value="5"/>
-<Cov CovItemId="S83" Value="5"/>
-<Cov CovItemId="S84" Value="5"/>
-<Cov CovItemId="S85" Value="5"/>
-<Cov CovItemId="S86" Value="5"/>
-<Cov CovItemId="S87" Value="5"/>
-<Cov CovItemId="S88" Value="6"/>
-<Cov CovItemId="S89" Value="6"/>
-<Cov CovItemId="S9" Value="10"/>
-<Cov CovItemId="S90" Value="6"/>
-<Cov CovItemId="S91" Value="6"/>
-<Cov CovItemId="S92" Value="6"/>
-<Cov CovItemId="S93" Value="6"/>
-<Cov CovItemId="S94" Value="6"/>
-<Cov CovItemId="S95" Value="6"/>
-<Cov CovItemId="S96" Value="15"/>
-<Cov CovItemId="S97" Value="15"/>
-<Cov CovItemId="S98" Value="15"/>
-<Cov CovItemId="S99" Value="15"/>
-</CovPrefix>
-<CovPrefix CovItemPrefix="CardSupply.java">
-<Cov CovItemId="B1" Value="10"/>
-<Cov CovItemId="B110" Value="1"/>
-<Cov CovItemId="B111" Value="17"/>
-<Cov CovItemId="B112" Value="3"/>
-<Cov CovItemId="B113" Value="167"/>
-<Cov CovItemId="B115" Value="17"/>
-<Cov CovItemId="B117" Value="102"/>
-<Cov CovItemId="B119" Value="17"/>
-<Cov CovItemId="B12" Value="19"/>
-<Cov CovItemId="B129" Value="1"/>
-<Cov CovItemId="B13" Value="3"/>
-<Cov CovItemId="B130" Value="1"/>
-<Cov CovItemId="B131" Value="1"/>
-<Cov CovItemId="B133" Value="1"/>
-<Cov CovItemId="B134" Value="2"/>
-<Cov CovItemId="B14" Value="13"/>
-<Cov CovItemId="B143" Value="1"/>
-<Cov CovItemId="B144" Value="1"/>
-<Cov CovItemId="B146" Value="12"/>
-<Cov CovItemId="B147" Value="1"/>
-<Cov CovItemId="B15" Value="2"/>
-<Cov CovItemId="B150" Value="10"/>
-<Cov CovItemId="B151" Value="2"/>
-<Cov CovItemId="B152" Value="3"/>
-<Cov CovItemId="B153" Value="1"/>
-<Cov CovItemId="B156" Value="9"/>
-<Cov CovItemId="B18" Value="17"/>
-<Cov CovItemId="B2" Value="2"/>
-<Cov CovItemId="B24" Value="257"/>
-<Cov CovItemId="B25" Value="19"/>
-<Cov CovItemId="B26" Value="14"/>
-<Cov CovItemId="B27" Value="28"/>
-<Cov CovItemId="B29" Value="18"/>
-<Cov CovItemId="B3" Value="124"/>
-<Cov CovItemId="B30" Value="1"/>
-<Cov CovItemId="B33" Value="13"/>
-<Cov CovItemId="B34" Value="4"/>
-<Cov CovItemId="B35" Value="21"/>
-<Cov CovItemId="B36" Value="1"/>
-<Cov CovItemId="B39" Value="11"/>
-<Cov CovItemId="B4" Value="4"/>
-<Cov CovItemId="B45" Value="339"/>
-<Cov CovItemId="B46" Value="357"/>
-<Cov CovItemId="B47" Value="315"/>
-<Cov CovItemId="B48" Value="325"/>
-<Cov CovItemId="B49" Value="333"/>
-<Cov CovItemId="B5" Value="5"/>
-<Cov CovItemId="B50" Value="317"/>
-<Cov CovItemId="B51" Value="329"/>
-<Cov CovItemId="B52" Value="350"/>
-<Cov CovItemId="B53" Value="336"/>
-<Cov CovItemId="B54" Value="347"/>
-<Cov CovItemId="B55" Value="112"/>
-<Cov CovItemId="B56" Value="320"/>
-<Cov CovItemId="B57" Value="125"/>
-<Cov CovItemId="B58" Value="358"/>
-<Cov CovItemId="B59" Value="334"/>
-<Cov CovItemId="B6" Value="28"/>
-<Cov CovItemId="B60" Value="119"/>
-<Cov CovItemId="B61" Value="322"/>
-<Cov CovItemId="B62" Value="323"/>
-<Cov CovItemId="B63" Value="337"/>
-<Cov CovItemId="B64" Value="341"/>
-<Cov CovItemId="B66" Value="2"/>
-<Cov CovItemId="B67" Value="2"/>
-<Cov CovItemId="B68" Value="2"/>
-<Cov CovItemId="B69" Value="2"/>
-<Cov CovItemId="B70" Value="2"/>
-<Cov CovItemId="B71" Value="2"/>
-<Cov CovItemId="B72" Value="2"/>
-<Cov CovItemId="B73" Value="2"/>
-<Cov CovItemId="B74" Value="2"/>
-<Cov CovItemId="B75" Value="2"/>
-<Cov CovItemId="B76" Value="2"/>
-<Cov CovItemId="B77" Value="2"/>
-<Cov CovItemId="B78" Value="2"/>
-<Cov CovItemId="B79" Value="2"/>
-<Cov CovItemId="B8" Value="18"/>
-<Cov CovItemId="B80" Value="2"/>
-<Cov CovItemId="B81" Value="2"/>
-<Cov CovItemId="B82" Value="2"/>
-<Cov CovItemId="B83" Value="2"/>
-<Cov CovItemId="B84" Value="2"/>
-<Cov CovItemId="B85" Value="2"/>
-<Cov CovItemId="B87" Value="40"/>
-<Cov CovItemId="B88" Value="4"/>
-<Cov CovItemId="B89" Value="2"/>
-<Cov CovItemId="B9" Value="1"/>
-<Cov CovItemId="B92" Value="2"/>
-<Cov CovItemId="L1-2" Value="1"/>
-<Cov CovItemId="L2-2" Value="194"/>
-<Cov CovItemId="L3-0" Value="22"/>
-<Cov CovItemId="L3-1" Value="21"/>
-<Cov CovItemId="L3-2" Value="151"/>
-<Cov CovItemId="L5-2" Value="17"/>
-<Cov CovItemId="L6-2" Value="17"/>
-<Cov CovItemId="S1" Value="5"/>
-<Cov CovItemId="S10" Value="4"/>
-<Cov CovItemId="S102" Value="387"/>
-<Cov CovItemId="S103" Value="257"/>
-<Cov CovItemId="S104" Value="257"/>
-<Cov CovItemId="S105" Value="19"/>
-<Cov CovItemId="S106" Value="19"/>
-<Cov CovItemId="S107" Value="14"/>
-<Cov CovItemId="S108" Value="14"/>
-<Cov CovItemId="S109" Value="28"/>
-<Cov CovItemId="S11" Value="4"/>
-<Cov CovItemId="S110" Value="28"/>
-<Cov CovItemId="S113" Value="18"/>
-<Cov CovItemId="S114" Value="18"/>
-<Cov CovItemId="S115" Value="1"/>
-<Cov CovItemId="S116" Value="1"/>
-<Cov CovItemId="S12" Value="4"/>
-<Cov CovItemId="S121" Value="13"/>
-<Cov CovItemId="S122" Value="13"/>
-<Cov CovItemId="S123" Value="4"/>
-<Cov CovItemId="S124" Value="4"/>
-<Cov CovItemId="S125" Value="21"/>
-<Cov CovItemId="S126" Value="21"/>
-<Cov CovItemId="S127" Value="1"/>
-<Cov CovItemId="S128" Value="1"/>
-<Cov CovItemId="S13" Value="4"/>
-<Cov CovItemId="S133" Value="11"/>
-<Cov CovItemId="S134" Value="11"/>
-<Cov CovItemId="S14" Value="4"/>
-<Cov CovItemId="S143" Value="6039"/>
-<Cov CovItemId="S144" Value="339"/>
-<Cov CovItemId="S145" Value="357"/>
-<Cov CovItemId="S146" Value="315"/>
-<Cov CovItemId="S147" Value="325"/>
-<Cov CovItemId="S148" Value="333"/>
-<Cov CovItemId="S149" Value="317"/>
-<Cov CovItemId="S15" Value="4"/>
-<Cov CovItemId="S150" Value="329"/>
-<Cov CovItemId="S151" Value="350"/>
-<Cov CovItemId="S152" Value="336"/>
-<Cov CovItemId="S153" Value="347"/>
-<Cov CovItemId="S154" Value="112"/>
-<Cov CovItemId="S155" Value="320"/>
-<Cov CovItemId="S156" Value="125"/>
-<Cov CovItemId="S157" Value="358"/>
-<Cov CovItemId="S158" Value="334"/>
-<Cov CovItemId="S159" Value="119"/>
-<Cov CovItemId="S16" Value="4"/>
-<Cov CovItemId="S160" Value="322"/>
-<Cov CovItemId="S161" Value="323"/>
-<Cov CovItemId="S162" Value="337"/>
-<Cov CovItemId="S163" Value="341"/>
-<Cov CovItemId="S165" Value="40"/>
-<Cov CovItemId="S166" Value="2"/>
-<Cov CovItemId="S167" Value="2"/>
-<Cov CovItemId="S168" Value="2"/>
-<Cov CovItemId="S169" Value="2"/>
-<Cov CovItemId="S17" Value="4"/>
-<Cov CovItemId="S170" Value="2"/>
-<Cov CovItemId="S171" Value="2"/>
-<Cov CovItemId="S172" Value="2"/>
-<Cov CovItemId="S173" Value="2"/>
-<Cov CovItemId="S174" Value="2"/>
-<Cov CovItemId="S175" Value="2"/>
-<Cov CovItemId="S176" Value="2"/>
-<Cov CovItemId="S177" Value="2"/>
-<Cov CovItemId="S178" Value="2"/>
-<Cov CovItemId="S179" Value="2"/>
-<Cov CovItemId="S18" Value="4"/>
-<Cov CovItemId="S180" Value="2"/>
-<Cov CovItemId="S181" Value="2"/>
-<Cov CovItemId="S182" Value="2"/>
-<Cov CovItemId="S183" Value="2"/>
-<Cov CovItemId="S184" Value="2"/>
-<Cov CovItemId="S185" Value="2"/>
-<Cov CovItemId="S19" Value="4"/>
-<Cov CovItemId="S192" Value="44"/>
-<Cov CovItemId="S193" Value="40"/>
-<Cov CovItemId="S194" Value="4"/>
-<Cov CovItemId="S195" Value="2"/>
-<Cov CovItemId="S196" Value="2"/>
-<Cov CovItemId="S2" Value="4"/>
-<Cov CovItemId="S20" Value="4"/>
-<Cov CovItemId="S201" Value="2"/>
-<Cov CovItemId="S202" Value="2"/>
-<Cov CovItemId="S21" Value="4"/>
-<Cov CovItemId="S22" Value="4"/>
-<Cov CovItemId="S23" Value="1"/>
-<Cov CovItemId="S235" Value="18"/>
-<Cov CovItemId="S236" Value="18"/>
-<Cov CovItemId="S237" Value="18"/>
-<Cov CovItemId="S238" Value="1"/>
-<Cov CovItemId="S239" Value="17"/>
-<Cov CovItemId="S24" Value="1"/>
-<Cov CovItemId="S240" Value="170"/>
-<Cov CovItemId="S241" Value="3"/>
-<Cov CovItemId="S242" Value="17"/>
-<Cov CovItemId="S244" Value="17"/>
-<Cov CovItemId="S245" Value="102"/>
-<Cov CovItemId="S247" Value="17"/>
-<Cov CovItemId="S249" Value="17"/>
-<Cov CovItemId="S25" Value="1"/>
-<Cov CovItemId="S250" Value="4"/>
-<Cov CovItemId="S26" Value="1"/>
-<Cov CovItemId="S269" Value="1"/>
-<Cov CovItemId="S27" Value="1"/>
-<Cov CovItemId="S270" Value="1"/>
-<Cov CovItemId="S271" Value="1"/>
-<Cov CovItemId="S272" Value="1"/>
-<Cov CovItemId="S275" Value="1"/>
-<Cov CovItemId="S276" Value="1"/>
-<Cov CovItemId="S277" Value="2"/>
-<Cov CovItemId="S278" Value="2"/>
-<Cov CovItemId="S28" Value="1"/>
-<Cov CovItemId="S289" Value="40"/>
-<Cov CovItemId="S29" Value="1"/>
-<Cov CovItemId="S292" Value="1"/>
-<Cov CovItemId="S293" Value="1"/>
-<Cov CovItemId="S295" Value="12"/>
-<Cov CovItemId="S296" Value="1"/>
-<Cov CovItemId="S299" Value="10"/>
-<Cov CovItemId="S3" Value="4"/>
-<Cov CovItemId="S30" Value="1"/>
-<Cov CovItemId="S300" Value="2"/>
-<Cov CovItemId="S301" Value="3"/>
-<Cov CovItemId="S302" Value="1"/>
-<Cov CovItemId="S305" Value="9"/>
-<Cov CovItemId="S31" Value="1"/>
-<Cov CovItemId="S32" Value="1"/>
-<Cov CovItemId="S33" Value="1"/>
-<Cov CovItemId="S34" Value="1"/>
-<Cov CovItemId="S35" Value="1"/>
-<Cov CovItemId="S36" Value="1"/>
-<Cov CovItemId="S37" Value="1"/>
-<Cov CovItemId="S38" Value="1"/>
-<Cov CovItemId="S39" Value="1"/>
-<Cov CovItemId="S4" Value="4"/>
-<Cov CovItemId="S40" Value="1"/>
-<Cov CovItemId="S41" Value="1"/>
-<Cov CovItemId="S42" Value="1"/>
-<Cov CovItemId="S43" Value="1"/>
-<Cov CovItemId="S44" Value="1"/>
-<Cov CovItemId="S45" Value="1"/>
-<Cov CovItemId="S46" Value="1"/>
-<Cov CovItemId="S47" Value="12"/>
-<Cov CovItemId="S48" Value="12"/>
-<Cov CovItemId="S49" Value="10"/>
-<Cov CovItemId="S5" Value="4"/>
-<Cov CovItemId="S50" Value="194"/>
-<Cov CovItemId="S51" Value="194"/>
-<Cov CovItemId="S52" Value="194"/>
-<Cov CovItemId="S53" Value="3880"/>
-<Cov CovItemId="S54" Value="194"/>
-<Cov CovItemId="S55" Value="194"/>
-<Cov CovItemId="S56" Value="194"/>
-<Cov CovItemId="S57" Value="2170"/>
-<Cov CovItemId="S58" Value="194"/>
-<Cov CovItemId="S59" Value="194"/>
-<Cov CovItemId="S6" Value="4"/>
-<Cov CovItemId="S60" Value="194"/>
-<Cov CovItemId="S61" Value="234"/>
-<Cov CovItemId="S62" Value="124"/>
-<Cov CovItemId="S63" Value="124"/>
-<Cov CovItemId="S64" Value="4"/>
-<Cov CovItemId="S65" Value="4"/>
-<Cov CovItemId="S66" Value="5"/>
-<Cov CovItemId="S67" Value="5"/>
-<Cov CovItemId="S68" Value="28"/>
-<Cov CovItemId="S69" Value="28"/>
-<Cov CovItemId="S7" Value="4"/>
-<Cov CovItemId="S72" Value="18"/>
-<Cov CovItemId="S73" Value="18"/>
-<Cov CovItemId="S74" Value="1"/>
-<Cov CovItemId="S75" Value="1"/>
-<Cov CovItemId="S8" Value="4"/>
-<Cov CovItemId="S80" Value="19"/>
-<Cov CovItemId="S81" Value="19"/>
-<Cov CovItemId="S82" Value="3"/>
-<Cov CovItemId="S83" Value="3"/>
-<Cov CovItemId="S84" Value="13"/>
-<Cov CovItemId="S85" Value="13"/>
-<Cov CovItemId="S86" Value="2"/>
-<Cov CovItemId="S87" Value="2"/>
-<Cov CovItemId="S9" Value="4"/>
-<Cov CovItemId="S92" Value="17"/>
-<Cov CovItemId="S93" Value="17"/>
-</CovPrefix>
-<CovPrefix CovItemPrefix="PlayTest.java">
-<Cov CovItemId="B2" Value="1"/>
-<Cov CovItemId="L1-2" Value="1"/>
-<Cov CovItemId="S1" Value="1"/>
-<Cov CovItemId="S10" Value="17"/>
-<Cov CovItemId="S11" Value="1"/>
-<Cov CovItemId="S12" Value="1"/>
-<Cov CovItemId="S13" Value="1"/>
-<Cov CovItemId="S15" Value="1"/>
-<Cov CovItemId="S2" Value="1"/>
-<Cov CovItemId="S3" Value="1"/>
-<Cov CovItemId="S4" Value="1"/>
-<Cov CovItemId="S5" Value="17"/>
-<Cov CovItemId="S6" Value="17"/>
-<Cov CovItemId="S7" Value="17"/>
-<Cov CovItemId="S8" Value="17"/>
-<Cov CovItemId="S9" Value="17"/>
-</CovPrefix>
-<CovPrefix CovItemPrefix="Player.java">
-<Cov CovItemId="B1" Value="6"/>
-<Cov CovItemId="B2" Value="188"/>
-<Cov CovItemId="L1-2" Value="196"/>
-<Cov CovItemId="L2-2" Value="196"/>
-<Cov CovItemId="L3-2" Value="2"/>
-<Cov CovItemId="S1" Value="2"/>
-<Cov CovItemId="S10" Value="8"/>
-<Cov CovItemId="S11" Value="8"/>
-<Cov CovItemId="S12" Value="8"/>
-<Cov CovItemId="S13" Value="8"/>
-<Cov CovItemId="S14" Value="8"/>
-<Cov CovItemId="S15" Value="8"/>
-<Cov CovItemId="S16" Value="8"/>
-<Cov CovItemId="S17" Value="8"/>
-<Cov CovItemId="S18" Value="8"/>
-<Cov CovItemId="S19" Value="8"/>
-<Cov CovItemId="S2" Value="2"/>
-<Cov CovItemId="S20" Value="8"/>
-<Cov CovItemId="S21" Value="8"/>
-<Cov CovItemId="S22" Value="8"/>
-<Cov CovItemId="S23" Value="8"/>
-<Cov CovItemId="S24" Value="8"/>
-<Cov CovItemId="S25" Value="8"/>
-<Cov CovItemId="S26" Value="8"/>
-<Cov CovItemId="S27" Value="8"/>
-<Cov CovItemId="S28" Value="8"/>
-<Cov CovItemId="S29" Value="8"/>
-<Cov CovItemId="S3" Value="2"/>
-<Cov CovItemId="S30" Value="8"/>
-<Cov CovItemId="S31" Value="8"/>
-<Cov CovItemId="S32" Value="8"/>
-<Cov CovItemId="S33" Value="8"/>
-<Cov CovItemId="S34" Value="8"/>
-<Cov CovItemId="S35" Value="8"/>
-<Cov CovItemId="S36" Value="8"/>
-<Cov CovItemId="S37" Value="8"/>
-<Cov CovItemId="S38" Value="8"/>
-<Cov CovItemId="S39" Value="8"/>
-<Cov CovItemId="S4" Value="2"/>
-<Cov CovItemId="S40" Value="8"/>
-<Cov CovItemId="S41" Value="8"/>
-<Cov CovItemId="S42" Value="8"/>
-<Cov CovItemId="S43" Value="8"/>
-<Cov CovItemId="S44" Value="8"/>
-<Cov CovItemId="S45" Value="8"/>
-<Cov CovItemId="S46" Value="194"/>
-<Cov CovItemId="S47" Value="6"/>
-<Cov CovItemId="S48" Value="194"/>
-<Cov CovItemId="S49" Value="196"/>
-<Cov CovItemId="S5" Value="8"/>
-<Cov CovItemId="S50" Value="196"/>
-<Cov CovItemId="S51" Value="196"/>
-<Cov CovItemId="S52" Value="1960"/>
-<Cov CovItemId="S53" Value="196"/>
-<Cov CovItemId="S54" Value="196"/>
-<Cov CovItemId="S55" Value="196"/>
-<Cov CovItemId="S56" Value="196"/>
-<Cov CovItemId="S57" Value="196"/>
-<Cov CovItemId="S58" Value="196"/>
-<Cov CovItemId="S59" Value="196"/>
-<Cov CovItemId="S6" Value="8"/>
-<Cov CovItemId="S60" Value="196"/>
-<Cov CovItemId="S61" Value="3332"/>
-<Cov CovItemId="S62" Value="196"/>
-<Cov CovItemId="S63" Value="2"/>
-<Cov CovItemId="S64" Value="2"/>
-<Cov CovItemId="S65" Value="2"/>
-<Cov CovItemId="S66" Value="40"/>
-<Cov CovItemId="S67" Value="2"/>
-<Cov CovItemId="S68" Value="2"/>
-<Cov CovItemId="S7" Value="8"/>
-<Cov CovItemId="S8" Value="8"/>
-<Cov CovItemId="S9" Value="8"/>
-</CovPrefix>
-<CovPrefix CovItemPrefix="SupplyStack.java">
-<Cov CovItemId="S1" Value="100"/>
-<Cov CovItemId="S2" Value="100"/>
-<Cov CovItemId="S3" Value="100"/>
-</CovPrefix>
-<CovPrefix CovItemPrefix="Turn.java">
-<Cov CovItemId="B13" Value="3"/>
-<Cov CovItemId="B15" Value="3"/>
-<Cov CovItemId="B18" Value="19"/>
-<Cov CovItemId="B20" Value="19"/>
-<Cov CovItemId="B23" Value="2"/>
-<Cov CovItemId="B25" Value="2"/>
-<Cov CovItemId="B28" Value="12"/>
-<Cov CovItemId="B29" Value="12"/>
-<Cov CovItemId="B31" Value="164"/>
-<Cov CovItemId="B32" Value="49"/>
-<Cov CovItemId="B33" Value="31"/>
-<Cov CovItemId="B34" Value="133"/>
-<Cov CovItemId="B35" Value="18"/>
-<Cov CovItemId="B36" Value="129"/>
-<Cov CovItemId="B37" Value="16"/>
-<Cov CovItemId="B38" Value="113"/>
-<Cov CovItemId="B39" Value="16"/>
-<Cov CovItemId="B41" Value="6"/>
-<Cov CovItemId="B42" Value="4"/>
-<Cov CovItemId="B43" Value="12"/>
-<Cov CovItemId="B44" Value="1"/>
-<Cov CovItemId="B45" Value="11"/>
-<Cov CovItemId="B46" Value="1"/>
-<Cov CovItemId="B48" Value="1"/>
-<Cov CovItemId="B5" Value="4"/>
-<Cov CovItemId="B53" Value="4"/>
-<Cov CovItemId="B54" Value="6"/>
-<Cov CovItemId="B7" Value="4"/>
-<Cov CovItemId="L1-2" Value="34"/>
-<Cov CovItemId="L10-2" Value="40"/>
-<Cov CovItemId="L11-1" Value="6"/>
-<Cov CovItemId="L11-2" Value="28"/>
-<Cov CovItemId="L12-0" Value="10"/>
-<Cov CovItemId="L12-2" Value="6"/>
-<Cov CovItemId="L13-1" Value="2"/>
-<Cov CovItemId="L13-2" Value="4"/>
-<Cov CovItemId="L6-2" Value="40"/>
-<Cov CovItemId="L7-2" Value="34"/>
-<Cov CovItemId="L8-1" Value="34"/>
-<Cov CovItemId="L9-1" Value="28"/>
-<Cov CovItemId="L9-2" Value="6"/>
-<Cov CovItemId="S1" Value="34"/>
-<Cov CovItemId="S10" Value="40"/>
-<Cov CovItemId="S100" Value="16"/>
-<Cov CovItemId="S101" Value="16"/>
-<Cov CovItemId="S102" Value="16"/>
-<Cov CovItemId="S103" Value="16"/>
-<Cov CovItemId="S104" Value="16"/>
-<Cov CovItemId="S105" Value="24"/>
-<Cov CovItemId="S106" Value="16"/>
-<Cov CovItemId="S107" Value="16"/>
-<Cov CovItemId="S108" Value="16"/>
-<Cov CovItemId="S11" Value="40"/>
-<Cov CovItemId="S110" Value="16"/>
-<Cov CovItemId="S111" Value="16"/>
-<Cov CovItemId="S112" Value="18"/>
-<Cov CovItemId="S113" Value="18"/>
-<Cov CovItemId="S114" Value="16"/>
-<Cov CovItemId="S115" Value="16"/>
-<Cov CovItemId="S116" Value="6"/>
-<Cov CovItemId="S117" Value="6"/>
-<Cov CovItemId="S118" Value="16"/>
-<Cov CovItemId="S119" Value="16"/>
-<Cov CovItemId="S12" Value="40"/>
-<Cov CovItemId="S120" Value="4"/>
-<Cov CovItemId="S121" Value="4"/>
-<Cov CovItemId="S122" Value="4"/>
-<Cov CovItemId="S123" Value="12"/>
-<Cov CovItemId="S124" Value="1"/>
-<Cov CovItemId="S125" Value="1"/>
-<Cov CovItemId="S126" Value="1"/>
-<Cov CovItemId="S127" Value="1"/>
-<Cov CovItemId="S128" Value="1"/>
-<Cov CovItemId="S129" Value="1"/>
-<Cov CovItemId="S13" Value="40"/>
-<Cov CovItemId="S130" Value="1"/>
-<Cov CovItemId="S131" Value="1"/>
-<Cov CovItemId="S132" Value="1"/>
-<Cov CovItemId="S14" Value="40"/>
-<Cov CovItemId="S141" Value="4"/>
-<Cov CovItemId="S142" Value="4"/>
-<Cov CovItemId="S143" Value="4"/>
-<Cov CovItemId="S144" Value="4"/>
-<Cov CovItemId="S145" Value="7"/>
-<Cov CovItemId="S2" Value="34"/>
-<Cov CovItemId="S20" Value="4"/>
-<Cov CovItemId="S21" Value="4"/>
-<Cov CovItemId="S23" Value="4"/>
-<Cov CovItemId="S24" Value="4"/>
-<Cov CovItemId="S25" Value="4"/>
-<Cov CovItemId="S26" Value="4"/>
-<Cov CovItemId="S3" Value="34"/>
-<Cov CovItemId="S37" Value="3"/>
-<Cov CovItemId="S38" Value="3"/>
-<Cov CovItemId="S4" Value="34"/>
-<Cov CovItemId="S43" Value="3"/>
-<Cov CovItemId="S44" Value="3"/>
-<Cov CovItemId="S45" Value="3"/>
-<Cov CovItemId="S46" Value="3"/>
-<Cov CovItemId="S47" Value="19"/>
-<Cov CovItemId="S48" Value="19"/>
-<Cov CovItemId="S5" Value="34"/>
-<Cov CovItemId="S53" Value="19"/>
-<Cov CovItemId="S54" Value="19"/>
-<Cov CovItemId="S55" Value="19"/>
-<Cov CovItemId="S56" Value="19"/>
-<Cov CovItemId="S57" Value="2"/>
-<Cov CovItemId="S58" Value="2"/>
-<Cov CovItemId="S6" Value="170"/>
-<Cov CovItemId="S63" Value="2"/>
-<Cov CovItemId="S64" Value="2"/>
-<Cov CovItemId="S65" Value="2"/>
-<Cov CovItemId="S66" Value="2"/>
-<Cov CovItemId="S67" Value="12"/>
-<Cov CovItemId="S68" Value="12"/>
-<Cov CovItemId="S69" Value="12"/>
-<Cov CovItemId="S7" Value="40"/>
-<Cov CovItemId="S70" Value="12"/>
-<Cov CovItemId="S71" Value="12"/>
-<Cov CovItemId="S72" Value="40"/>
-<Cov CovItemId="S73" Value="40"/>
-<Cov CovItemId="S74" Value="40"/>
-<Cov CovItemId="S75" Value="40"/>
-<Cov CovItemId="S76" Value="40"/>
-<Cov CovItemId="S77" Value="213"/>
-<Cov CovItemId="S78" Value="213"/>
-<Cov CovItemId="S79" Value="164"/>
-<Cov CovItemId="S8" Value="40"/>
-<Cov CovItemId="S80" Value="164"/>
-<Cov CovItemId="S81" Value="164"/>
-<Cov CovItemId="S82" Value="31"/>
-<Cov CovItemId="S83" Value="34"/>
-<Cov CovItemId="S84" Value="183"/>
-<Cov CovItemId="S85" Value="34"/>
-<Cov CovItemId="S86" Value="34"/>
-<Cov CovItemId="S87" Value="34"/>
-<Cov CovItemId="S88" Value="34"/>
-<Cov CovItemId="S89" Value="34"/>
-<Cov CovItemId="S9" Value="40"/>
-<Cov CovItemId="S90" Value="40"/>
-<Cov CovItemId="S91" Value="231"/>
-<Cov CovItemId="S92" Value="40"/>
-<Cov CovItemId="S93" Value="40"/>
-<Cov CovItemId="S94" Value="34"/>
-<Cov CovItemId="S95" Value="34"/>
-<Cov CovItemId="S96" Value="147"/>
-<Cov CovItemId="S97" Value="18"/>
-<Cov CovItemId="S98" Value="129"/>
-<Cov CovItemId="S99" Value="16"/>
-</CovPrefix>
-</CovList>
-<AssgnmntList>
-<AssgnmntPrefix RootTermCovItemPrefix="CardSupply.java">
-<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
-<MapEntry BoolAssgnmnt="0" Value="1"/>
-<MapEntry BoolAssgnmnt="1" Value="12"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C2">
-<MapEntry BoolAssgnmnt="0" Value="10"/>
-<MapEntry BoolAssgnmnt="1" Value="2"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C3">
-<MapEntry BoolAssgnmnt="0" Value="194"/>
-<MapEntry BoolAssgnmnt="1" Value="2170"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C4">
-<MapEntry BoolAssgnmnt="0" Value="4"/>
-<MapEntry BoolAssgnmnt="1" Value="40"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C5">
-<MapEntry BoolAssgnmnt="0" Value="17"/>
-<MapEntry BoolAssgnmnt="1" Value="1"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C6">
-<MapEntry BoolAssgnmnt="0" Value="167"/>
-<MapEntry BoolAssgnmnt="1" Value="3"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C7">
-<MapEntry BoolAssgnmnt="0" Value="17"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C8">
-<MapEntry BoolAssgnmnt="0" Value="102"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C9">
-<MapEntry BoolAssgnmnt="0" Value="17"/>
-</AssgnmntListEntry>
-</AssgnmntPrefix>
-<AssgnmntPrefix RootTermCovItemPrefix="PlayTest.java">
-<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
-<MapEntry BoolAssgnmnt="0" Value="17"/>
-<MapEntry BoolAssgnmnt="1" Value="1"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C2">
-<MapEntry BoolAssgnmnt="0" Value="1"/>
-</AssgnmntListEntry>
-</AssgnmntPrefix>
-<AssgnmntPrefix RootTermCovItemPrefix="Player.java">
-<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
-<MapEntry BoolAssgnmnt="0" Value="188"/>
-<MapEntry BoolAssgnmnt="1" Value="6"/>
-</AssgnmntListEntry>
-</AssgnmntPrefix>
-<AssgnmntPrefix RootTermCovItemPrefix="Turn.java">
-<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
-<MapEntry BoolAssgnmnt="0" Value="34"/>
-<MapEntry BoolAssgnmnt="1" Value="170"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C10">
-<MapEntry BoolAssgnmnt="0" Value="19"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C13">
-<MapEntry BoolAssgnmnt="0" Value="2"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C16">
-<MapEntry BoolAssgnmnt="1" Value="12"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C17">
-<MapEntry BoolAssgnmnt="0" Value="9"/>
-<MapEntry BoolAssgnmnt="1" Value="213"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C18">
-<MapEntry BoolAssgnmnt="0" Value="49"/>
-<MapEntry BoolAssgnmnt="1" Value="164"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C19">
-<MapEntry BoolAssgnmnt="0" Value="133"/>
-<MapEntry BoolAssgnmnt="1" Value="31"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C20">
-<MapEntry BoolAssgnmnt="0" Value="34"/>
-<MapEntry BoolAssgnmnt="1" Value="183"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C21">
-<MapEntry BoolAssgnmnt="0" Value="34"/>
-<MapEntry BoolAssgnmnt="1" Value="34"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C22">
-<MapEntry BoolAssgnmnt="0" Value="34"/>
-<MapEntry BoolAssgnmnt="1" Value="40"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C23">
-<MapEntry BoolAssgnmnt="0" Value="40"/>
-<MapEntry BoolAssgnmnt="1" Value="231"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C24">
-<MapEntry BoolAssgnmnt="1" Value="147"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C25">
-<MapEntry BoolAssgnmnt="0" Value="129"/>
-<MapEntry BoolAssgnmnt="1" Value="18"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C26">
-<MapEntry BoolAssgnmnt="0" Value="113"/>
-<MapEntry BoolAssgnmnt="1" Value="16"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C27">
-<MapEntry BoolAssgnmnt="0" Value="16"/>
-<MapEntry BoolAssgnmnt="1" Value="24"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C28">
-<MapEntry BoolAssgnmnt="1" Value="16"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C29">
-<MapEntry BoolAssgnmnt="0" Value="1"/>
-<MapEntry BoolAssgnmnt="1" Value="16"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C3">
-<MapEntry BoolAssgnmnt="0" Value="4"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C30">
-<MapEntry BoolAssgnmnt="0" Value="12"/>
-<MapEntry BoolAssgnmnt="1" Value="4"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C31">
-<MapEntry BoolAssgnmnt="0" Value="11"/>
-<MapEntry BoolAssgnmnt="1" Value="1"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C32">
-<MapEntry BoolAssgnmnt="0" Value="1"/>
-</AssgnmntListEntry>
-<AssgnmntListEntry Length="1" RootTermCovItemId="C7">
-<MapEntry BoolAssgnmnt="0" Value="3"/>
-</AssgnmntListEntry>
-</AssgnmntPrefix>
-</AssgnmntList>
-<ObjMetaDataList/>
-<MetaDataList/>
-</TestCase>
-<MetaDataList/>
-</TestSession>
 </TestSessionContainer>
