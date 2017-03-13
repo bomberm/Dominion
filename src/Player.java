@@ -1,3 +1,5 @@
+package org.cs362.dominion;
+
 import java.util.LinkedList;
 import java.util.List;
 

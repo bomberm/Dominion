@@ -1,3 +1,5 @@
+package org.cs362.dominion;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
@@ -102,7 +104,7 @@ public class Turn {
 				}
 		}
 		player.discard.addCard("curse", theSupply.isEmbargod(whatCard));
-		System.out.println("I purchased "+whatCard);
+		//System.out.println("I purchased "+whatCard);
 		return;
 		
 	}
@@ -153,7 +155,7 @@ public class Turn {
 		{
 			if(i==hand.size()) break;
 			if(hand.get(i).action){
-				System.out.println("I play "+hand.get(i).cardType);
+				//System.out.println("I play "+hand.get(i).cardType);
 				actions+=hand.get(i).actionsGranted;;
 				buys+=hand.get(i).buysGranted;
 				treasure+=hand.get(i).worth;
@@ -167,7 +169,7 @@ public class Turn {
 				return;
 			}
 		}
-		System.out.println("I forfitted an action");
+		//System.out.println("I forfitted an action");
 		return;
 	}
 
@@ -194,7 +196,7 @@ public class Turn {
 					return;
 				}
 			}
-			System.out.println("I chose to forfit my use of Mine");
+			//System.out.println("I chose to forfit my use of Mine");
 			break;
 		case "feast":
 			hand.remove(card);
@@ -205,7 +207,7 @@ public class Turn {
 					whatCard= pick[randomness.nextInt(2)];
 					if(theSupply.howMany(whatCard)>0) break;
 				}
-			if(whatCard==null) System.out.println("I didn't find a card to pick up");
+			if(whatCard==null); //System.out.println("I didn't find a card to pick up");
 			else hand.add(new Card(whatCard));
 			return;
 			}

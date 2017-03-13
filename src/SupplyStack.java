@@ -1,3 +1,5 @@
+package org.cs362.dominion;
+
 
 public class SupplyStack {
 	Card type;
